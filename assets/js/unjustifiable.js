@@ -362,7 +362,7 @@ unjustifiable = function(options) {
             text.push(bittext);
             linebreaks.pop();
             closeSpan(text);
-            text.push("<br />");
+            text.push("<br aria-hidden='true' />");
             cbreak = linebreaks[linebreaks.length - 1];
             openSpan(cbreak, text);
           } else if (bit.getAttribute("class") === "box") {
