@@ -16,11 +16,13 @@
 title: Sam Bleckley
 email: s@diiq.org
 description: >- # this means to ignore newlines until "baseurl:"
-  Sam is a software engineer, designer, and artist. This is thier blog.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://github.diiq.org" # the base hostname & protocol for your site, e.g. http://example.com
+  Sam is a software engineer, designer, and artist. This is Sam's blog.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: diiq
 github_username: diiq
+github: [metadata]
+sass_dir: _sass
 
 # Build settings
 markdown: kramdown

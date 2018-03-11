@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html data-ember-extension="1">
+<head>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<meta charset="UTF-8">
+  <link href="favicon.png" rel="icon" type="image/png">
+	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+	<script src="{{ '/assets/js/en-us.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+	<script src="{{ '/assets/js/unjustifiable.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+	<script src="{{ '/assets/js/justify.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+  <title>diiq | Sam Bleckley</title>
+</head>
+<body>
+		<div class="header"></div>
+		<div id="blog-entry">
+			<div class="post">
+				<div class="marginalia">
+					<div class="title">
+						<h1>{{page.title | escape}}</h1>
+						<h2>{{page.subtitle | escape}}</h2>
+					</div>
+					<p class="noteblock">{{page.notes}}</p>
+				</div>
+				<div class="content">
+					{{ content }}
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+// Our variables
+@import 'imports/variables';
+
+// Third party stuff, except grid-settings, which needs to come in before Neat
+@import 'imports/maintain-ratio';
+
+
+// Anything else in imports/
+@mixin clearfix() {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
