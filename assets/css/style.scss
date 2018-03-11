@@ -31,11 +31,11 @@ body {
     margin: $base-spacing * 3 $base-spacing * 2;
 
     @media(max-width: 1000px) {
-      margin: $base-spacing * 2 $base-spacing;
+      margin: $base-spacing * 2 $base-spacing $base-spacing * 2 $base-spacing * 2;
     }
 
     @media(max-width: 600px) {
-      margin: $base-spacing * 2 $small-spacing;
+      margin: $base-spacing * 2 $small-spacing $base-spacing * 2 $base-spacing;
     }
   }
 
