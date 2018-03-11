@@ -5,7 +5,7 @@
 @import "shared_styles/defaults";
 
 html {
-  background-color: #333;
+  background-color: #fafafa;
 }
 
 body {
@@ -19,7 +19,8 @@ body {
 
   .content {
     float: left;
-    width: 70%;
+    width: 65%;
+    max-width: 600px;
 
     @media(max-width: 1000px) {
       width: 100%;
@@ -122,8 +123,8 @@ body {
 
   .marginalia  {
     min-height: 10px;
-    width: 30%;
-    padding-right: $base-spacing;
+    width: 35%;
+    padding-right: $base-spacing * 2;
     float: left;
 
     @media(max-width: 900px) {
@@ -134,7 +135,7 @@ body {
       font: 12px/1.2  sans-serif;
       color: #a98;
 
-      @media(max-width: 600px) {
+      @media(max-width: 1000px) {
         display: none;
       }
     }
