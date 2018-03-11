@@ -1,21 +1,20 @@
 ---
 ---
-
+@import "{{ site.theme }}";
 @import "shared_styles/imports";
 @import "shared_styles/defaults";
+
+html {
+  background-color: #333;
+}
 
 body {
   background-color: #fff;
 }
 
 #blog-entry {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-
-  @media(max-width: 1000px) {
-    margin: 0 $base-spacing;
-  }
-
   background-color: #fff;
 
   .content {
@@ -28,8 +27,16 @@ body {
   }
 
   .post {
-    margin: $base-spacing * 4 0;
     @include clearfix;
+    margin: $base-spacing * 3 $base-spacing * 2;
+
+    @media(max-width: 1000px) {
+      margin: $base-spacing * 2 $base-spacing;
+    }
+
+    @media(max-width: 600px) {
+      margin: $base-spacing * 2 $small-spacing;
+    }
   }
 
   .date {
@@ -87,14 +94,15 @@ body {
     z-index: 99;
 
     @media(max-width: 600px) {
-      padding: $small-spacing;
-      margin-bottom: $base-spacing * 2;
+      padding: $small-spacing 0;
+      margin-bottom: $base-spacing;
     }
 
     h1 {
-      padding-top: 0;
+      padding: 0;
       font-size: 1.5em;
       margin: 0;
+      padding-bottom: $small-spacing;
     }
 
     h2 {
@@ -135,13 +143,50 @@ body {
   .marginalia > p {
     padding-top: 15px;
   }
+
+  figure {
+    margin: $base-spacing $small-spacing $base-spacing 0;
+    padding: $small-spacing/2 $base-spacing;
+    font-size: .9em;
+    overflow: auto;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+  }
+
+  pre {
+    overflow: visible;
+  }
 }
 
 .header, .footer {
   max-width: 1000px;
   margin: 0 auto;
-  color: #fff;
-  background-color: #333;
-  height: 100px;
+  color: #fed;
+  background-color: #fa0;
   padding: $base-spacing;
+  font-family: sans-serif;
+
+  font-size: .9em;
+  a {
+    color: #fed;
+    text-decoration: underline;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.header {
+  padding: 0;
+  height: 50px;
+  position: relative;
+  .diiq {
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    path {
+      fill: #fff;
+    }
+  }
 }

@@ -36,7 +36,8 @@ acronym {
 }
 
 p {
-  margin: 0 0 1em;
+  margin: 0;
+  margin-bottom: $base-spacing;
 }
 
 a {

@@ -21,27 +21,34 @@ unjustifiable = function(options) {
   or whatever, wrap each syllable in a <span> temporarily. Since I'm
   doing that *anyway*, I decided it wasn't too disgusting to stick
   glue and penalties in the DOM as well. They're only inserted
-    const glueSpan = glue => {
-    const elt = document.createElement("span");
-    elt.className = "glue";
-    elt.innerText = glue;
   temporarily, during the measurement process, and it makes the
   eventual rendering process simpler.
    */
-  const glueSpan = glue => "<span class='glue'>" + glue + "</span>";
 
-  const boxSpan = wordlet => "<span class='box'>" + wordlet + "</span>";
+  const spanMaker = function(klass) {
+    return content => {
+      const elt = document.createElement("span");
+      elt.className = klass;
+      if (content) elt.innerHTML = content;
+      return elt;
+    }
+  }
 
-  const punctuationSpan = wordlet => "<span class='punctuation'>" + wordlet + "</span>";
-
-  const penaltySpan = () => "<span class='penalty'></span>";
+  const glueSpan = spanMaker("glue");
+  const boxSpan = spanMaker("box");
+  const punctuationSpan = spanMaker("punctuation");
+  const penaltySpan = spanMaker("penalty");
 
   const spanifyWord = function(word) {
     var parts, spanifiedWord, syllables;
     syllables = options.hyphenator(word);
     spanifiedWord = boxSpan(syllables[0]);
-    parts = syllables.map(boxSpan);
-    return parts.join(penaltySpan());
+    parts = [];
+    syllables.forEach((s, i) => {
+      if (i > 0) parts.push(penaltySpan());
+      parts.push(boxSpan(s));
+    });
+    return parts;
   };
 
   const glueRegex = /(&nbsp;|(?:&mdash;|&rdquo;|[-,;:"”=\.\/\)\]\}\?])+(?:&nbsp;)*)/;
@@ -52,29 +59,33 @@ unjustifiable = function(options) {
     words = text.split(glueRegex);
     spannedWords = words.map(function(word, i) {
       if (word.match(glueRegex)) {
-        return glueSpan(word) + " ";
+        return [glueSpan(word), " "];
       } else if (word) {
         return spanifyWord(word);
       } else {
         return "";
       }
-    });
-    return spannedWords.join("");
+    })
+    return [].concat.apply([], spannedWords);
   };
 
   const spanifyElement = function(elt) {
     var newHtml, parts;
     parts = elt.childNodes;
-    newHtml = "";
+    newHtml = [];
     parts.forEach(function(part) {
       if (part.nodeType === 3) {
-        return newHtml += spanifyText(part.textContent);
+        newHtml = newHtml.concat(spanifyText(part.textContent));
       } else {
-        spanifyElement(part);
-        return newHtml += part.outerHTML;
+        newHtml.push(spanifyElement(part));
       }
     });
-    return elt.innerHTML = newHtml;
+
+    var clonedElt = elt.cloneNode(false);
+    clonedElt.innerHTML = "";
+    clonedElt.append.apply(clonedElt, newHtml);
+    elt.parentNode.replaceChild(clonedElt, elt);
+    return clonedElt;
   };
 
   /*
@@ -377,7 +388,7 @@ unjustifiable = function(options) {
           recur(bit);
           text.push(bit.outerHTML);
         } else {
-          bittext = bit.innerHTML;
+          bittext = bit.innerHTML.replace("&nbsp;", " ");
           text.push(bittext);
         }
       });
@@ -390,7 +401,7 @@ unjustifiable = function(options) {
 
   return function(elt) {
     var bestBreaks, lineLength, wordlets;
-    spanifyElement(elt);
+    elt = spanifyElement(elt);
     elt.style.textAlign = "justify";
     lineLength = lineLengths(elt);
     lineLength.push(lineLength[lineLength.length - 1]);
