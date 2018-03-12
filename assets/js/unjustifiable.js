@@ -340,63 +340,79 @@ unjustifiable = function(options) {
     if (!linebreaks) return despanifyNoJustify(elt);
     var cbreak, closeSpan, openSpan, recur;
     cbreak = linebreaks[linebreaks.length - 1];
-    openSpan = (cbreak, text) => text.push("<span style=\"word-spacing: " + cbreak.spacing + "px\">");
-    closeSpan = text => text.push("</span>");
+
+    var curElt = null;
+    openSpan = (cbreak) => {
+      const elt = document.createElement("span");
+      elt.style.wordSpacing = cbreak.spacing + "px";
+      curElt = elt;
+    }
+    closeSpan = elts => elts.push(curElt);
+    pushContent = content => curElt.innerHTML += content;
+    newLine = (elts) => {
+      const elt = document.createElement("br");
+      elt.setAttribute("aria-hidden", "true");
+      elts.push(elt);
+    }
+
     recur = function(elt) {
-      var text;
-      text = [];
-      openSpan(cbreak, text);
+      var elts = [];
+      openSpan(cbreak);
       Array.from(elt.children).forEach(function(bit) {
         var bittext;
         if (bit.children.length) {
-          closeSpan(text);
-          recur(bit);
-          text.push(bit.outerHTML);
-          return openSpan(cbreak, text);
+          closeSpan(elts);
+          elts.push(recur(bit));
+          openSpan(cbreak);
         } else {
           bittext = bit.innerHTML;
           if (cbreak && bit === cbreak.breakElement) {
             if (bit.getAttribute("class") === "penalty") {
-              text.push("-");
+              pushContent("-");
             }
-            text.push(bittext);
+            pushContent(bittext); closeSpan(elts); newLine(elts);
             linebreaks.pop();
-            closeSpan(text);
-            text.push("<br aria-hidden='true' />");
             cbreak = linebreaks[linebreaks.length - 1];
-            openSpan(cbreak, text);
+            openSpan(cbreak);
           } else if (bit.getAttribute("class") === "box") {
-            text.push(bittext);
+            pushContent(bittext);
           } else if (bit.getAttribute("class") === "glue") {
-            text.push(bittext.replace("&nbsp;", " "));
+            pushContent(bittext.replace("&nbsp;", " "));
           }
         }
       });
-      closeSpan(text);
-      // SO COSTLY. DO WITH CREATE ELEMENT.
-      elt.innerHTML = text.join("");
+      closeSpan(elts);
+
+      // Now return a new elt with the new contents:
+      var clonedElt = elt.cloneNode(false);
+      clonedElt.innerHTML = "";
+      clonedElt.append.apply(clonedElt, elts);
+      return clonedElt;
     };
-    return recur(elt);
+
+    elt.parentNode.replaceChild(recur(elt), elt);
   };
 
   const despanifyNoJustify = function(elt) {
     recur = function(elt) {
-      var text = [];
+      var elts = [];
       Array.from(elt.children).forEach(function(bit) {
         var bittext;
         if (bit.children.length) {
-          recur(bit);
-          text.push(bit.outerHTML);
+          elts.push(recur(bit));
         } else {
           bittext = bit.innerHTML.replace("&nbsp;", " ");
-          text.push(bittext);
+          elts.push(bittext);
         }
       });
       // SO COSTLY. DO WITH CREATE ELEMENT.
-      elt.innerHTML = text.join("");
+      var clonedElt = elt.cloneNode(false);
+      clonedElt.innerHTML = "";
+      clonedElt.append.apply(clonedElt, elts);
+      return clonedElt;
     }
 
-    return recur(elt);
+    elt.parentNode.replaceChild(recur(elt), elt);
   };
 
   return function(elt) {
@@ -408,7 +424,7 @@ unjustifiable = function(options) {
     elt.style.textAlign = "left";
     wordlets = listWordlets(elt);
     bestBreaks = findBreaks(wordlets, lineLength);
-    return despanifyElement(elt, bestBreaks);
+    despanifyElement(elt, bestBreaks);
   };
 };
 
