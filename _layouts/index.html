@@ -40,7 +40,7 @@
                 </div>
                 <div class="content">
                     <ul>	
-                        {% assign sorted = (site.writing | sort: 'date') | reverse %}
+                        {% assign sorted = site.writing | sort: 'date' | reverse %}
                         {% for post in sorted %}
                         <li>
                             <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>

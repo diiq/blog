@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ong Good and Green"
+title:  "On Good and Green"
 subtitle: how morality is like a color
 date: 2013-01-01
 categories: on good
