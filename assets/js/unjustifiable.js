@@ -1,15 +1,16 @@
 var unjustifiable;
 
 unjustifiable = function(options) {
-  options = Object.assign({
+  options = {
     hyphenator: function(w) {
       return [w];
     },
     stretch: 15,
     shrink: -1,
     overhang: 20,
-    hyphenPenalty: 1000
-  }, options || {});
+    hyphenPenalty: 1000,
+    ...(options || {})
+  };
 
   /*
   Spanify-ing is the process of wrapping each syllable in a
@@ -40,10 +41,9 @@ unjustifiable = function(options) {
   const penaltySpan = spanMaker("penalty");
 
   const spanifyWord = function(word) {
-    var parts, spanifiedWord, syllables;
-    syllables = options.hyphenator(word);
-    spanifiedWord = boxSpan(syllables[0]);
-    parts = [];
+    const syllables = options.hyphenator(word);
+    const spanifiedWord = boxSpan(syllables[0]);
+    const parts = [];
     syllables.forEach((s, i) => {
       if (i > 0) parts.push(penaltySpan());
       parts.push(boxSpan(s));
@@ -54,10 +54,9 @@ unjustifiable = function(options) {
   const glueRegex = /(&nbsp;|(?:&mdash;|&rdquo;|[-,;:"”=\.\/\)\]\}\?])+(?:&nbsp;)*)/;
   
   const spanifyText = function(text) {
-    var spannedWords, words;
     text = text.replace(/\n ?/g, " ").replace(/ +/g, "&nbsp;");
-    words = text.split(glueRegex);
-    spannedWords = words.map(function(word, i) {
+    const words = text.split(glueRegex);
+    const spannedWords = words.map(function(word, i) {
       if (word.match(glueRegex)) {
         return [glueSpan(word), " "];
       } else if (word) {
@@ -70,20 +69,19 @@ unjustifiable = function(options) {
   };
 
   const spanifyElement = function(elt) {
-    var newHtml, parts;
-    parts = elt.childNodes;
-    newHtml = [];
+    const parts = elt.childNodes;
+    var contents = [];
     parts.forEach(function(part) {
       if (part.nodeType === 3) {
-        newHtml = newHtml.concat(spanifyText(part.textContent));
+        contents = contents.concat(spanifyText(part.textContent));
       } else {
-        newHtml.push(spanifyElement(part));
+        contents.push(spanifyElement(part));
       }
     });
 
     var clonedElt = elt.cloneNode(false);
     clonedElt.innerHTML = "";
-    clonedElt.append.apply(clonedElt, newHtml);
+    clonedElt.append.apply(clonedElt, contents);
     elt.parentNode.replaceChild(clonedElt, elt);
     return clonedElt;
   };
@@ -101,13 +99,12 @@ unjustifiable = function(options) {
 
   const walkElt = function(elt, action) {
     return Array.from(elt.children).forEach(function(bit) {
-      var rec;
       if (hasClass(bit, "unjustifiable-ignore")) {
-
+        // Do nothing
       } else if (bit.children.length) {
-        return rec = walkElt(bit, action);
+        walkElt(bit, action);
       } else {
-        return action(bit);
+        action(bit);
       }
     });
   };
@@ -117,13 +114,11 @@ unjustifiable = function(options) {
   and makes an array of dictionaries that summarizes the important
   data about the word-fragments therein. It's recursive to cope with
   nested elements (<strong>, <em>, etc.)
-   */
+  */
   const listWordlets = function(elt) {
-    var list;
-    list = [];
+    const list = [];
     walkElt(elt, function(bit) {
-      var wordlet;
-      wordlet = {
+      const wordlet = {
         type: bit.getAttribute("class"),
         span: bit,
         width: bit.getClientRects()[0].width
@@ -146,14 +141,12 @@ unjustifiable = function(options) {
   css-justified.
    */
   const lineLengths = function(elt) {
-    var lineStart, list, prevHeight, prevOffset;
-    list = [];
-    prevHeight = 0;
-    lineStart = 0;
-    prevOffset = null;
-    walkElt(elt, function(bit) {
-      var offset;
-      offset = bit.getClientRects()[0];
+    const list = [];
+    var prevHeight = 0;
+    var lineStart = 0;
+    var prevOffset = null;
+    walkElt(elt, bit => {
+      const offset = bit.getClientRects()[0];
       if (prevOffset && offset.top - prevOffset.top > 2) {
         list.push(prevOffset.right - lineStart - options.overhang);
         lineStart = offset.left;
@@ -204,15 +197,14 @@ unjustifiable = function(options) {
     var oldBreaks = [];
     var newBreak = null;
     breaks.forEach(previousBreak => {
-      var compression, cost, lineLength, measure;
-      lineLength = lineLengths[previousBreak.lineNumber];
-      measure = measureWordlets(wordlets, previousBreak.index, index);
-      compression = lineLength - measure.width;
+      const lineLength = lineLengths[previousBreak.lineNumber];
+      const measure = measureWordlets(wordlets, previousBreak.index, index);
+      var compression = lineLength - measure.width;
       if (index === wordlets.length - 1) {
         compression = Math.min(compression, 0);
       }
       if (compression >= measure.shrink && compression <= measure.stretch) {
-        cost = previousBreak.cost;
+        let cost = previousBreak.cost;
         cost += Math.pow(compression, 2);
         if (wordlets[index].type === "penalty") {
           cost += wordlets[index].cost;
@@ -259,8 +251,7 @@ unjustifiable = function(options) {
   end, it chooses the lowest-cost set of breaks, which it returns.
    */
   const findBreaks = function(wordlets, lineLengths) {
-    var breaks, ret;
-    breaks = [
+    var breaks = [
       {
         wordlet: {},
         cost: 0,
@@ -279,7 +270,7 @@ unjustifiable = function(options) {
         breaks = findBreaksI(wordlets, index, breaks, lineLengths);
       }
     });
-    ret = getMin(breaks.reverse(), function(breakChain) {
+    var ret = getMin(breaks.reverse(), function(breakChain) {
       return breakChain.cost;
     });
     if (!ret) return;
@@ -301,8 +292,7 @@ unjustifiable = function(options) {
   - currentSpacing: Used by despanify.
    */
   const reifyBreakChain = function(chain) {
-    var compression, rets, spacing;
-    rets = [
+    const rets = [
       {
         gluesSoFar: 0,
         spacing: 0,
@@ -310,8 +300,8 @@ unjustifiable = function(options) {
       }
     ];
     while (chain.previous) {
-      compression = chain.compression;
-      spacing = compression / chain.glues;
+      const compression = chain.compression;
+      const spacing = compression / chain.glues;
       rets.push({
         breakElement: chain.wordlet.span,
         spacing: spacing
@@ -338,39 +328,50 @@ unjustifiable = function(options) {
    */
   const despanifyElement = function(elt, linebreaks) {
     if (!linebreaks) return despanifyNoJustify(elt);
-    var cbreak, closeSpan, openSpan, recur;
-    cbreak = linebreaks[linebreaks.length - 1];
 
     var curElt = null;
-    openSpan = (cbreak) => {
+    const openSpan = (cbreak) => {
       const elt = document.createElement("span");
       elt.style.wordSpacing = cbreak.spacing + "px";
       curElt = elt;
     }
-    closeSpan = elts => elts.push(curElt);
-    pushContent = content => curElt.innerHTML += content;
-    newLine = (elts) => {
+    const closeSpan = elts => elts.push(curElt);
+    const pushContent = content => curElt.innerHTML += content;
+
+    const newLine = (elts) => {
       const elt = document.createElement("br");
       elt.setAttribute("aria-hidden", "true");
+      elt.style.userSelect = "none";
+      elts.push(elt);
+    }
+    const hyphen = (elts) => {
+      const elt = document.createElement("span");
+      elt.innerText = "-"
+      elt.style.userSelect = "none";
       elts.push(elt);
     }
 
-    recur = function(elt) {
+    var cbreak = linebreaks[linebreaks.length - 1];
+
+    const recur = function(elt) {
       var elts = [];
       openSpan(cbreak);
       Array.from(elt.children).forEach(function(bit) {
-        var bittext;
         if (bit.children.length) {
           closeSpan(elts);
           elts.push(recur(bit));
           openSpan(cbreak);
         } else {
-          bittext = bit.innerHTML;
+          let bittext = bit.innerHTML;
           if (cbreak && bit === cbreak.breakElement) {
             if (bit.getAttribute("class") === "penalty") {
-              pushContent("-");
-            }
-            pushContent(bittext); closeSpan(elts); newLine(elts);
+              closeSpan(elts);
+              hyphen(elts);
+            } else {
+              pushContent(bittext);
+              closeSpan(elts);
+            } 
+            newLine(elts);
             linebreaks.pop();
             cbreak = linebreaks[linebreaks.length - 1];
             openSpan(cbreak);
@@ -378,8 +379,10 @@ unjustifiable = function(options) {
             pushContent(bittext);
           } else if (bit.getAttribute("class") === "glue") {
             pushContent(bittext.replace("&nbsp;", " "));
+          } else {
+            elts.push(bit);
           }
-        }
+        } 
       });
       closeSpan(elts);
 
@@ -394,15 +397,19 @@ unjustifiable = function(options) {
   };
 
   const despanifyNoJustify = function(elt) {
-    recur = function(elt) {
+    const recur = function(elt) {
       var elts = [];
       Array.from(elt.children).forEach(function(bit) {
         var bittext;
         if (bit.children.length) {
           elts.push(recur(bit));
         } else {
-          bittext = bit.innerHTML.replace("&nbsp;", " ");
-          elts.push(bittext);
+          if (["penalty", "box", "glue"].indexOf(bit.getAttribute("class")) >= 0) {
+            bittext = bit.innerHTML.replace("&nbsp;", " ");
+            elts.push(bittext);
+          } else {
+            elts.push(bit);
+          }
         }
       });
       // SO COSTLY. DO WITH CREATE ELEMENT.
@@ -417,13 +424,22 @@ unjustifiable = function(options) {
 
   return function(elt) {
     var bestBreaks, lineLength, wordlets;
+
+    // Wrap each syllable in a span so we can measure it
     elt = spanifyElement(elt);
+
+    // Temporarily justify so we can measure line lengths (esp. around floats)
     elt.style.textAlign = "justify";
     lineLength = lineLengths(elt);
+    // Last line assume matches next-to-last-line
     lineLength.push(lineLength[lineLength.length - 1]);
     elt.style.textAlign = "left";
+
+    // Find the proper places to break each line
     wordlets = listWordlets(elt);
     bestBreaks = findBreaks(wordlets, lineLength);
+
+    // Render the new line breaks
     despanifyElement(elt, bestBreaks);
   };
 };

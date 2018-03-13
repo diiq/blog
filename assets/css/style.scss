@@ -12,7 +12,7 @@ body {
   background-color: #fff;
 }
 
-#blog-entry {
+#blog-entry, #index-entry {
   max-width: 1000px;
   margin: 0 auto;
   background-color: #fff;
@@ -27,16 +27,16 @@ body {
     }
   }
 
-  .post {
+  .post, .index {
     @include clearfix;
-    margin: $base-spacing * 3 $base-spacing * 2;
+    margin: $base-spacing * 3 $base-spacing * 2 $base-spacing * 4;
 
     @media(max-width: 1000px) {
-      margin: $base-spacing * 2 $base-spacing $base-spacing * 2 $base-spacing * 2;
+      margin: $base-spacing * 2 $base-spacing $base-spacing * 4 $base-spacing * 2;
     }
 
     @media(max-width: 600px) {
-      margin: $base-spacing * 2 $small-spacing $base-spacing * 2 $base-spacing;
+      margin: $base-spacing * 2 $small-spacing $base-spacing * 4 $base-spacing;
     }
   }
 
@@ -48,48 +48,12 @@ body {
     color: #bbb;
   }
 
-  .text-block {
-    float: left;
-    width: 66%;
-    margin-top: 1em;
-    background-color: #fff;
-    padding-right: $base-spacing * 1.5;
-    padding-left: $base-spacing;
-
-    @media(max-width: 1024px) {
-      width: 70%;
-    }
-
-    @media(max-width: 600px) {
-      width: 100%;
-      padding-left: $small-spacing;
-      padding-right: $small-spacing;
-    }
-
-    &:first-of-type {
-      margin-top: $base-spacing * 2;
-    }
-
-    &:last-of-type {
-      margin-bottom: $base-spacing * 2;
-    }
-
-    >:first-child {
-      margin-top: 0;
-      padding-top: 0;
-    }
-
-    p {
-      margin-right: -15px;
-    }
-
-    img {
-      width: 100%;
-      padding: $base-spacing 0;
-    }
+  img {
+    width: calc(100% - 20px);
   }
 
   .title {
+    margin-top: $base-spacing;
     margin-bottom: $base-spacing;
     position:relative;
     z-index: 99;
@@ -104,6 +68,7 @@ body {
       font-size: 1.5em;
       margin: 0;
       padding-bottom: $small-spacing;
+      text-transform: lowercase;
     }
 
     h2 {
@@ -113,6 +78,7 @@ body {
       font-style: italic;
       font-weight: normal;
       padding-bottom: 2em;
+      text-transform: lowercase;
     }
 
     .logo {
@@ -156,6 +122,14 @@ body {
 
   pre {
     overflow: visible;
+  }
+
+  div.highlight {
+    padding: 0px 16px;
+    overflow-x: auto;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: $base-spacing;
   }
 }
 
