@@ -2,7 +2,7 @@
 layout: post
 title:  "Pillows"
 subtitle: a short story
-date: 2015-10-03
+date: 2010-06-03
 categories: fiction
 notes: 
 ---

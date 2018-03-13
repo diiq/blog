@@ -68,7 +68,7 @@ She looks around. They have reached the outer shell of the skyscraper, where the
 
 He smiles, gives a little bow, places the nub against the glass, and leans his bulk against the handle.
 
-<py>She gives a little gasp, and the glass window shatters.
+She gives a little gasp, and the glass window shatters.
 
 “You really can’t go out that way!”
 
@@ -86,4 +86,3 @@ She is reaching for the phone on the vacant desk.
 
 He holds up his three fingers, fixes her in his eye, and steps backwards out the window.
 
-</py>

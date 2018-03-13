@@ -26,9 +26,16 @@
 				</div>
 				<p class="noteblock">{{page.notes}}</p>
 			</div>
-			<div class="content">
+
+			<div class="content {{page.categories}}">
 				{{ content }}
 			</div>
+			{% if page.previous.url %}
+			<a class="older" title="Older post" href="{{page.previous.url}}">&#x279C;</a>
+			{% endif %}
+			{% if page.next.url %}
+			<a class="newer" title="Newer post" href="{{page.next.url}}">&#x279C;</a>
+			{% endif %}
 		</div>
 		<div class="footer">
 			<div>&copy; Sam Bleckley 2018</div>

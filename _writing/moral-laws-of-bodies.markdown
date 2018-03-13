@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Moral Laws of Bodies"
-subtitle: 
+subtitle: How to act around people with physical bodies
 date: 2014-11-28
 categories: on good
 notes: 

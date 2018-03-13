@@ -2,7 +2,7 @@
 layout: post
 title:  "Rehearsal"
 subtitle: Training for the abyss
-date: 2015-10-03
+date: 2010-10-03
 categories: event scores
 notes: 
 ---

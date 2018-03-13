@@ -4,12 +4,8 @@
 @import "shared_styles/imports";
 @import "shared_styles/defaults";
 
-html {
-  background-color: #fafafa;
-}
-
 body {
-  background-color: #fff;
+  background-color: #eee;
 }
 
 #blog-entry, #index-entry {
@@ -21,22 +17,27 @@ body {
     float: left;
     width: 65%;
     max-width: 600px;
+    margin-right: -20px;
 
     @media(max-width: 1000px) {
       width: 100%;
     }
+
+    img {
+      width: calc(100% - 20px);
+    }
   }
 
-  .post, .index {
+  .post, .index, .about {
     @include clearfix;
-    margin: $base-spacing * 3 $base-spacing * 2 $base-spacing * 4;
+    margin: $base-spacing * 3 $base-spacing * 2 - 20 $base-spacing * 2 $base-spacing * 2;
 
     @media(max-width: 1000px) {
-      margin: $base-spacing * 2 $base-spacing $base-spacing * 4 $base-spacing * 2;
+      margin: $base-spacing * 2 $base-spacing $base-spacing * 2 $base-spacing * 2;
     }
 
     @media(max-width: 600px) {
-      margin: $base-spacing * 2 $small-spacing $base-spacing * 4 $base-spacing;
+      margin: $base-spacing * 2 $small-spacing $base-spacing * 2 $base-spacing;
     }
   }
 
@@ -48,12 +49,8 @@ body {
     color: #bbb;
   }
 
-  img {
-    width: calc(100% - 20px);
-  }
-
   .title {
-    margin-top: $base-spacing;
+    //margin-top: $base-spacing;
     margin-bottom: $base-spacing;
     position:relative;
     z-index: 99;
@@ -95,6 +92,7 @@ body {
 
     @media(max-width: 900px) {
       width: 100%;
+      padding-right: 20px;
     }
 
     .noteblock {
@@ -105,6 +103,24 @@ body {
         display: none;
       }
     }
+  }
+
+  .older, .newer {
+    display: block;
+    margin-top: $base-spacing;
+    font-size: 40px;
+    &:hover {
+      text-decoration: none;
+      color: lighten($blue, 10%);
+    }
+  }
+  .older {
+    float: left;
+    transform: rotate(180deg);
+  }
+  .newer {
+    float: right;
+    margin-right: 20px;
   }
 
   .marginalia > p {
@@ -130,6 +146,42 @@ body {
     font-size: 16px;
     margin-right: 20px;
     margin-bottom: $base-spacing;
+  }
+}
+
+#about-entry, #index-entry {
+  .index, .about {
+    margin-top: $base-spacing * 2;
+    margin-bottom: $base-spacing;
+    padding-bottom: $base-spacing;
+  }
+
+  .index {
+    margin-right: $base-spacing * 2;
+    .marginalia {
+      @media(max-width: 900px) {
+        display: none;
+      }
+    }
+  }
+
+  .title {
+    margin-top: 0;
+  }
+
+  .about {
+    margin-top: $base-spacing * 2;
+    border-bottom: 1px solid #eee;
+
+    .title {
+      h1, h2 {
+        text-align: center;
+      }
+      img {
+        border-radius: 50%;
+        margin-bottom: $small-spacing;
+      }
+    }
   }
 }
 

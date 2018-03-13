@@ -4,6 +4,6 @@ const justify = unjustifiable({
 })
 
 window.addEventListener("load", function() {
-  const elts = document.querySelectorAll(".post .content p");
+  const elts = document.querySelectorAll(".post .content:not(.poetry) p, .about .content p");
   elts.forEach(justify);
 })
