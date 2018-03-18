@@ -30,12 +30,12 @@ theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
-collections: 
+collections:
   writing:
     output: true
-    defaults:
-      - values:
-          layout: post
+  art:
+    output: true
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -1,0 +1,8 @@
+---
+  layout: art
+  title:  "The 10,000-Name Suit"
+  images: ["10000names.jpg"]
+  date: 2011-06-23
+  notes:
+---
+

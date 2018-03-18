@@ -8,7 +8,7 @@ body {
   background-color: #eee;
 }
 
-#blog-entry, #index-entry {
+#blog-entry, #index-entry, #art-entry {
   max-width: 1000px;
   margin: 0 auto;
   background-color: #fff;
@@ -151,12 +151,14 @@ body {
 
 #about-entry, #index-entry {
   .index, .about {
-    margin-top: $base-spacing * 2;
+    margin-top: $base-spacing;
     margin-bottom: $base-spacing;
     padding-bottom: $base-spacing;
   }
 
   .index {
+    border-top: 1px solid #eee;
+    padding-top: $base-spacing * 3;
     margin-right: $base-spacing * 2;
     .marginalia {
       @media(max-width: 900px) {
@@ -170,8 +172,30 @@ body {
   }
 
   .about {
-    margin-top: $base-spacing * 2;
-    border-bottom: 1px solid #eee;
+    margin-top: $base-spacing * 3;
+
+    @media(max-width:1000px) {
+      .marginalia {
+        width: 100%;
+        float: none;
+        .title {
+          margin: $small-spacing auto;
+          width: 200px;
+        }
+      }
+
+      .content {
+        float: none;
+        margin: 0 auto;
+        padding-right: 20px;
+      }
+    }
+
+    @media(max-width:650px) {
+      .content {
+        padding-right: 0;
+      }
+    }
 
     .title {
       h1, h2 {
@@ -215,5 +239,28 @@ body {
     path {
       fill: #fff;
     }
+  }
+}
+
+#art-entry {
+  .header, .footer {
+    background-color: #333;
+    color: #eee;
+  }
+
+  .art {
+    @include clearfix;
+    background-color: #333;
+
+    img {
+      width: 100%;
+      display: block;
+      margin-bottom: 40px;
+    }
+  }
+
+  .older, .newer {
+    margin: -20px 20px 0;
+    color: #fff;
   }
 }

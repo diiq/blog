@@ -4,12 +4,12 @@
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width,initial-scale=1" name="viewport">
 	<meta charset="UTF-8">
-  <link href="favicon.png" rel="icon" type="image/png">
+    <link href="favicon.png" rel="icon" type="image/png">
 	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 	<script src="{{ '/assets/js/unjustifiable.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 	<script src="{{ '/assets/js/justify.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-  <title>diiq | Sam Bleckley</title>
+    <title>diiq | Sam Bleckley</title>
 </head>
 <body>
 	<div id="index-entry">
@@ -31,29 +31,48 @@
 			</div>
         </div>
         <div class="index">
-                <div class="marginalia">
-                    <div class="title">
-                        <h1>a list of posts</h1>
-                        <h2>as organized by date</h2>
-                    </div>
-                    <p class="noteblock"></p>
+            <div class="marginalia">
+                <div class="title">
+                    <h1>things I have written</h1>
+                    <h2>as organized by date</h2>
                 </div>
-                <div class="content">
-                    <ul>	
-                        {% assign sorted = site.writing | sort: 'date' | reverse %}
-                        {% for post in sorted %}
-                        <li>
-                            <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
-                            <a href="{{ post.url }}">{{post.title}}</a>
-                            <p><em>{{post.subtitle}}</em></p>
-                        </li>
-                        {% endfor %}	
-                    </ul>
-                </div>
+                <p class="noteblock"></p>
             </div>
+            <div class="content">
+                <ul>
+                    {% assign sorted = site.writing | sort: 'date' | reverse %}
+                    {% for post in sorted %}
+                    <li>
+                        <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
+                        <a href="{{ post.url }}">{{post.title}}</a>
+                        <p><em>{{post.subtitle}}</em></p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="index">
+            <div class="marginalia">
+                <div class="title">
+                    <h1>some art I have made</h1>
+                    <h2>as organized, barely</h2>
+                </div>
+                <p class="noteblock"></p>
+            </div>
+            <div class="content">
+                <ul>
+                    {% assign sorted = site.art | sort: 'date' | reverse %}
+                    {% for post in sorted %}
+                    <li>
+                        <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
+                        <a href="{{ post.url }}">{{post.title}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
 		<div class="footer">
 			<div>&copy; Sam Bleckley 2018</div>
-			<div><a href="/">Blog index</a></div>
 		</div>
 	</div>
 </body>
