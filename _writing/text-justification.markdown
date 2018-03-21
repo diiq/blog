@@ -46,9 +46,10 @@ It turns out that web browsers are spectacularly bad at justifying text. They do
 it by cramming words on to a line until no more words will fit, and then
 increasing the word-spacing to make up whatever space is left. This works
 acceptably for one line, but for a block of text is woefully suboptimal. It
-results in large gaps in the text; in one line having **HUGE** gaps and the next
-having _teeny-tiny_ gaps; and in large gaps staking up between lines, creating
-vertical 'rivers' that catch the eye and prevent smooth reading.
+results in large gaps in the text; in one line having
+<acronym>**HUGE**</acronym> gaps and the next having _teeny-tiny_ gaps; and in
+large gaps staking up between lines, creating vertical 'rivers' that catch the
+eye and prevent smooth reading.
 
 For that reason, designers for the web put forth a dictum:
 
@@ -71,7 +72,7 @@ a set of line-breaks that minimizes:
 * the difference in word-spacing between adjacent lines
 * the number of words that must be hyphenated
 
-Knuth and Plass has been widely described elsewhere; the DOI of the original
+Knuth and Plass has been widely described elsewhere; the <acronym>DOI</acronym> of the original
 paper is 10.1002/spe.4380111102; I'll leave it to you to obtain it if you'd like
 to give it a read.
 
