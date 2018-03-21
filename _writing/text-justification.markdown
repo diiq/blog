@@ -423,12 +423,12 @@ the qualities of web text &mdash; it can be selected, copied, pasted, read by a
 screen-reader, etc.
 
 We're going to turn each line into a `span` (or several, if the line is broken
-by an existing DOM element); then follow that span with a non-selectable,
-non-screen-readable hard line-break. The span will get an in-line style setting
-its word-spacing to some wild fractional number of pixels. (When I first wrote
-unjustifiable, word-spacings could only be whole-number pixels, and each line
-had to be broken into several `span`s whose word-spacings averaged to the correct
-value. Thankfully that's no longer necessary.)
+by an existing <acronym>DOM</acronym> element); then follow that span with a
+non-selectable, non-screen-readable hard line-break. The span will get an
+in-line style setting its word-spacing to some wild fractional number of pixels.
+(When I first wrote unjustifiable, word-spacings could only be whole-number
+pixels, and each line had to be broken into several `span`s whose word-spacings
+averaged to the correct value. Thankfully that's no longer necessary.)
 
 We'll also remove the spans from any text that the algorithm failed to find a
 solution for.
