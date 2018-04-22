@@ -1,0 +1,12 @@
+@import "./variables";
+@import "./typography";
+@import "./fonts";
+@import "./lists";
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

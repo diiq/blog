@@ -5,76 +5,34 @@
 	<meta content="width=device-width,initial-scale=1" name="viewport">
 	<meta charset="UTF-8">
     <link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 	<script src="{{ '/assets/js/unjustifiable.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-	<script src="{{ '/assets/js/justify.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-    <title>diiq | Sam Bleckley</title>
+    <script src="{{ '/assets/js/justify.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    <title>Sam Bleckley</title>
 </head>
-<body>
-	<div id="index-entry">
-		<div class="header">
-            <a href="/">
-                <svg viewBox="0 0 882 592" style="fill-rule:evenodd;stroke-linejoin:round" class="diiq"><path d="M547 149l-74 0 0 298 74 0 0-298ZM296 297c0 0 0 1 0 1 0 82-66 148-148 148 -82 0-148-66-148-148 0-82 66-148 148-148 28 0 53 8 75 21l0-171 74 0 0 296 -2 0ZM421 149l-74 0 0 296 74 0 0-296ZM882 298l1 0 0 296 -74 0 0-170c-22 13-48 20-75 20 -82 0-148-66-148-148 0-82 66-148 148-148 82 0 148 66 148 148 0 0 0 0 0 1ZM149 223c41 0 74 33 74 74 0 41-33 74-74 74 -41 0-74-33-74-74 0-41 33-74 74-74ZM810 298c0 0 0-1 0-1 0-41-33-74-74-74 -41 0-74 33-74 74 0 41 33 74 74 74 39 0 70-29 74-67l0-6 0 0Z"></path></svg>
-            </a>
-		</div>
-		<div class="about">
-			<div class="marginalia">
-				<div class="title">
-					<img src="assets/images/sam.png" />
-                    <h1>Sam Bleckley</h1>
-                    <h2>real human person</h2>
-				</div>
-			</div>
-			<div class="content">
-                {{ content }}
-			</div>
-        </div>
-        <div class="index">
-            <div class="marginalia">
-                <div class="title">
-                    <h1>things I have written</h1>
-                    <h2>as organized by date</h2>
-                </div>
-                <p class="noteblock"></p>
-            </div>
-            <div class="content">
-                <ul>
-                    {% assign sorted = site.writing | sort: 'date' | reverse %}
-                    {% for post in sorted %}
-                    <li>
-                        <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
-                        <a href="{{ post.url }}">{{post.title}}</a>
-                        <p><em>{{post.subtitle}}</em></p>
-                    </li>
-                    {% endfor %}
-                </ul>
+<body id="index-page">
+    <nav>
+        <a class="green" href="/tools">Tools</a>
+        <a class="blue" href="/services">Services</a>
+        <a class="violet" href="/blog">Writing</a>
+        <a class="red" href="/art">Art</a>
+        <a class="yellow" href="/contact">Contact</a>
+    </nav>
+    <main>
+        <div class="content">
+            <img class="self-portrait-mobile" src="assets/images/sam.png" />
+            <h1>Sam Bleckley</h1>
+            <img class="self-portrait-desktop" src="assets/images/sam.png" />
+            {{ content }}
+            <div class="social">
+                <a href="https://twitter.com/diiq"><i class="fa fa-lg fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/sam-bleckley/"><i class="fa fa-lg fa-linkedin-square"></i></a>
+                <a href="mailto:sam@sambleckley.com"><i class="fa fa-lg fa-envelope"></i></a>
             </div>
         </div>
-        <div class="index">
-            <div class="marginalia">
-                <div class="title">
-                    <h1>some art I have made</h1>
-                    <h2>as organized, barely</h2>
-                </div>
-                <p class="noteblock"></p>
-            </div>
-            <div class="content">
-                <ul>
-                    {% assign sorted = site.art | sort: 'date' | reverse %}
-                    {% for post in sorted %}
-                    <li>
-                        <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
-                        <a href="{{ post.url }}">{{post.title}}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-		<div class="footer">
-			<div>&copy; Sam Bleckley 2018</div>
-		</div>
-	</div>
+    </main>
 </body>
 </html>
 

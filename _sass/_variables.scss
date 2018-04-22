@@ -1,0 +1,43 @@
+// Typography
+$base-font-family: 'equity-text-b';
+$heading-font-family: "Raleway", sans-serif;
+
+// Font Sizes
+$base-font-size: 18px;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: 32px;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$paper: #EFEEEA;
+$white: #F7F7F5;
+$font-white: #fff;
+$font: #655D4E;
+$green: #507443;
+$green-hover: #2A5F37;
+$blue: #3B799D;
+$blue-hover: #004B61;
+$violet: #9C6994;
+$violet-hover: #755582;
+$red: #BA2E17;
+$red-hover: #850301;
+$yellow: #EFC11C;
+$yellow-hover: #CEA71C;
+$yellow-text: #A68409;
+$yellow-text-hover: #CEA71C;
+
+// Font Colors
+$base-background-color: #fff;
+$base-font-color: $font;
+$action-color: $blue;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
