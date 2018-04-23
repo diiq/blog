@@ -75,6 +75,7 @@ html {
     font-family: $heading-font-family;
     display: none;
     color: $font-white;
+    border: none;
 
     > div {
       flex: 1;
@@ -95,6 +96,7 @@ html {
   }
 
   nav {
+    position: relative;
     margin: 0 auto;
     max-width: 808px;
     display: flex;
@@ -592,7 +594,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    background-color: $paper;
+    position: relative;
 
     @media(max-width: 675px) {
       flex: 0;
@@ -628,8 +630,9 @@ html {
   }
 
   main {
-    flex: 2;
     background-color: $white;
+    position: relative;
+    flex: 2;
 
     display: flex;
     flex-direction: column;
@@ -723,4 +726,122 @@ html {
       }
     }
   }
+}
+
+
+.colors {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #f2f1ed;
+
+  @media(max-width: 768px) {
+    display: none;
+  }
+
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    animation: colorchange 60s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: rgb(15, 15, 2);
+    &:nth-of-type(5n) {
+      background-color: $red-afterimage;
+      animation-delay: 0s;
+      width: 20%;
+    }
+    &:nth-of-type(5n+1) {
+      background-color: $yellow-afterimage;
+      animation-delay: -10s;
+      width: 40%;
+    }
+    &:nth-of-type(5n+2) {
+      background-color: $green-afterimage;
+      animation-delay: -20s;
+      width: 35%;
+    }
+    &:nth-of-type(5n+3) {
+      background-color: $blue-afterimage;
+      animation-delay: -30s;
+      width: 30%;
+    }
+    &:nth-of-type(5n+4) {
+      background-color: $violet-afterimage;
+      animation-delay: -40s;
+      width: 25%;
+    }
+  }
+}
+
+@keyframes colorchange {
+  0% { transform: translate(0)  }
+  25% { transform: translate(100vw) }
+  50% { transform: translate(25vw)  }
+  75% { transform: translate(75vw) }
+  100% { transform: translate(0) }
+}
+
+
+.index-colors {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #f2f1ed;
+
+  @media(max-width: 768px) {
+    display: none;
+  }
+
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: colorchange 60s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: rgb(15, 15, 2);
+    &:nth-of-type(5n) {
+      background-color: $red-afterimage;
+      animation-delay: 0s;
+      height: 20vh;
+    }
+    &:nth-of-type(5n+1) {
+      background-color: $yellow-afterimage;
+      animation-delay: -10s;
+      height: 40vh;
+    }
+    &:nth-of-type(5n+2) {
+      background-color: $green-afterimage;
+      animation-delay: -20s;
+      height: 35vh;
+    }
+    &:nth-of-type(5n+3) {
+      background-color: $blue-afterimage;
+      animation-delay: -30s;
+      height: 30vh;
+    }
+    &:nth-of-type(5n+4) {
+      background-color: $violet-afterimage;
+      animation-delay: -40s;
+      height: 25vh;
+    }
+  }
+}
+
+@keyframes colorchange {
+  0% { transform: translate(0, 0)  }
+  25% { transform: translate(0, 100vh) }
+  50% { transform: translate(0, 25vh)  }
+  75% { transform: translate(0, 75vh) }
+  100% { transform: translate(0) }
 }
