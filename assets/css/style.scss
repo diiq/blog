@@ -242,6 +242,40 @@ html {
       background-color: $yellow-hover;
     }
   }
+
+  .social {
+    margin-bottom: 40px;
+    margin-top: -20px;
+    text-align: center;
+
+    a {
+      margin-right: 20px;
+
+      .fa-envelope {
+        line-height: 0.7;
+      }
+    }
+  }
+
+  h4 {
+    color: $yellow-hover;
+    font-size: 24px;
+  }
+
+  textarea {
+    height: 30vh;
+  }
+
+  button {
+    display: block;
+    float: right;
+    background-color: $yellow;
+    color: $font;
+    font-family: $heading-font-family;
+    padding: 10px 50px;
+    border: none;
+    margin-top: 24px;
+  }
 }
 
 .art-index-page {

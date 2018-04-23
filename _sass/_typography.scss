@@ -115,3 +115,22 @@ tt {
   font-family: monospace;
   color: #555;
 }
+
+label {
+  display: block;
+  font-weight: bold;
+  font-family: $heading-font-family;
+  margin-top: 1em;
+}
+
+input[type="text"], textarea {
+  font-family: $base-font-family;
+  font-weight: normal;
+  background-color: #fff;
+  border: 1px solid #CFC5B4;
+  box-shadow: inset 2px 2px 1px rgba(0,0,0,.1);
+  padding: 10px;
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+}

@@ -47,14 +47,14 @@ ol {
 }
 
 dl {
-  margin-bottom: $small-spacing;
-
   dt {
     margin-top: $small-spacing;
     font-weight: bold;
   }
 
   dd {
-    margin: 0;
+    margin-left: 20px;
+    text-align: right;
+    margin-top: $small-spacing;
   }
 }
