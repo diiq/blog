@@ -4,7 +4,8 @@
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width,initial-scale=1" name="viewport">
 	<meta charset="UTF-8">
-  <link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
+	<link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 	<script src="{{ '/assets/js/unjustifiable.js?v=' | append: site.github.build_revision | relative_url }}"></script>
@@ -41,10 +42,10 @@
 
 						<div class="scrub">
 								{% if page.previous.url %}
-								<a class="older" title="Older post" href="{{page.previous.url}}">&#x279C;</a>
+								<a class="older" title="Older post" href="{{page.previous.url}}"><i class="fa fa-lg fa-arrow-left"></i></a>
 								{% endif %}
 								{% if page.next.url %}
-								<a class="newer" title="Newer post" href="{{page.next.url}}">&#x279C;</a>
+								<a class="newer" title="Newer post" href="{{page.next.url}}"><i class="fa fa-lg fa-arrow-right"></i></a>
 								{% endif %}
 						</div>
 					</div>

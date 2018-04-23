@@ -17,6 +17,7 @@ html {
   &.services { background-color: $services-theme; }
   &.art { background-color: $art-theme; }
   &.contact { background-color: $yellow; }
+  &.default { background-color: $blue; }
 }
 
 @mixin colorLink($color, $hover) {
@@ -89,7 +90,7 @@ html {
       justify-content: space-between;
       width: 100%;
       font-size: 24px;
-      padding: 30px;
+      padding: 20px 30px;
     }
   }
 
@@ -154,7 +155,7 @@ html {
       @media(max-width: 650px) {
         display: block;
         font-size: 24px;
-        padding: 30px;
+        padding: 20px 30px;
       }
     }
   }
@@ -232,6 +233,10 @@ html {
   }
 }
 
+.page {
+  @include colorPage($blue, $blue, $blue-hover, default);
+}
+
 .contact-page {
   @include colorPage($contact-theme, $yellow, $contact-theme-hover, contact);
   .content { max-width: 808px; }
@@ -244,8 +249,7 @@ html {
   }
 
   .social {
-    margin-bottom: 40px;
-    margin-top: -20px;
+    margin-top: 120px;
     text-align: center;
 
     a {
@@ -266,7 +270,7 @@ html {
     height: 30vh;
   }
 
-  button {
+  .content button {
     display: block;
     float: right;
     background-color: $yellow;
