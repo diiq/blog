@@ -1,10 +1,537 @@
 ---
 ---
+@import "{{ site.theme }}";
 @import "main.scss";
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   @media(min-width: 676px) {
     height: 100%;
+  }
+
+  &.tools { background-color: $tools-theme; }
+  &.writing { background-color: $writing-theme; }
+  &.services { background-color: $services-theme; }
+  &.art { background-color: $art-theme; }
+  &.contact { background-color: $yellow; }
+}
+
+@mixin colorLink($color, $hover) {
+  color: $color;
+
+  &:hover {
+    color: $hover;
+  }
+
+  @media(max-width: 650px) {
+    background-color: $color;
+    color: $font-white;
+  }
+}
+
+.page {
+  background-color: $paper;
+  margin: 0;
+  padding: 0;
+
+  .content > .aside {
+    float: right;
+    width: 70%;
+    margin-top: 32px;
+    color: $font-light;
+    font-family: $heading-font-family;
+
+    @media(max-width: 900px) {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-size: 72px;
+    font-weight: 200;
+    margin: 10px 0 60px -2.5ch;
+    max-width: 475px;
+    padding: 0;
+
+    @media(max-width: 900px) {
+      margin-left: 0;
+    }
+
+    @media(max-width: 768px) {
+      text-align: center;
+      margin: 10px auto 60px;
+    }
+
+    @media(max-width: 325px) {
+      font-size: 50px;
+    }
+  }
+
+  .mobile-nav {
+    font-family: $heading-font-family;
+    display: none;
+    color: $font-white;
+
+    > div {
+      flex: 1;
+      text-align: left;
+    }
+
+    .fa-bars {
+      margin-top: 5px;
+    }
+
+    @media(max-width: 650px) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 24px;
+      padding: 30px;
+    }
+  }
+
+  nav {
+    margin: 0 auto;
+    max-width: 808px;
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: 650px) {
+      display: none;
+      &.open {
+        display: flex;
+        background-color: $paper;
+        flex-direction: column;
+        align-content: space-between;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+      }
+    }
+
+    .mobile-nav {
+      background-color: $font-light;
+    }
+
+    a {
+      font-family: $heading-font-family;
+      font-size: 18px;
+      padding: 20px;
+      transition: color 125ms;
+
+      &:hover {
+        font-weight: bold;
+      }
+
+      &.tools { @include colorLink($tools-theme, $tools-theme-hover) }
+      &.art { @include colorLink($art-theme, $art-theme-hover) }
+      &.services { @include colorLink($services-theme, $services-theme-hover) }
+      &.writing { @include colorLink($writing-theme, $writing-theme-hover) }
+      &.contact { @include colorLink($contact-theme, $contact-theme-hover);
+        @media(max-width: 650px) {
+          color: $font;
+          &:hover {
+            color: $font;
+          }
+        }
+      }
+
+      &.gray {
+        @include colorLink($font, $font-light);
+        margin-right: 25px;
+
+        @media(max-width: 650px) {
+          display: none;
+        }
+      }
+
+      @media(max-width: 650px) {
+        display: block;
+        font-size: 24px;
+        padding: 30px;
+      }
+    }
+  }
+
+  main {
+    position: relative;
+    z-index: 2;
+  }
+
+  .content {
+    @include clearfix();
+    padding: 50px;
+    background-color: $white;
+    margin: 0 auto -50px;
+    max-width: 768px;
+
+    @media(max-width: 675px) {
+      padding: 20px;
+    }
+  }
+
+  footer {
+    height: 150px;
+    padding-top: 100px;
+    text-align: center;
+    color: $font-white;
+    a { color: rgba(255,255,255,.25) }
+    a:hover { color: rgba(255,255,255,1) }
+  }
+}
+
+@mixin colorPage($text-color, $color, $hover, $class) {
+
+  .mobile-nav {
+    background-color: $color;
+  }
+
+  h1 {
+    color: $color;
+  }
+
+  nav {
+    a.#{$class} {
+      background-color: $color;
+      color: $font-white;
+      &:hover {
+        color: $font-white;
+        background-color: $hover;
+        font-weight: normal;
+      }
+    }
+  }
+
+  footer {
+    background-color: $color;
+  }
+
+  a {
+    color: $text-color;
+
+    &:hover {
+      color: $hover;
+    }
+  }
+
+  ul {
+    border-left-color: $color;
+    li:before {
+      border-bottom-color: $color;
+    }
+  }
+
+  blockquote {
+    border-color: $color;
+  }
+}
+
+.contact-page {
+  @include colorPage($contact-theme, $yellow, $contact-theme-hover, contact);
+  .content { max-width: 808px; }
+  nav a.contact {
+    color: $font;
+    &:hover {
+      color: $font;
+      background-color: $yellow-hover;
+    }
+  }
+}
+
+.art-index-page {
+  @include colorPage($art-theme, $art-theme, $art-theme-hover, art);
+  .date {
+    float: right;
+    font-style: italic;
+    color: $font-extra-light;
+  }
+
+  .title {
+    font-family: $heading-font-family;
+  }
+
+  ul {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.art-page {
+  @include colorPage($art-theme, $art-theme, $art-theme-hover, art);
+  h1 {
+    font-size: 48px;
+  }
+
+  .art-post {
+    img {
+      display: block;
+      border: 1px solid #CFC5B4;
+      margin: 0 auto 50px;
+    }
+  }
+}
+
+.blog-index-page {
+  @include colorPage($writing-theme, $writing-theme, $writing-theme-hover, writing);
+  .date {
+    float: right;
+    font-style: italic;
+    color: $font-extra-light;
+  }
+
+  .title {
+    font-family: $heading-font-family;
+  }
+
+  .description {
+    color: $font-light;
+    margin-bottom: 40px;
+  }
+
+  ul {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.blog-page {
+  @include colorPage($writing-theme, $writing-theme, $writing-theme-hover, writing);
+  .post {
+    width: 70%;
+    float: right;
+
+    @media(max-width: 675px) {
+      width: 100%;
+      float: none;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  .marginalia  {
+    font-family: "Raleway";
+    font-size: 12px;
+    color: $font-extra-light;
+    min-height: 100%;
+    width: 29%;
+    padding-right: 40px;
+    float: left;
+
+    @media(max-width: 675px) {
+      display: none;
+    }
+  }
+
+  figure {
+    margin: $base-spacing 0;
+    padding: $small-spacing/2 $base-spacing;
+    font-size: .9em;
+    overflow: auto;
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+  }
+
+  pre.highlight {
+    overflow: visible;
+    background-color: $font-white;
+  }
+
+  div.highlight {
+    border-top: 1px solid #EBE1CF;
+    border-bottom: 1px solid #EBE1CF;
+
+    padding: 0px 50px;
+    overflow-x: auto;
+    max-height: 50vh;
+    overflow-y: auto;
+    font-size: 12px;
+    margin-bottom: $base-spacing;
+    margin-left: calc(-43% - 50px);
+    margin-right: -50px;
+
+    background: #fff;
+
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar-track {
+      background-color: $font-white;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      background-color: $font-white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #EBE1CF;
+    }
+  }
+
+  .scrub {
+    clear: both;
+  }
+}
+
+.tools-page {
+  @include colorPage($tools-theme, $tools-theme, $tools-theme-hover, tools);
+  .content {
+    padding-bottom: 0;
+  }
+
+  .tool {
+    background-color: #fff;
+    border: 1px solid #CFC5B4;
+    display: flex;
+    margin-bottom: 50px;
+
+    @media(max-width: 575px) {
+      display: block;
+    }
+
+    .img {
+      margin: -1px;
+      width: 225px;
+      height: 225px;
+
+      @media(max-width: 768px) {
+        border-radius: 3px;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: 30px 0 30px 30px;
+      }
+
+      @media(max-width: 575px) {
+        margin: 30px auto 0;
+      }
+    }
+
+    .description {
+      flex: 1;
+      padding: 30px;
+    }
+
+    a {
+      color: $font-white;
+      margin: 30px auto 0;
+      max-width: 150px;
+      background-color: $blue;
+      display: block;
+      text-align: center;
+      font-family: $heading-font-family;
+      padding: 5px 10px;
+
+      @media(max-width: 675px) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .tool.vistimo a {
+    background-color: #0085AA;
+    &:hover {
+      background-color: darken(#0085AA, 10%);
+    }
+  }
+
+  .tool.reference-board {
+    .img {
+      background-color: #FCDFBD;
+    }
+    a {
+      background-color: #FF8800;
+      &:hover {
+        background-color: darken(#FF8800, 10%);
+      }
+    }
+  }
+
+  .tool.pigmentor a {
+    background-color: #E08782;
+    &:hover {
+      background-color: darken(#E08782, 10%);
+    }
+  }
+}
+
+@mixin serviceBox($color, $hover) {
+  .title { color: $color }
+  a {
+    background-color: $color;
+    &:hover { background-color: $hover; }
+  }
+}
+
+.services-page {
+  @include colorPage($services-theme, $services-theme, $services-theme-hover, services);
+  .content > .services {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .service {
+    background-color: #fff;
+    border: 1px solid #CFC5B4;
+    padding: 30px;
+    margin: 15px;
+    min-width: 250px;
+    flex: 1;
+
+    .title {
+      color: $services-theme;
+      font-family: $heading-font-family;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: $font-white;
+      margin: 30px auto 0;
+      max-width: 250px;
+      background-color: $blue;
+      display: block;
+      text-align: center;
+      font-family: $heading-font-family;
+      padding: 5px 10px;
+
+      @media(max-width: 675px) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .service.hire { @include serviceBox($violet, $violet-hover);}
+  .service.gap { @include serviceBox($blue, $blue-hover);}
+  .service.talks { @include serviceBox($red, $red-hover);}
+  .service.web-app { @include serviceBox($green, $green-hover);
+    min-width: 70%;
+  }
+  .service.audit {
+    @include serviceBox($yellow, $yellow-hover);
+    .title {color: $yellow-text;}
+  }
+}
+
+@mixin indexColorLink($color) {
+  color: $color;
+
+  @media(max-width: 675px) {
+    background-color: $color;
+    color: $font-white;
+  }
+
+  &:hover {
+    background-color: $color;
+    color: $font-white;
   }
 }
 
@@ -19,7 +546,6 @@ html {
 
   @media(max-width: 675px) {
     flex-direction: column-reverse;
-
   }
 
   nav {
@@ -53,75 +579,13 @@ html {
         padding: 10px 30px;
       }
 
-      &.green {
-        color: $green;
-
-        @media(max-width: 675px) {
-          background-color: $green;
-          color: $font-white;
-        }
-
-        &:hover {
-          background-color: $green;
-          color: $font-white;
-        }
+      &.tools { @include indexColorLink($tools-theme) }
+      &.writing { @include indexColorLink($writing-theme) }
+      &.art { @include indexColorLink($art-theme) }
+      &.contact { @include indexColorLink($contact-theme);
+        &:hover { background-color: $yellow; color: $font }
       }
-
-      &.red {
-        color: $red;
-
-        @media(max-width: 675px) {
-          background-color: $red;
-          color: $font-white;
-        }
-
-        &:hover {
-          background-color: $red;
-          color: $font-white;
-        }
-      }
-
-      &.blue {
-        color: $blue;
-
-        @media(max-width: 675px) {
-          background-color: $blue;
-          color: $font-white;
-        }
-
-        &:hover {
-          background-color: $blue;
-          color: $font-white;
-        }
-      }
-
-      &.violet {
-        color: $violet;
-
-        @media(max-width: 675px) {
-          background-color: $violet;
-          color: $font-white;
-        }
-
-        &:hover {
-          background-color: $violet;
-          color: $font-white;
-        }
-      }
-
-      &.yellow {
-        color: $yellow-text;
-
-        @media(max-width: 675px) {
-          background-color: $yellow;
-          color: $font-white;
-        }
-
-        &:hover {
-          background-color: $yellow;
-          color: $font-white;
-        }
-      }
+      &.services { @include indexColorLink($services-theme) }
     }
   }
 
@@ -216,7 +680,6 @@ html {
         margin-right: 20px;
 
         .fa-envelope {
-          margin-left: 5px;
           line-height: 0.7;
         }
       }

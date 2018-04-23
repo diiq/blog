@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html data-ember-extension="1" class="writing">
+<head>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<meta charset="UTF-8">
+  <link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+	<script src="{{ '/assets/js/unjustifiable.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+  <script src="{{ '/assets/js/justify.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+  <title>{{ page.title }} | Sam Bleckley</title>
+</head>
+<body class="blog-index-page page">
+    <button class="mobile-nav" aria-haspopup="true" onclick="openNav();">
+        <div>Sam Bleckley</div>
+        <i class="fa fa-lg fa-bars"></i>
+    </button>
+    <nav id="nav">
+        <button class="mobile-nav" aria-haspopup="true" onclick="closeNav();">
+            <div>Sam Bleckley</div>
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <a class="gray" href="/">Sam Bleckley</a>
+        <a class="tools" href="/tools">Tools</a>
+        <a class="services" href="/services">Services</a>
+        <a class="writing" href="/blog">Writing</a>
+        <a class="art" href="/art">Art</a>
+        <a class="contact" href="/contact">Contact</a>
+    </nav>
+    <main>
+        <div class="content">
+          <h1>Writing</h1>
+          <ul>
+              {% assign sorted = site.writing | sort: 'date' | reverse %}
+              {% for post in sorted %}
+              <li>
+                  <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
+                  <a class="title" href="{{ post.url }}">{{post.title}}</a>
+                  <p class="description">{{post.subtitle}}</p>
+              </li>
+              {% endfor %}
+          </ul>
+        </div>
+    </main>
+    <footer>
+      <a href="mailto:sam@sambleckley.com">sam@sambleckley.com</a>
+    </footer>
+</body>
+</html>
+

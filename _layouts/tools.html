@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html data-ember-extension="1" class="tools">
+<head>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<meta charset="UTF-8">
+  <link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+	<script src="{{ '/assets/js/unjustifiable.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+  <script src="{{ '/assets/js/justify.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+  <title>{{ page.title }} | Sam Bleckley</title>
+</head>
+<body class="tools-page page">
+    <button class="mobile-nav" aria-haspopup="true" onclick="openNav();">
+        <div>Sam Bleckley</div>
+        <i class="fa fa-lg fa-bars"></i>
+    </button>
+    <nav id="nav">
+        <button class="mobile-nav" aria-haspopup="true" onclick="closeNav();">
+            <div>Sam Bleckley</div>
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <a class="gray" href="/">Sam Bleckley</a>
+        <a class="tools" href="/tools">Tools</a>
+        <a class="services" href="/services">Services</a>
+        <a class="writing" href="/blog">Writing</a>
+        <a class="art" href="/art">Art</a>
+        <a class="contact" href="/contact">Contact</a>
+    </nav>
+    <main>
+        <div class="content">
+            <div class="aside">
+                <p>I build tools and products I’ve to help me do my job more effectively. Maybe they’ll help you, too.</p>
+            </div>
+            <h1>Tools</h1>
+            <div class="tool vistimo">
+                <div class="img"><img src="/assets/images/vistimo_logo.png" /></div>
+                <div class="description">
+                    <p>Vistimo manages software projects. It ensures
+                    your team shares the same product vision, and your
+                    business understands the time and budgetary
+                    risks.</p>
+                    <a href="https://www.vistimo.com/landing">Try it out</a>
+                </div>
+            </div>
+
+            <div class="tool reference-board">
+                <div class="img"><img src="/assets/images/reference-board-logo.svg" /></div>
+                <div class="description">
+                    <p>Reference Board helps artists to organize and store
+                    references images. It eliminates social distractions and
+                    lets artists concentrate on making art.</p>
+                    <a href="https://www.reference-board.com/">Try it out</a>
+                </div>
+            </div>
+
+            <div class="tool pigmentor">
+                <div class="img"><img src="/assets/images/pigmentor_logo.png" /></div>
+                <div class="description">
+                    <p>Pigmentor is a tool for understanding and harmonizing
+                    color, with a pedigree going back to the early 1900's and
+                    Munsell's Book of Color.</p>
+                    <a href="https://palette.sambleckley.com">Try it out</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <a href="mailto:sam@sambleckley.com">sam@sambleckley.com</a>
+    </footer>
+</body>
+</html>
+

@@ -16,10 +16,12 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$paper: #EFEEEA;
-$white: #F7F7F5;
+$paper: #f2f1ed;
+$white: #fdfcf8; //F7F7F5;
 $font-white: #fff;
-$font: #655D4E;
+$font: #363022;
+$font-light: #655D4E;
+$font-extra-light: #99907F;
 $green: #507443;
 $green-hover: #2A5F37;
 $blue: #3B799D;
@@ -32,6 +34,18 @@ $yellow: #EFC11C;
 $yellow-hover: #CEA71C;
 $yellow-text: #A68409;
 $yellow-text-hover: #CEA71C;
+
+
+$writing-theme: $red;
+$writing-theme-hover: $red-hover;
+$tools-theme: $blue;
+$tools-theme-hover: $blue-hover;
+$services-theme: $green;
+$services-theme-hover: $green-hover;
+$art-theme: $violet;
+$art-theme-hover: $violet-hover;
+$contact-theme: $yellow-text;
+$contact-theme-hover: $yellow-text-hover;
 
 // Font Colors
 $base-background-color: #fff;

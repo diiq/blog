@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ember-extension="1">
+<html data-ember-extension="1" class="writing">
 <head>
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width,initial-scale=1" name="viewport">
@@ -11,36 +11,46 @@
 	<script src="{{ '/assets/js/justify.js?v=' | append: site.github.build_revision | relative_url }}"></script>
   <title>{{page.title}} | Sam Bleckley</title>
 </head>
-<body>
-	<div id="blog-entry">
-		<div class="header">
-				<a href="/">
-					<svg viewBox="0 0 882 592" style="fill-rule:evenodd;stroke-linejoin:round" class="diiq"><path d="M547 149l-74 0 0 298 74 0 0-298ZM296 297c0 0 0 1 0 1 0 82-66 148-148 148 -82 0-148-66-148-148 0-82 66-148 148-148 28 0 53 8 75 21l0-171 74 0 0 296 -2 0ZM421 149l-74 0 0 296 74 0 0-296ZM882 298l1 0 0 296 -74 0 0-170c-22 13-48 20-75 20 -82 0-148-66-148-148 0-82 66-148 148-148 82 0 148 66 148 148 0 0 0 0 0 1ZM149 223c41 0 74 33 74 74 0 41-33 74-74 74 -41 0-74-33-74-74 0-41 33-74 74-74ZM810 298c0 0 0-1 0-1 0-41-33-74-74-74 -41 0-74 33-74 74 0 41 33 74 74 74 39 0 70-29 74-67l0-6 0 0Z"></path></svg>
-				</a>
-		</div>
-		<div class="post">
-			<div class="marginalia">
-				<div class="title">
-					<h1>{{page.title}}</h1>
-					<h2>{{page.subtitle}}</h2>
-				</div>
-				<p class="noteblock">{{page.notes}}</p>
-			</div>
+	<body class="blog-page page">
+	    <button class="mobile-nav" aria-haspopup="true" onclick="openNav();">
+					<div>Sam Bleckley</div>
+					<i class="fa fa-lg fa-bars"></i>
+			</button>
+			<nav id="nav">
+					<button class="mobile-nav" aria-haspopup="true" onclick="closeNav();">
+							<div>Sam Bleckley</div>
+							<i class="fa fa-lg fa-bars"></i>
+					</button>
+					<a class="gray" href="/">Sam Bleckley</a>
+					<a class="tools" href="/tools">Tools</a>
+					<a class="services" href="/services">Services</a>
+					<a class="writing" href="/blog">Writing</a>
+					<a class="art" href="/art">Art</a>
+					<a class="contact" href="/contact">Contact</a>
+			</nav>
+			<main>
+					<div class="content  {{page.categories}}">
+						<h1>{{ page.title }}</h1>
 
-			<div class="content {{page.categories}}">
-				{{ content }}
-			</div>
-			{% if page.previous.url %}
-			<a class="older" title="Older post" href="{{page.previous.url}}">&#x279C;</a>
-			{% endif %}
-			{% if page.next.url %}
-			<a class="newer" title="Newer post" href="{{page.next.url}}">&#x279C;</a>
-			{% endif %}
-		</div>
-		<div class="footer">
-			<div>&copy; Sam Bleckley 2018</div>
-			<div><a href="/">Home</a></div>
-		</div>
-	</div>
-</body>
+						<div class="marginalia">
+								<p>{{ page.date | date: "%B %e, %Y" }}</p>
+								<p>{{page.notes}}</p>
+						</div>
+
+						<div class="post">{{ content }}</div>
+
+						<div class="scrub">
+								{% if page.previous.url %}
+								<a class="older" title="Older post" href="{{page.previous.url}}">&#x279C;</a>
+								{% endif %}
+								{% if page.next.url %}
+								<a class="newer" title="Newer post" href="{{page.next.url}}">&#x279C;</a>
+								{% endif %}
+						</div>
+					</div>
+			</main>
+			<footer>
+				<a href="mailto:sam@sambleckley.com">sam@sambleckley.com</a>
+			</footer>
+	</body>
 </html>

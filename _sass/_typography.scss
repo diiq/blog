@@ -1,5 +1,5 @@
 body {
-  font-feature-settings: "kern", "liga", "dlig", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
   //-webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: $base-font-color;
@@ -37,10 +37,18 @@ acronym {
 }
 
 p {
-  font-feature-settings: "kern", "liga", "dlig", "pnum", "ss01";
+  font-feature-settings: "kern", "liga", "pnum";
   margin: 0;
   margin-bottom: 1em;
+}
+
+.post p {
+  font-feature-settings: "kern", "liga", "dlig", "pnum", "ss01", "onum";
   margin-right: -20px; // For unjustifiable overhang
+
+  > img {
+    padding-right: 20px;
+  }
 }
 
 a {
@@ -52,11 +60,13 @@ a {
   &:focus,
   &:hover {
     color: $blue-hover;
+    text-decoration: none;
   }
 
   &:active,
   &:focus {
     outline: none;
+    text-decoration: none;
   }
 }
 
@@ -69,7 +79,7 @@ picture {
 
 
 blockquote {
-  border-left: 3px solid #FA0;
+  border-left: 3px solid $font-extra-light;
   padding: $small-spacing $base-spacing;
   margin: 2em 0 2em 0;
 
