@@ -22,9 +22,9 @@ function makeDapple(t, l, r) {
   c.classList.add("dapple");
   c.style.top = t + "vh";
   c.style.left = l + "vw";
-  c.style.width = r + "px";
-  c.style.height = r + "px";
-  c.style.borderRadius = r/2 + "px";
+  c.style.width = r/12 + "vw";
+  c.style.height = r/12 + "vw";
+  c.style.borderRadius = r/24 + "vw";
   return c;
 }
 
