@@ -393,10 +393,10 @@ html {
     overflow-y: auto;
     font-size: 12px;
     margin-bottom: $base-spacing;
-    margin-left: calc(-43% - 50px);
+    margin-left: calc(-43% - 49px);
     margin-right: -50px;
 
-    background: #fff;
+    background: #fffffe;
 
     -webkit-overflow-scrolling: touch;
     &::-webkit-scrollbar-track {
@@ -729,122 +729,46 @@ html {
   }
 }
 
-
-.colors {
-  overflow: hidden;
-  position: absolute;
+.trees {
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #f2f1ed;
-
-  @media(max-width: 768px) {
-    display: none;
-  }
-
-  > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    animation: colorchange 60s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    background-color: rgb(15, 15, 2);
-    filter: blur(20px);
-    &:nth-of-type(5n) {
-      background-color: $red-afterimage;
-      animation-delay: 0s;
-      width: 20%;
-    }
-    &:nth-of-type(5n+1) {
-      background-color: $yellow-afterimage;
-      animation-delay: -10s;
-      width: 40%;
-    }
-    &:nth-of-type(5n+2) {
-      background-color: $green-afterimage;
-      animation-delay: -20s;
-      width: 35%;
-    }
-    &:nth-of-type(5n+3) {
-      background-color: $blue-afterimage;
-      animation-delay: -30s;
-      width: 30%;
-    }
-    &:nth-of-type(5n+4) {
-      background-color: $violet-afterimage;
-      animation-delay: -40s;
-      width: 25%;
-    }
-  }
-}
-
-@keyframes colorchange {
-  0% { transform: translate(0)  }
-  25% { transform: translate(100vw) }
-  50% { transform: translate(25vw)  }
-  75% { transform: translate(75vw) }
-  100% { transform: translate(0) }
-}
-
-
-.index-colors {
+  background-color: #dce3ec;
   overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #f2f1ed;
+  transform: rotate(0);
 
   @media(max-width: 768px) {
     display: none;
   }
-
-  > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    animation: vertcolorchange 60s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    background-color: rgb(15, 15, 2);
-    filter: blur(20px);
-    &:nth-of-type(5n) {
-      background-color: $red-afterimage;
-      animation-delay: 0s;
-      height: 20vh;
-    }
-    &:nth-of-type(5n+1) {
-      background-color: $yellow-afterimage;
-      animation-delay: -10s;
-      height: 40vh;
-    }
-    &:nth-of-type(5n+2) {
-      background-color: $green-afterimage;
-      animation-delay: -20s;
-      height: 35vh;
-    }
-    &:nth-of-type(5n+3) {
-      background-color: $blue-afterimage;
-      animation-delay: -30s;
-      height: 30vh;
-    }
-    &:nth-of-type(5n+4) {
-      background-color: $violet-afterimage;
-      animation-delay: -40s;
-      height: 25vh;
-    }
-  }
 }
 
-@keyframes vertcolorchange {
-  0% { transform: translate(0, 0)  }
-  25% { transform: translate(0, 100vh) }
-  50% { transform: translate(0, 25vh)  }
-  75% { transform: translate(0, 75vh) }
-  100% { transform: translate(0) }
+.dapple {
+  position: absolute;
+  filter: blur(10px);
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: rgba(255,255,254,.3);
+}
+
+.dapples-a {
+  animation: sway 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+}
+
+.dapples-b {
+  animation: sway 9.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+}
+
+@keyframes sway {
+  0% { transform: translate(-20vw, -20vh);  }
+  50% { transform: translate(20vw, 20vh);  }
+  100% { transform: translate(0vw, 0vh);  }
 }
