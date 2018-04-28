@@ -28,16 +28,16 @@ function makeDapple(t, l, r) {
   return c;
 }
 
-function makeDapples() {
+function makeDapples(element, klass) {
   var a = document.createElement("div");
   a.classList.add("dapples-a");
   var b = document.createElement("div");
   b.classList.add("dapples-b");
   var trees = document.createElement("div");
-  trees.classList.add("trees");
+  trees.classList.add(klass);
   trees.appendChild(a);
   trees.appendChild(b);
-  document.body.insertBefore(trees, document.body.firstChild);
+  element.insertBefore(trees, element.firstChild);
 
   for(var i = 0; i < 60; i++) {
     var r = 200 + Math.random() * 50;
@@ -50,4 +50,4 @@ function makeDapples() {
     }
   }
 }
-document.addEventListener("DOMContentLoaded", makeDapples);
+document.addEventListener("DOMContentLoaded", function() { makeDapples(document.body, "trees") });

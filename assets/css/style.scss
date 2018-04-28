@@ -53,7 +53,7 @@ html {
   h1 {
     font-size: 72px;
     font-weight: 200;
-    margin: 10px 0 60px -2.5ch;
+    margin: 10px 0 60px -2.65ch;
     max-width: 475px;
     padding: 0;
 
@@ -307,6 +307,7 @@ html {
   @include colorPage($art-theme, $art-theme, $art-theme-hover, art);
   h1 {
     font-size: 48px;
+    margin-left: -3.3ch;
   }
 
   .art-post {
@@ -744,6 +745,16 @@ html {
   }
 }
 
+.js-figure {
+  height: 40vh;
+  min-height: 400px;
+  background-color: #dce3ec;
+  overflow: hidden;
+  transform: rotate(0);
+  border: 1px solid #CFC5B4;
+  margin-bottom: 30px;
+}
+
 .dapple {
   position: absolute;
   filter: blur(15px);
@@ -772,4 +783,56 @@ html {
   0% { transform: translate(-20vw, -20vh);  }
   50% { transform: translate(20vw, 20vh);  }
   100% { transform: translate(0vw, 0vh);  }
+}
+
+
+
+
+
+#stripes {
+  overflow: hidden;
+  background-color: #f2f1ed;
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    animation: colorchange 40s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: rgb(15, 15, 2);
+    &:nth-of-type(5n) {
+      background-color: $red-afterimage;
+      animation-delay: 0s;
+      width: 7%;
+    }
+    &:nth-of-type(5n+1) {
+      background-color: $blue-afterimage;
+      animation-delay: -7s;
+      width: 28%;
+    }
+    &:nth-of-type(5n+2) {
+      background-color: $green-afterimage;
+      animation-delay: -14s;
+      width: 21%;
+    }
+    &:nth-of-type(5n+3) {
+      background-color: $yellow-afterimage;
+      animation-delay: -21s;
+      width: 30%;
+    }
+    &:nth-of-type(5n+4) {
+      background-color: $violet-afterimage;
+      animation-delay: -28s;
+      width: 14%;
+    }
+  }
+}
+
+ @keyframes colorchange {
+   0.0% { transform: translate(0)  }
+   25% { transform: translate(400px) }
+   50% { transform: translate(100px)  }
+   75% { transform: translate(300px) }
+   100% { transform: translate(0) }
 }
