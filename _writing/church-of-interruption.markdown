@@ -4,7 +4,7 @@ title:  "The Church of Interruption"
 subtitle: A conversation with a Wizard
 date: 2011-11-22
 categories: on good
-notes: I’m working from memory – don’t hold me to the accuracy of individual words.
+notes: The conversation about this post on <a href="https://www.metafilter.com/174614/Weve-had-Ask-vs-Guess-and-now">metafilter</a> will give you some idea how nuanced and fraught this topic is. This post is not intended to be comprehensive, just offer some tools that have been useful to me.
 ---
 
 Sometimes I am startled to realize, in the middle of a discussion, that I have offended or hurt some of the people I’m talking with.

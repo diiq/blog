@@ -18,7 +18,7 @@ email: s@diiq.org
 description: >- # this means to ignore newlines until "baseurl:"
   Sam is a software engineer, designer, and artist. This is Sam's blog.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://sambleckley.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: diiq
 github_username: diiq
 github: [metadata]
@@ -29,6 +29,7 @@ markdown: kramdown
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 collections:
   writing:

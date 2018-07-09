@@ -5,8 +5,8 @@
 layout: index
 ---
 
-My name is Sam Bleckley. I’m a software engineer, designer, and artist working
-out of Grand Rapids, Michigan.
+My name is Sam Bleckley. I’m a <span class="category">software engineer, designer, and artist</span> working
+out of <span class="adr"><span class="locality">Grand Rapids</span>, <span class="region">Michigan</span></span>.
 
 I design and build information-dense, complex web software for clients and for
 my own business.

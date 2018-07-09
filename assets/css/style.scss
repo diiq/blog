@@ -66,8 +66,8 @@ html {
       margin: 10px auto 60px;
     }
 
-    @media(max-width: 325px) {
-      font-size: 50px;
+    @media(max-width: 400px) {
+      font-size:48px;
     }
   }
 
@@ -523,9 +523,11 @@ html {
     background-color: #fff;
     border: 1px solid #CFC5B4;
     padding: 30px;
+    padding-bottom: 70px;
     margin: 15px;
     min-width: 250px;
     flex: 1;
+    position: relative;
 
     .title {
       color: $services-theme;
@@ -537,17 +539,16 @@ html {
     a {
       color: $font-white;
       margin: 30px auto 0;
-      max-width: 250px;
+      max-width: 275px;
       background-color: $blue;
       display: block;
       text-align: center;
       font-family: $heading-font-family;
       padding: 5px 10px;
-
-      @media(max-width: 675px) {
-        max-width: 100%;
-        width: 100%;
-      }
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      right: 30px;
     }
   }
 
@@ -556,6 +557,9 @@ html {
   .service.talks { @include serviceBox($red, $red-hover);}
   .service.web-app { @include serviceBox($green, $green-hover);
     min-width: 70%;
+  }
+  .service.linkless {
+    padding-bottom: 30px;
   }
   .service.audit {
     @include serviceBox($yellow, $yellow-hover);
@@ -651,12 +655,18 @@ html {
       margin-top: 100px;
     }
 
-    h1 {
+    a.fn {
+      display: block;
+      font-family: $heading-font-family;
       font-size: 72px;
       font-weight: 200;
       margin: 0;
-      margin-bottom: 32px;
+      line-height: 1;
+      margin-bottom: 30px;
       padding: 0;
+      cursor: default;
+      color: $base-font-color;
+      pointer-events: none;
 
       @media(max-width: 800px) {
         font-size: 60px;
