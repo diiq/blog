@@ -776,6 +776,10 @@ html {
 }
 
 .dapples-a {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translateZ(0);
   animation: sway 10s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -783,6 +787,10 @@ html {
 }
 
 .dapples-b {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translateZ(0);
   animation: sway 9.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -790,9 +798,9 @@ html {
 }
 
 @keyframes sway {
-  0% { transform: translate(-20vw, -20vh);  }
-  50% { transform: translate(20vw, 20vh);  }
-  100% { transform: translate(0vw, 0vh);  }
+  0% { transform: translate3d(-20vw, -20vh, 0);  }
+  50% { transform: translate3d(20vw, 20vh, 0);  }
+  100% { transform: translate3d(0vw, 0vh, 0);  }
 }
 
 
