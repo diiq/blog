@@ -7,7 +7,7 @@ title: Custom Applications
 permalink: /services/custom-apps/
 ---
 <div class="aside">
-    <p>Building custom software from the ground up requires a methodical approach to ensure you get the right result, on time and on budget. I break the planning and execution into 4 phases; and I'm happy to work with you through all four, or just part of the way.</p>
+    <p>I break the planning and execution of custom software into 4 phases; and I'm happy to work with you through all four, or just part of the way.</p>
 </div>
 <h1>Custom Software</h1>
 <div class="services">

@@ -40,7 +40,7 @@ html {
 
   .content > .aside {
     float: right;
-    width: 70%;
+    width: 40%;
     margin-top: 32px;
     color: $font-light;
     font-family: $heading-font-family;
@@ -55,7 +55,9 @@ html {
     font-weight: 200;
     margin: 10px 0 60px -2.65ch;
     max-width: 475px;
-    padding: 0;
+    display: block;
+    padding: 30px;
+    color: #fff;
 
     @media(max-width: 900px) {
       margin-left: 0;
@@ -128,8 +130,8 @@ html {
       padding: 20px;
       transition: color 125ms;
 
-      &:hover {
-        font-weight: bold;
+      &:hover, &:focus {
+        text-decoration: underline;
       }
 
       &.tools { @include colorLink($tools-theme, $tools-theme-hover) }
@@ -197,8 +199,13 @@ html {
   }
 
   h1 {
-    color: $color;
+    background-color: $color;
+    @media(max-width: 900px) {
+      background-color: transparent;
+      color: $color;
+    }
   }
+  
 
   nav {
     a.#{$class} {
@@ -491,6 +498,18 @@ html {
       background-color: #FF8800;
       &:hover {
         background-color: darken(#FF8800, 10%);
+      }
+    }
+  }
+
+  .tool.draw-every-day {
+    .img {
+      background-color: #3DA5E6;
+    }
+    a {
+      background-color: #3DA5E6;
+      &:hover {
+        background-color: darken(#3DA5E6, 10%);
       }
     }
   }

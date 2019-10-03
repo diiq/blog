@@ -11,7 +11,7 @@ I've been thinking a lot about how the software industry can become more
 professional. One way to explore that is by comparing software practices to some
 other industry.
 
-The obvious choices for comparison are other technical fields: branches   of
+The obvious choices for comparison are other technical fields: branches of
 engineering, architecture, etc. 
 
 But there's another industry where high-strung workers are expected to apply
@@ -29,8 +29,8 @@ What do they know about getting things done quickly that we don't?
 
 ## What makes a good chef
 
-Jacques Pépin has said that, if he wanted to judge a chef's technical skill, he
-'d probably have them make a French omelette.
+Jacques Pépin has said that, if he wanted to judge a chef's technical skill, he'd
+probably have them make a French omelette.
 
 Why an omelette? Eggs are unforgiving in this sense: they do not wait, they
 cannot uncook, and the window when they are tender is narrow. No single step in
@@ -48,9 +48,9 @@ a task that calls for fancy French verbiage.
 
 ## Mise en place
 
-Mise en place is the phrase for all the setup, all the preparation of
+*Mise en place* is the phrase for all the setup, all the preparation of
 ingredients, tools, and emotional poise necessary for work as a professional
-chef. It means "everything in it's place". It's more satisfying and pretentious
+chef. It means "everything in its place". It's more satisfying and pretentious
 to leave it in French, so I shall.
 
 Mise en place is invisible because it's already been done. When you walk into a
@@ -98,8 +98,8 @@ then re-frame the features with those tools."
 I bet him a whole dollar that that would never, ever happen; but the idea of it
 stuck with me as a very lisp-y, bottom-up approach that appealed to me.
 
-## Mise en codegen
 
+## Mise en codegen
 
 What does mise en place mean in the software world?
 
@@ -117,8 +117,8 @@ build the features incredibly rapidly and gracefully because your mise is
 settled. 
 
 "No deployable work?" you say. "That goes against everything we know!". You're
-right; mise is not right for every recipe, and this workflow is not suitable for
-example, for startups that might pivot to an entirely different industry and
+right; mise is not right for every recipe, and this workflow might not be
+not suitable for startups that might pivot to an entirely different industry and
 concept. If, however, the industry is right and it's the product space needs
 exploring, then building some generic tools could speed you along. When you
 learn something important, and need a complete rewrite or major change, that's
@@ -128,7 +128,7 @@ with good mise.
 
 It's not waterfall; you're not preparing to build one rigid thing, untested
 until complete. But it's not myopic agile, working only within the mental
-confines of a single sprint.
+confines of a single sprint. Build legos, and then build *with* the legos.
 
 Beware, though! Good mise only comes from a practiced technician. The grunt-work
 of chopping celery may go to a less experienced cook, but establishing what goes
