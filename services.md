@@ -11,6 +11,10 @@ permalink: /services/
     direction? Here are some ways I can help.</p>
 </div>
 <h1>Services</h1>
+<div class="aside-mobile">
+    <p>Does your team need a helping hand, or a nudge in the right
+    direction? Here are some ways I can help.</p>
+</div>
 <div class="services">
     <div class="service web-app">
         <div class="title">Custom Web Applications</div>
@@ -20,8 +24,8 @@ permalink: /services/
 
     <div class="service hire">
         <div class="title">First Hire Assistance</div>
-        <p>Hiring your first software engineer can be daunting. It's a huge expense, 
-        and it's very hard to vet candidate's technical skills. Let me help you, 
+        <p>Hiring your first software engineer can be daunting. It's a huge expense,
+        and it's very hard to vet candidate's technical skills. Let me help you,
         from writing the job description, through the interview process.</p>
         <a href="/contact">Contact Me</a>
     </div>
@@ -37,9 +41,9 @@ permalink: /services/
 
     <div class="service gap">
         <div class="title">Gap Analysis</div>
-        <p>You don't already have a product in mind, but you suspect that the right 
-        idea could change your business for the better. I can help! Over 2-3 weeks, 
-        I'll talk to you, your team, and your customers, and see if 
+        <p>You don't already have a product in mind, but you suspect that the right
+        idea could change your business for the better. I can help! Over 2-3 weeks,
+        I'll talk to you, your team, and your customers, and see if
         custom software or improved processes might make a difference.</p>
         <a href="/contact">Contact Me</a>
     </div>

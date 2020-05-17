@@ -38,7 +38,7 @@ html {
   margin: 0;
   padding: 0;
 
-  .content > .aside {
+  .content > .aside, content > .aside-mobile {
     float: right;
     width: 40%;
     margin-top: 32px;
@@ -47,6 +47,17 @@ html {
 
     @media(max-width: 900px) {
       display: none;
+    }
+  }
+
+  .content > .aside-mobile {
+    display: none;
+    margin-bottom: 60px;
+    text-align: center;
+
+    @media(max-width: 900px) {
+      display: block;
+      float: none;
     }
   }
 
@@ -59,13 +70,13 @@ html {
     padding: 30px;
     color: #fff;
 
-    @media(max-width: 900px) {
-      margin-left: 0;
+    @media(max-width: 1030px) {
+      margin-left: -50px;
     }
 
-    @media(max-width: 768px) {
+    @media(max-width: 900px) {
       text-align: center;
-      margin: 10px auto 60px;
+      margin: 10px auto 10px;
     }
 
     @media(max-width: 400px) {
@@ -100,7 +111,7 @@ html {
   nav {
     position: relative;
     margin: 0 auto;
-    max-width: 808px;
+    max-width: 900px;
     display: flex;
     justify-content: space-between;
 
@@ -172,9 +183,9 @@ html {
   .content {
     @include clearfix();
     padding: 50px;
-    background-color: $white;
+    background-color: #fff;
     margin: 0 auto -50px;
-    max-width: 768px;
+    max-width: 900px;
 
     @media(max-width: 675px) {
       padding: 20px;
@@ -205,7 +216,7 @@ html {
       color: $color;
     }
   }
-  
+
 
   nav {
     a.#{$class} {
@@ -249,7 +260,7 @@ html {
 
 .contact-page {
   @include colorPage($contact-theme, $yellow, $contact-theme-hover, contact);
-  .content { max-width: 808px; }
+  .content { max-width: 900px; }
   nav a.contact {
     color: $font;
     &:hover {
@@ -655,7 +666,7 @@ html {
   }
 
   main {
-    background-color: $white;
+    background-color: #fff;
     position: relative;
     flex: 2;
 
@@ -757,6 +768,46 @@ html {
       }
     }
   }
+
+  .quotes {
+    height: 200px;
+    overflow: hidden;
+    padding-top: -100px;
+
+    blockquote {
+      margin: 0;
+      height: 200px;
+      animation: 40s quote infinite;
+      overflow: hidden;
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      @media(max-width: 500px) {
+        font-size: 18px;
+      }
+    };
+  }
+
+  @keyframes quote {
+    0% { transform: translateY(0);}
+
+    18% { transform: translateY(0);}
+    20% { transform: translateY(-200px);}
+
+    38% { transform: translateY(-200px);}
+    40% { transform: translateY(-400px);}
+
+    58% { transform: translateY(-400px);}
+    60% { transform: translateY(-600px);}
+
+    78% { transform: translateY(-600px);}
+    80% { transform: translateY(-800px);}
+
+    98% { transform: translateY(-800px);}
+  }
+
 }
 
 .trees {

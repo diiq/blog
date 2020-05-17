@@ -7,13 +7,17 @@ title: Custom Applications
 permalink: /services/custom-apps/
 ---
 <div class="aside">
-    <p>I break the planning and execution of custom software into 4 phases; and I'm happy to work with you through all four, or just part of the way.</p>
+    <p>I have a breadth of experience in lots of web technologies, both frontend and backend. If you're already dedicated to using a particular tech stack, I can probably help with that.</p>
 </div>
 <h1>Custom Software</h1>
+<div class="aside-mobile">
+    <p>I have a breadth of experience in lots of web technologies, both frontend and backend. If you're already dedicated to using a particular tech stack, I can probably help with that.</p>
+</div>
 <div class="services">
+    <div class="service web-app linkless" style="border: 0"><p>I break the planning and execution of custom software into 4 phases; and I'm happy to work with you through all four, or just part of the way.</p></div>
     <div class="service web-app linkless">
       <h4 class="title">I. Research and Inception</h4>
-      <p>During the inception phase, I conduct stakeholder interviews. I want to understand not just your problem, but your business, and how you measure value. I'll document your existing solution, and if your competitors have solutions, I'll examine those as Ill. I'll talk to users, and validate our assumptions with simple prototypes.</p>
+      <p>During the inception phase, I conduct stakeholder interviews. I want to understand not just your problem, but your business, and how you measure value. I'll document your existing solution, and if your competitors have solutions, I'll examine those as well. I'll talk to users, and validate our assumptions with simple prototypes.</p>
       <p>At the end of this phase, I deliver a story-map, which is a proposal of the features I think the final product should have, and how it will benefit your business.</p>
     </div>
 
