@@ -104,10 +104,20 @@ blockquote {
   visibility: hidden;
 }
 
-tt {
-  font-size: .9em;
-  font-family: monospace;
+code {
+  font-size: .8em;
+  font-family: 'Courier New', Courier, monospace;
   color: #555;
+}
+
+p code {
+  white-space: normal;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .8em;
+}
+
+pre code {
+  font-size: 1.3em;
 }
 
 label {

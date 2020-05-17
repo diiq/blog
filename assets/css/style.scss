@@ -260,7 +260,6 @@ html {
 
 .contact-page {
   @include colorPage($contact-theme, $yellow, $contact-theme-hover, contact);
-  .content { max-width: 900px; }
   nav a.contact {
     color: $font;
     &:hover {
@@ -369,7 +368,6 @@ html {
     @media(max-width: 675px) {
       width: 100%;
       float: none;
-      max-width: 500px;
       margin: 0 auto;
     }
   }
@@ -386,9 +384,13 @@ html {
     @media(max-width: 675px) {
       display: none;
     }
+
+    p {
+      white-space: pre-wrap;
+    }
   }
 
-  figure {
+  figure.image {
     margin: $base-spacing 0;
     padding: $small-spacing/2 $base-spacing;
     font-size: .9em;
@@ -402,16 +404,22 @@ html {
     background-color: $font-white;
   }
 
-  div.highlight {
+  pre {
+    overflow: visible;
+  }
+
+  figure.highlight, div.highlight {
+    overflow: auto;
     border-top: 1px solid #EBE1CF;
     border-bottom: 1px solid #EBE1CF;
 
-    padding: 0px 50px;
+    padding: 30px 50px;
     overflow-x: auto;
     max-height: 50vh;
     overflow-y: auto;
     font-size: 12px;
-    margin-bottom: $base-spacing;
+    margin-bottom: $base-spacing * 2;
+    margin-top: $base-spacing * 2;
     margin-left: calc(-43% - 49px);
     margin-right: -50px;
 
@@ -430,6 +438,10 @@ html {
 
     &::-webkit-scrollbar-thumb {
       background-color: #EBE1CF;
+    }
+
+    @media(max-width: 675px) {
+      margin: 0 -20px $base-spacing;
     }
   }
 
@@ -666,7 +678,7 @@ html {
   }
 
   main {
-    background-color: #fff;
+    background-color: $white;
     position: relative;
     flex: 2;
 
@@ -807,7 +819,6 @@ html {
 
     98% { transform: translateY(-800px);}
   }
-
 }
 
 .trees {

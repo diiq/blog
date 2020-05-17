@@ -7,7 +7,7 @@ title: Services
 permalink: /services/
 ---
 <div class="aside">
-    <p>Does your team need a helping hand, or a nudge in the right
+    <p class="skip-justification">Does your team need a helping hand, or a nudge in the right
     direction? Here are some ways I can help.</p>
 </div>
 <h1>Services</h1>

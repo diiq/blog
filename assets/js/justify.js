@@ -4,7 +4,7 @@ const justify = unjustifiable({
 })
 
 window.addEventListener("load", function() {
-  const elts = document.querySelectorAll(".post:not(.poetry) p");
+  const elts = document.querySelectorAll(".content:not(.poetry) p:not(.skip-justification)");
   elts.forEach(justify);
 })
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Black Ice"
 subtitle: A poem written on public transit
 date: 2014-02-04
-categories: code
+categories: poetry
 notes: This was composed on a bus ride, between 5:45 and 6:15. There was a delay due to a stopped train. The theme came from <a href="https://twitter.com/SaltedCarthage/status/430834853148258304">here</a>
 ---
 
@@ -21,4 +21,4 @@ In the very end it won’t be the ice waking up with a broken foot.
 So listen; don’t touch, don’t step. Black ice sings her song:  
 
 I am not yours, not wet, not sound, not safe, not soft — not now.  
-My nature never lived in eyes, but here, in frozen ground.
+My nature never lived in eyes, but here, in frozen ground.  
