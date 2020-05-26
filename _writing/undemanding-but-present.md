@@ -15,7 +15,7 @@ Digital design is obsessed with content. Everything choice is made to center con
 
 Everywhere you look, in a forest, there is something to see. The closer you look at any square inch, the more rewards you will find. There is life, and detail, and interest *everywhere*. And yet, the forest is a relaxing, low-intensity place to be. We unwind there. Why is that? Despite the fact that every place you can rest your eyes is filled with information, *none of it demands your attention*. It isn't aching to convey that information to you; it's not calling out to you. You are free to choose where to let your eyes rest, and what to ignore; whereever your eyes fall there are riches, and whatever you ignore remains largely invisible.
 
-A forest is the anti-website; there is no funnel, no call to action, no bounce rate. When you get bored or distracted or want to rest, you don’t go *elsewhere* -- you *do elsewhat*. You sit on a rock, you stare at the sky, you look at a bug, you play with a stick.
+A forest is the anti-website; there is no funnel, no call to action, no bounce rate. When you get bored or distracted or want to rest, you don’t go *elsewhere* --- you *do elsewhat*. You sit on a rock, you stare at the sky, you look at a bug, you play with a stick.
 
 Such things can be intentionally brought into a space; see [Gongshi](https://en.wikipedia.org/wiki/Gongshi), as an example of a semi-manufactured place to look without intent.
 
@@ -25,9 +25,9 @@ Unlike a website, a forest is a place where close-looking is both **rewarded** a
 
 ### II. The Thresholds of Perception
 
-> There!  
-> Near the borderline  
-> Right between two countries  
+> There!
+> Near the borderline
+> Right between two countries
 > &mdash; They Might Be Giants
 
 Lately I’ve been playing with one *specific* approach to rewarding close-looking; it’s by no means the only way, or even the best way, but it’s *a* way.
@@ -50,7 +50,7 @@ These map reasonably onto the two properties of close-looking in a forest: the r
 
 ### III. Doing it Digitally
 
-All this Capital-A Art is very inspiring, but maybe impossible to recreate digitally; both Reinhardt's meticulously-painted matte surfaces and Turell's body-encompassing light paintings are really very analog, very physical things -- they're almost impossible to photograph, let alone mimic within the limits of a screen. But if we're to try, we've got to nail down what, exactly, the limits of a screen *are*: 
+All this Capital-A Art is very inspiring, but maybe impossible to recreate digitally; both Reinhardt's meticulously-painted matte surfaces and Turell's body-encompassing light paintings are really very analog, very physical things --- they're almost impossible to photograph, let alone mimic within the limits of a screen. But if we're to try, we've got to nail down what, exactly, the limits of a screen *are*:
 
 * A screen takes up a limited field of view
 * we cannot control the light levels or colors in the surrounding space
