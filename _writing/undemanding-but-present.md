@@ -70,12 +70,12 @@ Using Pigmentor, I can easily and quickly pick colors which rest right on the ed
 
 which, if you stare at patiently, you'll find contains moving stripes of color. Each color has precisely the same lightness, and the same chroma; only the hues are shifted (the hues, though, are actually dramatically different). If you're in a uniformly-lit environment (dimly lit is even better) then the longer you stare, the brighter and more obvious the stripes become. When I first finished it, having been staring at it for hours, I was convinced it was a failure; it was too brash, too garish and distracting. It was only when I showed it to people who had not stared at it all day, and watched them take several minutes to see the stripes at all, that I was convinced.
 
-Here's a similar (but more obvious) effect that I'm using in the background of this site, right now; it mimics the dappled light in the shadow of a tree:
+Here's a similar (but more obvious) effect; it mimics the dappled light in the shadow of a tree:
 
 <div id="dappled"></div>
 <script>makeDapples(document.getElementById("dappled"), "js-figure")</script>
 
-This one is much more obvious, because it uses value-contrast, where the stripes exercise uses hue-contrast. Value is a tyrant, and matters to your eye more than anything else; and this value contrast is ~10 times the minimum distinguishable difference.
+This one is much more obvious, because it uses non-zero value-contrast, where the stripes exercise uses hue-contrast. Value is a tyrant, and matters to your eye more than anything else; and this value contrast is ~10 times the minimum distinguishable difference.
 
 ### Epilogue
 

@@ -315,7 +315,7 @@ html {
   }
 
   ul {
-    max-width: 600px;
+    max-width: 675px;
     margin: 0 auto;
   }
 }
@@ -354,13 +354,18 @@ html {
   }
 
   ul {
-    max-width: 600px;
+    max-width: 675px;
     margin: 0 auto;
   }
 }
 
 .blog-page {
   @include colorPage($writing-theme, $writing-theme, $writing-theme-hover, writing);
+
+  h1 {
+    max-width: 550px;
+  }
+
   .post {
     width: 70%;
     float: right;
@@ -374,7 +379,7 @@ html {
 
   .marginalia  {
     font-family: "Raleway";
-    font-size: 12px;
+    font-size: 14px;
     color: $font-extra-light;
     min-height: 100%;
     width: 29%;
@@ -647,7 +652,7 @@ html {
     @media(max-width: 675px) {
       flex: 0;
       display: block;
-      padding: 40px 30px;
+      padding: 40px 30px 110px; // Remove 110px when hiring banner goes
     }
 
     a {
@@ -935,3 +940,34 @@ html {
    75% { transform: translate(300px) }
    100% { transform: translate(0) }
 }
+
+
+
+.footer-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $green;
+  color: $white;
+  z-index: 8;
+  padding: 1rem;
+  font-family: $heading-font-family;
+  text-align: center;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  @media(max-width: 740px) {
+    font-size: .9rem;
+  }
+}
+
+html.tools .footer-banner { background-color: $tools-theme; }
+html.writing .footer-banner { background-color: $writing-theme; }
+html.services .footer-banner { background-color: $services-theme; }
+html.art .footer-banner { background-color: $art-theme; }
+html.contact .footer-banner { background-color: $yellow; color: $base-font-color }
+html.default .footer-banner { background-color: $blue; }
