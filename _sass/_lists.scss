@@ -32,6 +32,10 @@ ul {
     &.no-bullet:before {
       border: 0;
     }
+
+    p:first-child {
+      margin-top: -30px;
+    }
   }
 }
 
