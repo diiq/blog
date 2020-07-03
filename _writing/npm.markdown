@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Worrying about the <acronym>npm</acronym> ecosystem"
+title:  "Worrying about the NPM ecosystem"
 subtitle: There are too many packages and too many dependencies, too deeply nested. Can we measure the problem? And what do we do about it?
 date: 2020-06-29
 categories: code
 notes:
 ---
 ### TL;DR
-The <acronym>npm</acronym> ecosystem seems unwell. If you are concerned with security, reliability, or long-term maintainence, it is almost impossible to pick a suitable package to use --- both because there are 1.3 million packages available, and even if you find one that is well documented and maintained, it might depend on hundreds of other packages, with dependency trees stretching ten or more levels deep --- as one developer, it's impossible to validate them all.
+The <acronym>npm</acronym> ecosystem seems unwell. If you are concerned with security, reliability, or long-term maintenance, it is almost impossible to pick a suitable package to use --- both because there are 1.3 million packages available, and even if you find one that is well documented and maintained, it might depend on hundreds of other packages, with dependency trees stretching ten or more levels deep --- as one developer, it's impossible to validate them all.
 
 I spend some time measuring the extent of the problem.
 
@@ -102,7 +102,7 @@ The *average* dependency tree depth in npmjs.org is just under 4. Which doesn't 
 
 As often happens, though, the mean does not tell the whole story. Almost half of all packages have no dependencies at all --- which is a good thing! --- but all those zeros dramatically drop the average of the packages that *do* have dependencies.
 
-If we charted of the number of packages with each dependency tree depth greaterh than zero, then based on the idealized registry I imagined above, here's what I'd hope to see:
+If we charted of the number of packages with each dependency tree depth greater than zero, then based on the idealized registry I imagined above, here's what I'd hope to see:
 
 **Imagined:**
 
@@ -114,7 +114,7 @@ And here's what we actually get:
 
 ![Real chart of package counts per tree depth](/assets/images/npm_packages_per_tree_depth.svg)
 
-Remember that we were hoping for mostly 2, 3 and 4. Instead, there are still a long tail of packages with tree depths *above 20*. 20 is... much larger than I was expecting, and I was expecting to be disappointed.
+Remember that we were hoping for mostly 2, 3, and 4. Instead, there is still a long tail of packages with tree depths *above 20*. 20 is... much larger than I was expecting, and I was expecting to be disappointed.
 
 But let's re-use the "oddball" theory: perhaps all those packages with extremely deep dependency trees are rarely used, and not worth worrying about. Let's check.
 
@@ -135,7 +135,7 @@ There are heaps of 10+ tree-depths up among even the most popular packages, and 
 
 ### Direct dependencies (branching factor)
 
-The average number of direct dependencies (among packages with any dependencies at all) is 5. That, by itself, doesn't seem to bad. It feels a little alarming when combined with high tree depths, though. Does that mean some of these packages have 5<sup>10<sup> total dependencies? (Spoiler: no.)
+The average number of direct dependencies (among packages with any dependencies at all) is 5. That, by itself, doesn't seem to bad. It feels a little alarming when combined with high tree depths, though. Does that mean some of these packages have 5<sup>10</sup> total dependencies? (Spoiler: no.)
 
 Here's a graph of how many packages have 1 dependency, 2 dependencies... up to 30 --- a nice, neat exponential decay.
 
@@ -201,13 +201,13 @@ But most of all, imagine this recursive rule:
 
 - A healthy package can only depend on other healthy packages.
 
-Now, starting with the most popular packages with zero dependencies, start collecting a list of healthy packages. Then you can start looking at the packages that depend upon those, walking teh dependency graph backwards and flagging what is not only safe, but recursively so. Eventually, (with time, and enough social pressure to be "healthy"), you could build something akin to a standard library. When a package like `request` decides to deprecate, that will mean *something* to any approved packages that depend on it --- they must find a replacement, or lose approved status themselves.
+Now, starting with the most popular packages with zero dependencies, start collecting a list of healthy packages. Then you can start looking at the packages that depend upon those, walking the dependency graph backwards and flagging what is not only safe, but recursively so. Eventually, (with time, and enough social pressure to be "healthy"), you could build something akin to a standard library. When a package like `request` decides to deprecate, that will mean *something* to any approved packages that depend on it --- they must find a replacement, or lose approved status themselves.
 
 There's no need to change <acronym>npm</acronym> for any of this to work! People can still publish silly packages and personal packages and packages they have no intention of maintaining --- but it will be easy for developers in professional contexts to recognize the difference.
 
 It's a lovely picture to imagine. Obviously, it won't work. The most popular javascript packages, especially large frameworks, have no impetus to dramatically change their practices just because some person in West Michigan made some graphs and said it would be nice.
 
-Any set of rules will risk gaming; for instance, if you say a healthy package responds to bug reports in a timely manner, you're giving permission to furstrated mis-users to yell and scream and threaten to report a project when they're ignored.
+Any set of rules will risk gaming; for instance, if you say a healthy package responds to bug reports in a timely manner, you're giving permission to frustrated mis-users to yell and scream and threaten to report a project when they're ignored.
 
 How do we solve *those* problems?
 
@@ -228,7 +228,7 @@ I cannot offer a batteries-included answer, but I want you to walk away with the
 - That solution will need to take into account not just a package, but all its direct and indirect dependencies, too.
 - And, for approval and adoption, it will need the social clout of major names in the field.
 
-If you're interested in discussing the problem, potential solutions, or berating me for getting it all wrong, feel free to reach out: [sam@sambleckely.com](mailto:sam@sambleckley.com).
+If you're interested in discussing the problem, potential solutions, or berating me for getting it all wrong, feel free to reach out: [sam@sambleckley.com](mailto:sam@sambleckley.com).
 
 <br />
 <br />
@@ -269,7 +269,7 @@ Similarly, to calculate the depth of dependency trees, find all packages with no
 
 The biggest challenge was counting total indirect dependencies. A single package may depend on another single package in many ways --- as a direct dependency, and as an indirect dependency multiple places elsewhere in its dependency tree. If you ignore that fact, especially for packages with deep trees, you can end up with results like "this package has 900,000 indirect dependencies".
 
-So there is no inductive-proof-style all-SQL solution to be had, here. You must add another join table from packages onto packages, this time tracking indirect dependencies. It needs a compound uniqueness key. And you'll need to iterate through every package, starting with depth = 1 and working up, filling out the indirect dependencies from both the direct dependencies table, and all the indirect dependencies from the previous depth.
+So there is no inductive-proof-style all-SQL solution to be had, here. You must add another join table from packages onto packages, this time tracking indirect dependencies. It needs a compound uniqueness key. And you'll need to iterate through every package, starting with `depth = 1` and working up, filling out the indirect dependencies from both the direct dependencies table, and all the indirect dependencies from the previous depth.
 
 inserting 40 million entries into that join table will, as before, take many hours of computation, so try to get it right the first time.
 
