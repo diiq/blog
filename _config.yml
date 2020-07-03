@@ -38,9 +38,9 @@ collections:
     output: true
 
 feed:
-  path: atom.xml
   collections:
     - writing
+    - art
 
 
 
