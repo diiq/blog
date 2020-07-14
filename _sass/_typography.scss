@@ -21,14 +21,20 @@ h6 {
 }
 
 h1, h2, h3 { margin-top:0; margin-bottom:0; }
-h1 { font-size:1.5em; padding:1.45833em 0; }
-h2 { font-size:1.33333em; padding:1.25em 0; }
+h1 { font-size:1.5em; margin:1.45833em 0; }
+h2 { font-size:1.33333em; margin:2.5em 0 1.25em; }
 h3 {
   font-feature-settings: "c2sc";
   font-family: "equity-caps-b";
   font-size:1em;
   font-weight: bolder;
-  padding: 1.5em 0 1em;
+  margin: 1.5em 0 1em;
+}
+h4 {
+  font-family: $base-font-family;
+  font-size:1em;
+  font-weight: bold;
+  margin: 1em 0 1em;
 }
 
 acronym {

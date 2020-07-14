@@ -375,6 +375,10 @@ html {
       float: none;
       margin: 0 auto;
     }
+
+    :first-child {
+      margin-top: 0;
+    }
   }
 
   svg.chart {
