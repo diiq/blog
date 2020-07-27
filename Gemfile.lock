@@ -5,12 +5,15 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.5)
+    cssminify2 (2.0.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
+    execjs (2.7.0)
     ffi (1.11.1)
     forwardable-extended (2.6.0)
+    htmlcompressor (0.4.0)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -29,6 +32,12 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.14.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-minifier (0.1.10)
+      cssminify2 (~> 2.0)
+      htmlcompressor (~> 0.4)
+      jekyll (>= 3.5)
+      json-minify (~> 0.0.3)
+      uglifier (~> 4.1)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.6.1)
@@ -40,6 +49,9 @@ GEM
       jekyll-seo-tag (~> 2.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    json (2.1.0)
+    json-minify (0.0.3)
+      json (> 0)
     kramdown (1.17.0)
     liquid (4.0.3)
     listen (3.2.0)
@@ -59,12 +71,15 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   jekyll-feed (~> 0.14)
+  jekyll-minifier
   jekyll-sitemap
   jekyll-theme-cayman
   tzinfo-data

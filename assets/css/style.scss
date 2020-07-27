@@ -16,7 +16,7 @@ html {
   &.writing { background-color: $writing-theme; }
   &.services { background-color: $services-theme; }
   &.art { background-color: $art-theme; }
-  &.contact { background-color: $yellow; }
+  &.contact { background-color: $yellow-text; }
   &.default { background-color: $blue; }
 }
 
@@ -376,7 +376,7 @@ html {
       margin: 0 auto;
     }
 
-    :first-child {
+    > :first-child {
       margin-top: 0;
     }
   }
@@ -505,7 +505,7 @@ html {
     a {
       color: $font-white;
       margin: 30px auto 0;
-      max-width: 150px;
+      max-width: 225px;
       background-color: $blue;
       display: block;
       text-align: center;
@@ -693,7 +693,7 @@ html {
   main {
     background-color: $white;
     position: relative;
-    flex: 2;
+    flex: 2.5;
 
     display: flex;
     flex-direction: column;
@@ -727,7 +727,7 @@ html {
         font-size: 60px;
       }
 
-      @media(max-width: 675px) {
+      @media(max-width: 700px) {
         text-align: center;
       }
 
@@ -738,31 +738,31 @@ html {
 
     .self-portrait-desktop {
       float: right;
-      border-radius: 75px;
-      width: 150px;
-      margin: -2px 20px 20px;
+      border-radius: 100px;
+      width: 200px;
+      margin: -2px 40px 20px;
 
-      @media(max-width: 675px) {
+      @media(max-width: 800px) {
         display: none;
       }
     }
 
     .self-portrait-mobile {
-      margin: -75px auto 20px;
-      border-radius: 75px;
-      width: 150px;
+      margin: -100px auto 20px;
+      border-radius: 100px;
+      width: 200px;
       display: none;
 
-      @media(max-width: 675px) {
+      @media(max-width: 800px) {
         display: block;
       }
     }
 
     .content {
-      max-width: 570px;
+      max-width: 700px;
       margin-left: 50px;
 
-      @media(max-width: 675px) {
+      @media(max-width: 800px) {
         max-width: none;
         margin: 0;
         padding: 50px;
@@ -780,7 +780,7 @@ html {
     .social {
       margin-top: 40px;
 
-      @media(max-width: 675px) {
+      @media(max-width: 800px) {
         text-align: center;
       }
 

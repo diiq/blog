@@ -30,6 +30,11 @@ theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-minifier
+
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
 
 collections:
   writing:

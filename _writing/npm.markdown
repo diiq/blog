@@ -169,7 +169,7 @@ Do what I've done for <acronym>npm</acronym> to PyPI.org, or rubygems.org, and s
 
 [**EDIT**: I have run a [brief-but-similar analysis on Crates.io](./crates.html) and the results are fascinating, but not so unambiguous as to include directly here.]
 
-[**ANOTHER EDIT**: Ivan Krylov has kindly contributed an [analysis of CRAN](https://aitap.github.io/2020/07/10/cran.html]), which results look similar in some ways to Crates.]
+[**ANOTHER EDIT**: Ivan Krylov has kindly contributed an [analysis of CRAN](https://aitap.github.io/2020/07/10/cran.html), which results look similar in some ways to Crates.]
 
 ### Why are things this way?
 
