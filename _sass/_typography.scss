@@ -50,7 +50,8 @@ p {
 
 .post p {
   font-feature-settings: "kern", "liga", "dlig", "pnum", "ss01", "onum";
-  margin-right: -20px; // For unjustifiable overhang
+  margin-right: -20px;
+  margin-left: -20px; // Negative margins for unjustifiable overhang
 
   > img {
     padding-right: 20px;
