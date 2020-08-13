@@ -17,7 +17,7 @@ An important part of descriptive vocabulary is that it does not become tainted w
 
 In the spirit of Tom Freidman, I’m going to follow each potential vocabulary word with a list of questions we could ask about an interactive work.
 
-### Actor
+## Actor
 
 I heard lots of people using the words “user” and “audience” to describe the people who are interacting with the work. I think those are poor choices. “Audience” is weak because it’s passive — audiences watch. What happens when we want to talk about people who are watching but _not_ interacting? _Those_ people are the audience. Similarly, “user” is weak because implies a one-sided intention on the part of the actor. Users _use tools to accomplish goals_. It connotes a commercial relationship.
 
@@ -30,7 +30,7 @@ Toni Dove’s [Artificial Changelings](http://tonidove.com/) is a perfect exampl
 *   What limitations does the work place on who can be an actor? Do they need to be able to stand up? Push hard? Use both hands?
 *   What about mental, emotional or contextual constraints? Do they need a smartphone? Do they need to be willing to expose something private about themselves?
 
-### Affordance
+## Affordance
 
 Let’s steal the word **affordance** from design. An affordance is a potential for action offered by an object or an environment. Doorknobs afford twisting, handles afford holding. We need to be able to talk about both the intended and unintended affordances of our work and the environments our work is placed in.
 
@@ -42,7 +42,7 @@ Let’s steal the word **affordance** from design. An affordance is a potential 
 *   What unexpected or unexplored affordances does the work or the space offer? Could the work be inclusive of those potential actions?
 *   Could affordances be added? Purposefully removed?
 
-### Persistence
+## Persistence
 
 Let’s steal the word **persistence** from fluid dynamics.
 
@@ -57,7 +57,7 @@ But this is not always the case; and it’s work being able to talk about how lo
 *   What information remains, and what information is lost?
 *   How many actors and actions can the system represent simultaneously?
 
-### Distance
+## Distance
 
 Let’s steal the word **distance** from computer science. Computer science uses the word distance in the usual sense (spatial distance) but also defines more arcane forms of distance.
 
@@ -75,7 +75,7 @@ Compare that to Christopher Coleman and Laleh Mehran’s [Unclaimed](http://lale
 *   How long does it take between the action and the result?
 *   How conceptually similar are the action and the result?
 
-### IDTIDT
+## IDTIDT
 
 We can’t steal this one from anywhere, ‘cause I made it up.
 
@@ -89,11 +89,10 @@ I’d like to call this atomic interaction an “I do this; it does that” inte
 *   How broad or narrow is the set of responses?
 *   What makes it simpler or more complicated for the actor to connect their action to the result?
 
-### Motion words
+## Motion words
 
 Dancers appeared as interactive media designers more than once over the course of <acronym>INST-INT</acronym> 2015\. Ruairi Glynn dropped multiple hints about ways to talk about motion — he made it clear that the moment something moves, the _quality_ of motion is how it conveys meaning; he also pointed out in passing that dance already has a vocabulary for describing the qualities of motion: Labanotation. Labanotation is far outside the scope of this little post, and I am not the person to write about it — but we should all read up, and start describing the motion of actors and the motion of kinetic works along meaningful, descriptive axes like direct/indirect, strong/light, sudden/sustained, bound/free.
 
-### What else?
+## What else?
 
 This is by no means an exhaustive list — it’s just the first few words that occurred to me, on the plane, as useful bridges between the speakers at this year’s conference. What have I missed? Which words are obvious bad choices? Which are terms of art everyone in the interactive installation world has been using for years and I just never noticed?
-

@@ -4,12 +4,12 @@ title:  "Code Questions"
 subtitle: a rambling explanation of how I critique my own code
 date: 2014-04-15
 categories: code
-notes: 
+notes:
 ---
 
 I want to talk about 5 questions I ask myself, almost unconsciously, while writing code. I think they’re very important, but it’s going to take me a little while to build up the conceptual vocabulary to explain ‘em. Be patient with me!
 
-### I. Intention, Action, and Magnification
+## I. Intention, Action, and Magnification
 
 A foundational metaphor: looking at software at different levels of magnification. Zoom way in, and see individual morphemes of code. Back off a little, and see variable names, fragments of lines. Zoom out, and see full lines, then methods and functions, then classes, libraries, programs, suites of interacting programs...
 
@@ -39,7 +39,7 @@ See the line that divides design and code shift forward and back depending on th
 
 When I read, review, or revise software, if I want to critique design and implementation separately, I must first pick the scale at which I am passing critique.
 
-### II. Inquisitive Practices
+## II. Inquisitive Practices
 
 When I was in high school, I learned to play Go (you can probably learn too much about me based on the fact that I managed to make myself an outsider even from e chess club). After a few months of practice, I was given a list of questions. I was told that if I asked and answered these questions before every move, I would nstantly gain 5 stones on my handicap. None of the questions contained any new information I didn’t already know. “Defend weak groups.” “Attack the opponent’s territory.” Baby stuff.
 
@@ -65,7 +65,7 @@ It’s easy to list out useful questions. But somewhere between question number 
 
 Your list needs to be short — I like 5 questions. To keep the list so short, every question needs to apply equally well whether you’re examining a single line or a whole program. Each question should be concise and easy to remember. You’re going to be asking them a lot.
 
-### III. Questions for Design
+## III. Questions for Design
 
 My first two questions regard design. Remember, I’ve temporarily redefined design to mean “the act of describing my intention.”
 
@@ -175,7 +175,7 @@ And sometimes a method doesn’t need to answer a question at all — sometimes 
 
 But what about `dingsave`? Or, rather, what about `save` (assuming I redesigned based on my horrific answer to the action-question)? Should it answer “Did it save successfully?” Or should it answer “Where is it saved?” Or even "What information got saved?" There is no "right" answer — but trying to do _all_ of these things will muddy the design. It is fair to have lines, methods, classes, programs that have one answer to each of these design questions.
 
-### IV. Questions for Code
+## IV. Questions for Code
 
 *   “What part has the worst fit?”
 *   “What part will be hardest for a new team member to understand?”

@@ -9,7 +9,7 @@ notes:
 This was intended to be an essay about web design; but reading it over, I've used the vocabulary of a pretentious art critic. It happens, sometimes.
 
 
-### I. What is a forest?
+## I. What is a forest?
 
 Digital design is obsessed with content. Everything choice is made to center content and drive users to consume it. Today, someone asked me what the difference was between "consuming content" and just looking at the world. "Isn't everything content?" they asked. But while everything may be readable *as* text, not everything is content. Imagine, for example, a forest.
 
@@ -23,7 +23,7 @@ The tyranny of the funnel has brought us to build digital spaces where at best t
 
 Unlike a website, a forest is a place where close-looking is both **rewarded** and **unnecessary**.
 
-### II. The Thresholds of Perception
+## II. The Thresholds of Perception
 
 > There!
 > Near the borderline
@@ -48,7 +48,7 @@ What’s most important to me about these experiences, though, are these two qua
 
 These map reasonably onto the two properties of close-looking in a forest: the reward of seeing requires time invested, and the invisibility makes looking unnecessary unless desired.
 
-### III. Doing it Digitally
+## III. Doing it Digitally
 
 All this Capital-A Art is very inspiring, but maybe impossible to recreate digitally; both Reinhardt's meticulously-painted matte surfaces and Turell's body-encompassing light paintings are really very analog, very physical things --- they're almost impossible to photograph, let alone mimic within the limits of a screen. But if we're to try, we've got to nail down what, exactly, the limits of a screen *are*:
 
@@ -77,6 +77,6 @@ Here's a similar (but more obvious) effect; it mimics the dappled light in the s
 
 This one is much more obvious, because it uses non-zero value-contrast, where the stripes exercise uses hue-contrast. Value is a tyrant, and matters to your eye more than anything else; and this value contrast is ~10 times the minimum distinguishable difference.
 
-### Epilogue
+## Epilogue
 
 These effects are obviously just toys, at the moment. They hardly even count as proofs of the concept. But I'm encouraged; I think it may be possible to break the false dichotomy of minimalism vs. maximalism. Maybe we can create digital spaces in which, when you need a moment to think, a moment to zone out from demanding content, there is space for that. Rather that turning away to twitter or facebook or another advertising platform eager to steal that moment of relaxation, maybe we can build digital scholars' stones and forests to accompany our more directed content; environments where taking a break from reading is welcomed and rewarded.

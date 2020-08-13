@@ -6,14 +6,14 @@ date: 2020-06-29
 categories: code
 notes:
 ---
-### TL;DR
+## TL;DR
 The <acronym>npm</acronym> ecosystem seems unwell. If you are concerned with security, reliability, or long-term maintenance, it is almost impossible to pick a suitable package to use --- both because there are 1.3 million packages available, and even if you find one that is well documented and maintained, it might depend on hundreds of other packages, with dependency trees stretching ten or more levels deep --- as one developer, it's impossible to validate them all.
 
 I spend some time measuring the extent of the problem.
 
 I suggest that this is a social problem, more than a technical one, and propose a semi-social solution: a human-maintained subset of the total registry, based on shared criteria by which a "healthy" package can receive a seal of approval. One criterion would be to only depend on other approved packages.
 
-### The premise
+## The premise
 
 I don't like the way I feel when I'm installing packages with npm. Selecting a package, installing it, discovering the 93 additional packages that were installed along with it, and hoping all of *them* are also suitable for my project... it feels out of control.
 
@@ -21,11 +21,11 @@ I feel unhappy because picking dependencies is hard, so I blame npm, and that wa
 
 Is there some way for me to measure this badness, and thus more thoroughly escape the blame?
 
-### Thinking a bit like a scientist, but not too much
+## Thinking a bit like a scientist, but not too much
 
 Can we make meaningful empirical measurements of the health of the <acronym>npm</acronym> registry? I think so; but before I do, in order to maintain the slightest semblance of impartiality, I want to lay out what I *expect* a healthy package registry to look like. If it turns out that npm, taken as a whole, mostly looks the way I expect a healthy registry to look, I'll have to put my tail between my legs and take ownership of my struggles. If it looks wildly different, I'll still have hope for blaming the system.
 
-### Imagining a healthy repository
+## Imagining a healthy repository
 
 In my ideal world there are, mostly, 4 types of packages:
 
@@ -47,7 +47,7 @@ In my ideal world there are, mostly, 4 types of packages:
 
 Obviously, the world is messy! I don't expect 100% of packages to fit into such simple categories, nor are any of these definitions strict and unyielding. But overall, I'd hope *many* or even *most* packages to *mostly* conform to a categorization *something* like that, with most packages being utilities and libraries, and the fewest packages being frameworks.
 
-### What would that mean statistically?
+## What would that mean statistically?
 
 In a world where packages fit mostly into that hierarchy, a registry of many packages would have these qualities:
 
@@ -55,13 +55,13 @@ In a world where packages fit mostly into that hierarchy, a registry of many pac
 - Most packages would have dependency trees 0-4 levels deep, leaning towards lower numbers
 - Even the deepest and broadest frameworks would depend on fewer than 250 packages, including dependencies of dependencies (3-4 steps deep, with 3-4 dependencies per package, <= 4<sup>4</sup> max). Most packages would install well under 30 other packages. These numbers are extremely generous; smaller numbers would make me even happier.
 
-### What do we actually see?
+## What do we actually see?
 
 I downloaded the metadata for all 1.3 million packages in the npmjs.org repository and attempted to crunch some numbers. (For more technical details on how I did this, see the final section, titled "Appendix: Methods")
 
 I'm going to use "the number of other packages that depend on this one" as a poor-man's proxy for how popular a package is. It's not a *good* proxy, but neither is the other common choice: the number of downloads (see the section ["Background"](https://packaging.python.org/guides/analyzing-pypi-package-downloads/#background), from PyPI). The number of downloads would have been much more computationally expensive to acquire, so I used dependents.
 
-### Circular dependencies
+## Circular dependencies
 
 Of those 1.3 million packages, 1,700 depend directly on themselves, either perfectly circularly, or a different version of the same package. I have no explanation for that.
 
@@ -82,7 +82,7 @@ I need to be clear, here, that this is not *technically* a problem! <acronym>npm
 
 But I'm not particularly comfortable with it. I'm especially uncomfortable when the cycles involved are longer than two packages, which makes them seem less intentional. Maybe there's a good reason; these folks are smart, and I always try to assume that odd choices were made for important reasons. And yet...
 
-### What about `devDependencies`?
+## What about `devDependencies`?
 
 Among the most-depended-upon packages are
 
@@ -94,7 +94,7 @@ I'm **not** measuring that using `devDependencies` --- `typescript` appears in o
 
 So while I am less concerned with packages having large and deep `devDependency` trees (I *am* still concerned, but less so), it seems that a large proportion of packages aren't making use of the distinctions between `dependencies` and `devDependencies` in the first place. That *is* concerning.
 
-### Dependency tree depths
+## Dependency tree depths
 
 I am defining the depth of a package's dependency tree as the longest dependency-of-a-dependency-of-a-dependency chain I can find. Especially deep dependency trees are a problem because of how difficult they make it to audit all the packages that will get installed when including a single new package.
 
@@ -133,7 +133,7 @@ Followed by reality:
 There are heaps of 10+ tree-depths up among even the most popular packages, and a few even reach 20+. Extremely deep trees are not just a problem of "oddball" packages.
 
 
-### Direct dependencies (branching factor)
+## Direct dependencies (branching factor)
 
 The average number of direct dependencies (among packages with any dependencies at all) is 5. That, by itself, doesn't seem to bad. It feels a little alarming when combined with high tree depths, though. Does that mean some of these packages have 5<sup>10</sup> total dependencies? (Spoiler: no.)
 
@@ -143,7 +143,7 @@ Here's a graph of how many packages have 1 dependency, 2 dependencies... up to 3
 
 This curve is clean enough that I would not be surprised to see something pretty similar in any package registry --- maybe not the exact same parameters, but a similar shape. Not shown here is an *incredibly* long tail; there are 4 packages tied for the most direct dependencies with exactly 1000, and there are runners-up spread pretty smoothly up to that maximum.
 
-### Indirect dependencies
+## Indirect dependencies
 
 Knowing the average depth and branching factor, you have to imagine that counting the total dependencies of each package, including dependencies-of-dependencies, is not going to yield good news. But many of the branches of a large dependency tree are shared --- multiple packages in the tree all depend on the same library. And the tree depth I have measured is the *maximum* depth for each package --- not the average. So the picture is not necessarily as dire as an initial back-of-the-envelope calculation might make it seem.
 
@@ -159,7 +159,7 @@ For verification, let's split things out by frequency of use, again; in this cha
 
 The bad news here is the same as it has been. Many packages in that long tail are, in fact, reasonably frequently used. Even among the most-used packages are a few spots representing packages with over 1000 total dependencies.
 
-### Experiment conclusions
+## Experiment conclusions
 
 Certainly, <acronym>npm</acronym> doesn't match my hoped-for "healthy" qualities. You can take that to mean my desires are unrealistic, or that something is genuinely wrong.
 
@@ -171,7 +171,7 @@ Do what I've done for <acronym>npm</acronym> to PyPI.org, or rubygems.org, and s
 
 [**ANOTHER EDIT**: Ivan Krylov has kindly contributed an [analysis of CRAN](https://aitap.github.io/2020/07/10/cran.html), which results look similar in some ways to Crates.]
 
-### Why are things this way?
+## Why are things this way?
 
 Some observations:
 
@@ -188,7 +188,7 @@ And because that is considered normal, it will continue to happen; and as it con
 
 If you are an engineer tasked with selecting safe, useful, and long-lasting dependencies
 
-### So what do we do about it?
+## So what do we do about it?
 
 This is the part of the essay where ideally I'd introduce my new automated package-repository-better-maker, that will solve all our problems. Instead, I can only offer some interesting things for you to imagine.
 
@@ -253,7 +253,7 @@ If you're interested in discussing the problem, potential solutions, or berating
 <br />
 <br />
 
-### Appendix: Methods
+## Appendix: Methods
 
 There is not a *documented* endpoint on [replicate.npmjs.org](https://replicate.npmjs.org) for downloading the entire registry in bulk; for some time I assumed I would need to make 1.3 million separate requests to get the data I needed. However, the replicate api is actually a raw couchdb instance. So (don't follow this link!) https://replicate.npmjs.com/registry/_all_docs?include_docs=true is an incantation for a 50GB json file that contains more than enough information for this task.
 

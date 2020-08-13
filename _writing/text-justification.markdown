@@ -10,7 +10,7 @@ notes: Why no examples of the results? Because this post has been laid out using
 This post details the motivation and function of my in-browser
 text-justification library, [unjustifiable](https://github.com/diiq/unjustifiable).
 
-### The History of Justification
+## The History of Justification
 
 The desirability of justified text goes back to the beginning of movable type;
 Gutenberg's 42-line Bible dates to the 1450s. It was the first mass-produced
@@ -40,7 +40,7 @@ Still, almost all printed text blocks in English ARE justified &mdash; every nov
 newspaper, and academic journal article is justified. It is easy to read and
 good-looking. Why, then isn't the web?
 
-### The Anti-Justification Dictum
+## The Anti-Justification Dictum
 
 It turns out that web browsers are spectacularly bad at justifying text. They do
 it by cramming words on to a line until no more words will fit, and then
@@ -57,7 +57,7 @@ For that reason, designers for the web put forth a dictum:
 >
 > &mdash; Web Designers
 
-### How Computers Justify Text
+## How Computers Justify Text
 
 However, bad justification is not computers' fault. Computers are, in fact,
 really very good at text justification; they just need a little more strategy
@@ -76,7 +76,7 @@ Knuth and Plass has been widely described elsewhere; the <acronym>DOI</acronym> 
 paper is 10.1002/spe.4380111102; I'll leave it to you to obtain it if you'd like
 to give it a read.
 
-### How I justify text on the web
+## How I justify text on the web
 
 The problem of making a javascript text-justification engine breaks into 4 parts:
 
@@ -88,7 +88,7 @@ The problem of making a javascript text-justification engine breaks into 4 parts
 Pretty much every one of these steps requires an uncomfortable hack to make
 possible; so strap in for some nastiness.
 
-#### Measuring Text
+### Measuring Text
 
 Unjustifiable measures text by wrapping each word (or hyphenatable word-part &mdash;
 which I will refer to hereon as a **wordlet**) in a span. Each span can them be
@@ -250,7 +250,7 @@ const lineLengths = function(elt) {
 };
 ```
 
-### Finding line breaks
+## Finding line breaks
 
 Now it's time to perform a bastardized version of Knuth and Plass. The proper
 algorithm looks both forward AND back to minimize the difference in
@@ -417,7 +417,7 @@ const reifyBreakChain = function(chain) {
 };
 ```
 
-### Rendering line-breaks
+## Rendering line-breaks
 
 This final step is messy, but it's the only method I've found that preserves all
 the qualities of web text &mdash; it can be selected, copied, pasted, read by a
@@ -533,7 +533,7 @@ const despanifyNoJustify = function(elt) {
 };
 ```
 
-### Putting it all together
+## Putting it all together
 
 ```javascript
 function(elt) {

@@ -22,15 +22,15 @@ h6 {
 
 h1, h2, h3 { margin-top:0; margin-bottom:0; }
 h1 { font-size:1.5em; margin:1.45833em 0; }
-h2 { font-size:1.33333em; margin:2.5em 0 1.25em; }
-h3 {
+h2 {
   font-feature-settings: "c2sc";
   font-family: "equity-caps-b";
-  font-size:1em;
+  font-size:1.1em;
+  color: $blue;
   font-weight: bolder;
   margin: 1.5em 0 1em;
 }
-h4 {
+h3 {
   font-family: $base-font-family;
   font-size:1em;
   font-weight: bold;
@@ -56,6 +56,10 @@ p {
   > img {
     padding-right: 20px;
   }
+}
+
+.post ol {
+  padding-left: 35px;
 }
 
 a {

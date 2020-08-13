@@ -7,11 +7,11 @@ categories: design
 notes:
 ---
 
-### TL;DR
+## TL;DR
 
 Nothing is actually simple. But humans mostly prefer learning and using things that *seem* simple. There are different ways of seeming simple. Each approach hides and reveals complexity to different people; we should do so purposefully.
 
-### What's actually simple
+## What's actually simple
 
 Things that are actually simple are boring. They do not do much, and not much can be said of them. Thankfully, nothing is simple in every context. A rock is simple when it appears in a plowed field and needs to be removed; but hand it to a geologist and, even if it is not an especially rare rock, you'll still get an earful if you ask for it. This is true for most undesigned objects --- you can find a context for examination where its complexity will be made visible.
 
@@ -25,7 +25,7 @@ I'm going to describe some classic ways of seeming simple; if your background is
 
 Here are some approaches you might take:
 
-### Make each part simply constructed
+## Make each part simply constructed
 
 This is a classic engineer's version of simple. We broke the problem into tiny parts, each part is built as simply as we could, and now each part is easy to maintain!
 
@@ -35,7 +35,7 @@ I don't mean to say this is a bad approach! Often, it is the *only plausible* ap
 
 This kind of simplicity is simple for the junior developer and complex for the architect.
 
-### Make every part follow the same few principles
+## Make every part follow the same few principles
 
 This is how a high-modern architect or graphic designer might approach simplicity.
 
@@ -51,7 +51,7 @@ Again! This is not a *bad* approach -- it is a very powerful one. Especially in 
 
 This kind of simplicity is simple for the user and fiendish for the designer; exponentially more so if it must change over time.
 
-### Make a tree of simple choices
+## Make a tree of simple choices
 
 This is the phone-tree version of simplicity. At any given moment, there are only 9 choices, and usually only 2 or 3. How could a user get confused? Don't worry about the past or the future --- think only about this choice right now.
 
@@ -65,7 +65,7 @@ Reducing the number of buttons on the phone to 1 and replacing them all with a t
 
 This kind of complexity is simple for the new user, but can be tiringly complex for the power-user.
 
-### Journeyman Simplicity
+## Journeyman Simplicity
 
 There are some systems which take years to learn how to use effectively --- both because of the memorized knowledge needed, and because of the muscle memory required.
 
@@ -77,7 +77,7 @@ But to someone who has been using one of these tools for years, everything is *s
 
 One symptom of a system like this is how hard it is for an expert to teach. I can remember, when I was a daily Emacs user, trying to tell someone a hotkey combination and realizing I didn't know what it actually was --- it had become merely a shape my hand made in direct response to my intention. The keyboard and its labels had been abstracted away.
 
-### Use repeated building blocks
+## Use repeated building blocks
 
 Complexity from repeated, simple building blocks? Yes, we could talk about cellular (please-sit-back-down-Mr-Wolfram) automata. But I'd rather talk about Lego.
 
@@ -95,11 +95,11 @@ This, too, is not a bad approach; there is a simple base which is easy to unders
 
 This simplicity is simple for the manufacturer, and potentially for the new user. It is complex for *everyone* when the demands become more specific and refined.
 
-### Is that all of them?
+## Is that all of them?
 
 Any list of human categories that pretends to be a complete taxonomy is a lie, I will not pretend. I'm sure, with this mental framework in place, you can come up with some other ways in which to seem simple, and other ways the complexity leaks out from behind the seeming. Assume that creating an exhaustive list is left as an exercise for the reader.
 
-### So what?
+## So what?
 
 You can begin to see, at least, that there are ways to make complex systems feel simple to their creators, or their maintainers, or to their consumers; to first-time users or to long-time users.
 

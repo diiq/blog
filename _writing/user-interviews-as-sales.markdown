@@ -35,6 +35,6 @@ Obviously, between you and me, of *course* you're going to get new information. 
 
 ---------
 
-### A postscript:
+## A postscript:
 
 My instinct is that there's an argument for the user-interview-as-sales-tool even for customer-facing software; I just don't have the direct experience to back that up. It's much easier to see the difference in the highly-limited pool of users of an internal tool.

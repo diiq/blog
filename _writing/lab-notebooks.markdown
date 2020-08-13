@@ -9,7 +9,7 @@ notes:
 
 In college I worked as a developer in several science labs, including a chemistry lab. Even us computational folks were told to keep lab notebooks, and the protocols for your lab notebook were quite strict. At the time, I was not very good at using my notebook (or at doing the science, frankly). Over the intervening years, I've come to understand and value what they were for; and now I keep lab books for almost all my software engineering work.
 
-### What's a lab notebook?
+## What's a lab notebook?
 It's a disciplined record of what you do and think each day.
 
 One of the hardest things about software engineering is that, while it's often possible to understand the code you committed, it's usually impossible to see all the things you tried first, that didn't work. This is a trap for other developers, and even your future self, where a seemingly better solution gets tried again and again, and each time the same problem arises. But since the failure never gets committed, no record of the attempt is left. I suspect most experienced developers can remember a time where their memory saved a team hours or even weeks of work, simply by saying "ah, we tried [clever solution] a few years ago, but ran into problems X, Y, and Z. So we'd need to solve those problems before we try again."
@@ -28,7 +28,7 @@ A paper notebook is a way of signalling you're present and listening.
 
 Finally, and least compelling, the [Eudaimonia Machine](https://www.workfront.com/blog/eudaimonia-machine-blueprint-virtual-workplace) office design gets some attention from design and tech people every few months. Few people really discuss what goes in the library/archive room of the machine. One answer: your old lab notebooks.
 
-### What are the rules?
+## What are the rules?
 
 I said there was a lot of discipline associated with a lab notebook. This is in part for forensics. If plagiarism/data falsification/ethics/etc concerns arise over some scientist's research, the lab notebook can be valuable exonerating evidence --- but only if the discipline is kept.
 
@@ -68,7 +68,7 @@ Software engineering doesn't have quite the same forensic constraints, but the s
 
 These aren't all the guidelines --- pick a research university and I guarantee they'll have some multi-page document explaining all the protocols surrounding your lab notebook --- but these are the ones that have stuck with me.
 
-### What notebook should I use?
+## What notebook should I use?
 
 I use full-size gridded notebooks from [Vela](https://velasciences.com/). They're made locally, and specifically designed for use as lab notebooks, so they have page numbers, page titles and dates, tables of contents, and so on all built-in; they make keeping the above disciplines easy. Vela also sell notebooks covered in material designed for use in wet labs; if you're a clumsy person, an extra few dollars can make your coffee spill no big deal.
 
@@ -76,6 +76,6 @@ They're expensive, but I rarely use more than one per client, and I'm confident 
 
 (I have no relationship to Vela; I-just-think-theyre-neat.gif)
 
-### Isn't this just a bullet journal? Isn't this just a planner? Etc.
+## Isn't this just a bullet journal? Isn't this just a planner? Etc.
 
 Sure, do whatever works for you. I call it a lab notebook.

@@ -25,7 +25,7 @@ Heterogenous @ContentChildren
 
 If you just want to know how to force `@ContentChild` to return mixed component types, skip down to "Part III." If you're interested in *why* I would want such a thing, start here.
 
-### Part I: What I Want
+## Part I: What I Want
 
 Every form element needs a label.
 
@@ -57,7 +57,7 @@ I would like to say something like this:
 
 That way, the input component can worry about being a good monetary input (which is tricky enough on its own) and the label can concern itself with all the textual business around the periphery.
 
-### Part II: You can't always get what you want
+## Part II: You can't always get what you want
 
 However, that's easier said than done, because to make this all accessible, I need to properly hook up the aria attributes: `aria-labelled-by` for the label itself; `aria-described-by` for longer descriptions and error messages; plus `for`, an attribute which is on the `label` element but its value should match the id of the input...
 
@@ -115,7 +115,7 @@ Nor would it work if I made `Labelable` a class, and let each input `extend` it.
 
 What about a `TemplateRef`? Unfortunately, `TemplateRef` contentchildren are wrappers around <acronym>DOM</acronym> elements --- they don't return the component instance, which is what I need.
 
-### Part III: You know my name (look up the number)
+## Part III: You know my name (look up the number)
 
 `@ContentChild` simply cannot look for "one of a group of things with different names," no matter how similar they are.
 

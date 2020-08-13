@@ -6,7 +6,7 @@ date: 2020-07-16
 categories: sewing
 notes:
 ---
-### TL;DR
+## TL;DR
 
 The clothing industry rarely creates dramatically new patterns. It is more lucrative to make small, easy-to-manufacture changes that always use the same basic pattern.
 
@@ -15,7 +15,7 @@ There is therefore lots of room to innovate clothing that is more appropriate fo
 I made some trousers with unusual pockets, and I think they're good.
 
 
-### Pockets are either ugly or useless
+## Pockets are either ugly or useless
 
 Pockets in tight jeans look bad. Putting a modern slab phone, a wallet, and keys into a pair of skinny jeans will leave even the most fashionable figure looking looking like they're wearing batman's utility belt as underwear. Even empty, in tight pants a large pocket bag can show through.
 
@@ -27,7 +27,7 @@ Many of us spend most of our time sitting, but all four traditional pockets are 
 
 Aesthetics, storage, and access: these are user needs that are currently poorly fulfilled --- and that means things are ripe for innovation.
 
-### A brief history
+## A brief history
 
 If the space is so ripe, why has there been no pocket innovation recently?
 
@@ -55,11 +55,11 @@ Even more recently, menswear has returned to an incredibly slim silhouette. Guys
 
 Women get no practicality and men get no grace.
 
-### What if we redesigned the pocket from scratch?
+## What if we redesigned the pocket from scratch?
 
 Let's design a trouser pocket! This process is going to land somewhere between UX and industrial design. I am, sadly, not in charge of a clothes factory, so I am not concerned with the problems of mass-production, but material properties and the construction process do still matter; but I am maybe more willing to make manufacturing sacrifices for usefulness than most industrial designers are able to be.
 
-### What do people use pockets for?
+## What do people use pockets for?
 
 - Storing things; most often phone, then keys, wallet or money-clip, and other small items. At the moment, a mask.
 - *Verifying* stored objects --- the hip-slapping dance of making sure you have everything before walking out the door.
@@ -85,12 +85,12 @@ So I made a pair of trousers with no pockets at the waist, and a pair of welt po
 
 ![First pair of pants.](/assets/images/pants1.jpg)
 
-### Notes from user testing:
+## Notes from user testing:
 - A pocket needs to be big enough for a whole hand, not just phone, to allow for fishing out small items from the very bottom of the pocket-bag.
 - The pocket bag slips down and back if it's full and the wearer sits down. This is uncomfortable and
 - The pocket mustn't allow a slick round phone to fall out when sitting, especially when, e.g. jiggling a leg.
 
-### Revisions
+## Revisions
 Luckily, each of these notes point at simple revision, rather than the need to start again.
 
 - Make the pockets wider.
@@ -99,13 +99,13 @@ Luckily, each of these notes point at simple revision, rather than the need to s
 
 ![Second pair of pants.](/assets/images/pants2.jpg)
 
-### Outcome
+## Outcome
 
 These are great. I completely forget my phone and wallet are there --- they don't restrict my movement, they're completely invisible, and yet they're easy to access while standing or sitting. There's no temptation to slouch around with my hands stuffed in my pockets. They're so straightforwardly better for my needs that I'm now frustrated when my new-pocket pants are dirty and I have to wear trousers with pockets that are just SO twentieth-century. I immediately made a pair of jeans in this pattern, too.
 
 Further revision is possible, of course; but while it will be easy to refine this design to suit my personal body and needs more precisely, there's only so much refinement possible while remaining suitable for a wide range of body types. If you wanted to mass-produce a pocket like this, you'd want to use something like Dreyfuss' Humanscale data to make sure the placement and size is appropriate for the widest range of people. Luckily, you'd have *some* additional information in the sizing of the *rest* of the pants.
 
-### Appendix: Sam, have you simply invented cargo pants?
+## Appendix: Sam, have you simply invented cargo pants?
 
 No. Cargo pants solve different problems for different people.
 

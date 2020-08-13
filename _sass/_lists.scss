@@ -41,8 +41,14 @@ ul {
 
 ol {
   margin-bottom: $small-spacing;
-  padding-left: $base-spacing;
+  padding-left: 0;
+  margin-left: -15px;
   list-style-type: decimal;
+
+  @media(max-width: 675px) {
+    margin-left: 5px;
+    padding-left: $small-spacing;
+  }
 
   li {
     margin-bottom: .3em;

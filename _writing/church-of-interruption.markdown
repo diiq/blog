@@ -41,7 +41,7 @@ I frowned, but said nothing.
 
 “It is yours, but it’s just a name. Your creedo goes something like:”
 
-> ### THE HOLY CREEDO OF THE CHURCH OF INTERRUPTION:
+> ## THE HOLY CREEDO OF THE CHURCH OF INTERRUPTION:
 >
 > 1.  Thou shalt interrupt when thou understand’st.
 > 2.  Thou shalt speak until I interrupt.
@@ -55,7 +55,7 @@ He nodded. “And?”
 
 “Uh. There’s more?”
 
-> ### DOCTRINES OF THE CHURCH OF STRONG CIVILITY
+> ## DOCTRINES OF THE CHURCH OF STRONG CIVILITY
 >
 > 1.  Thou shalt not interrupt.
 > 2.  Thou shalt speak briefly.

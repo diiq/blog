@@ -10,13 +10,13 @@ On the fortieth floor of this office building, a receptionist is thinking about 
 
 He smiles and opens him mouth, “How can I—” he begins, but, though she smiles in return, she walks past him in silence, storming into the office block beyond.
 
-“Excuse me! Excuse me. Ma'am.” The receptionist is put together tidily, with auburn hair, carefully chosen glasses and a clothes appropriate to his station and his figure. He is beautiful, but his brow begins to wrinkle. He stands, brushes his trousers smooth, and walks after her. He’s wearing practical shoes. He catches up and places a hand on his shoulder.
+“Excuse me! Excuse me. Ma'am.” The receptionist is put together tidily, with auburn hair, carefully chosen glasses and a clothes appropriate to his station and his figure. He is beautiful, but his brow begins to wrinkle. He stands, brushes his trousers smooth, and walks after her. He’s wearing practical shoes. He catches up and places a hand on her shoulder.
 
-“Sir!”
+“Ma'am!”
 
 “Oh, hello again. Yes?” She spins around, but continues to walk backwards as she looks at him pleasantly.
 
-“You mustn’t come back here, sir. Not without an appointment. You can’t.”
+“You mustn’t come back here, ma'am. Not without an appointment. You can’t.”
 
 “Oh. Oh. I’m sorry.”
 
@@ -36,13 +36,13 @@ She turns around, so that she is once more watching where she was walking; but s
 
 “Hmm.” She pauses, and thinks. “Fine. But you force me to be brief.”
 
-She steps two steps to his left, into a cubicle. From it, she drags an office chair, on which she sits facing the receptionist.
+She steps two steps to her left, into a cubicle. From it, she drags an office chair, on which she sits facing the receptionist.
 
 “Rules,” she lectures, “do not define what you can and cannot do. They are merely the way that kindly people explain how they will respond to certain actions. I keep going, you call security. Rules are ways of making the rule-makers predictable. Right?”
 
 He does not reply, thoughtfully.
 
-“Good!” She claps his hands to his neatly pressed trousers, spins once in his chair, and stands, returning it to its cubicle before heading deeper into the office.
+“Good!” She claps her hands to her neatly pressed trousers, spins once in her chair, and stands, returning it to its cubicle before heading deeper into the office.
 
 “I will call security if you don’t leave this area. I have to.”
 
@@ -78,10 +78,10 @@ He is reaching for the phone on the vacant desk.
 
 “No.” she says, and he stops. “Listen.” she says, and he does. The wind slows its gusting for a moment.
 
-“There are three kinds of rules.” She counts on his fingers. “One, someone tells you. They tell you what they’ll do if you break their rule.
+“There are three kinds of rules.” She counts on her fingers. “One, someone tells you. They tell you what they’ll do if you break their rule.
 
 “Two, you assume. Invisible rules. You’re blind to alternatives because you never imagined there might be any.
 
 “Three, the important ones. Physics. There are no consequences because they can’t be broken. But! There’s more leeway even in those rules than many people suspect.”
 
-She holds up his three fingers, fixes him in his eye, and steps backwards out the window.
+She holds up her three fingers, looks him in the eye, and steps backwards out the window.

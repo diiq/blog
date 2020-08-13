@@ -33,23 +33,23 @@ I wish I could say that clients I walk away from contact me again, later, with m
 
 So here are the questions. I may have to ask several times, with different phrasings; and I will improvise follow-ups and deeper dives, but this short list covers a lot:
 
-### Success Criteria
+## Success Criteria
 * What's success look like? What's failure look like?
 * What are some measurable metrics of success? Some intangibles?
 
-### Project mechanics
+## Project mechanics
 * What's the budget? Do you want the best thing you can get for that price, or the cheapest thing that will do the job?
 * What deadlines or time constraints are there?
 * Who *can* make decisions? And where does the buck stop if there's disagreement?
 
-### Usefulness and ethics
+## Usefulness and ethics
 * Who will use the software?
 * How will they find out about it?
 * What alternatives do they have? (Competing products, but also, maybe, "a well-organized filing cabinet" or "a box of sticky notes")
 * What do users want? What do they need? What do you want from them? What do you need?
 * What are the risks users face?
 
-### Reliability
+## Reliability
 * What does it replace?
 * How long do you want the result to last?
 * How often will it change?
