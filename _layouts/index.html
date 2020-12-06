@@ -1,89 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="google-site-verification" content="7_CrE8LLEBX_kUpnfbuFTza9VDdJkSAwoh3dQwN0Prc" />
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta charset="UTF-8">
-    <meta name="description" content="My name is Sam Bleckley. I’m a software engineer, designer, and artist working
-    out of Grand Rapids, Michigan.">
-    <link rel="alternate" type="application/atom+xml" href="{{ '/feed/writing.xml' | absolute_url }}" title="Atom feed">
-    <link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="profile" href="http://microformats.org/profile/hcard">
-	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-
+  <head>
+    <meta
+      name="google-site-verification"
+      content="7_CrE8LLEBX_kUpnfbuFTza9VDdJkSAwoh3dQwN0Prc"
+    />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="My name is Sam Bleckley. I’m a software engineer, designer, and artist working
+    out of Grand Rapids, Michigan."
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      href="{{ '/feed/writing.xml' | absolute_url }}"
+      title="Atom feed"
+    />
+    <link href="{{ "/assets/images/favicon.png" | absolute_url }}" rel="icon"
+    type="image/png">
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    />
+    <link rel="profile" href="http://microformats.org/profile/hcard" />
+    <script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 
     <script src="{{ '/assets/js/trees.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <title>Sam Bleckley</title>
-</head>
-<body id="index-page">
+  </head>
+  <body id="index-page">
     <nav>
-        <a class="tools" href="/tools">Tools</a>
-        <a class="services" href="/services">Services</a>
-        <a class="writing" href="/blog">Writing</a>
-        <a class="art" href="/art">Art</a>
-        <a class="contact" href="/contact">Contact</a>
+      <a class="tools" href="/tools">Software</a>
+      <a class="services" href="/services">Services</a>
+      <a class="writing" href="/blog">Writing</a>
+      <a class="art" href="/art">Art</a>
+      <a class="contact" href="/contact">Contact</a>
     </nav>
     <main>
-        <div class="content vcard">
-            <img class="self-portrait-mobile u-photo" src="assets/images/portrait_no_beard_sm.jpg" alt="A painting of Sam's face" />
-            <a class="fn url" href="https://sambleckley.com">Sam Bleckley</a>
-            <img class="self-portrait-desktop u-photo" src="assets/images/portrait_no_beard_sm.jpg" alt="A painting of Sam's face" />
-            {{ content }}
-            <div class="quotes">
-                <blockquote>
-                    <p class="skip-justification">Sam possesses tremendous insight into how software should be
-                    written, from inception through delivery.
-                    </p>
-                    <p>&mdash;Mike Doel, Mutually Human</p>
-                </blockquote>
-                <blockquote>
-                    <p class="skip-justification">Not only knowledgeable, but more importantly, knew how to
-                    articulate abstract ideas and knowledge to non-domain experts
-                    </p>
-                    <p>&mdash;Ryan Liu, SJS Lab</p>
-                </blockquote>
-                <blockquote>
-                    <p class="skip-justification">Code quality was consistently excellent, laying down a solid
-                    foundation for us to grow our application suite.
-                    </p>
-                    <p>&mdash;Joshua Bloom, Wise.io</p>
-                </blockquote>
-                <blockquote>
-                    <p class="skip-justification">He quickly became one of my most trusted colleagues and
-                    favorite collaborators for working through the thorniest of
-                    problems.
-                    </p>
-                    <p>&mdash;Zach Dennis, Mutually Human</p>
-                </blockquote>
-                <blockquote>
-                    <p class="skip-justification">Sam took the time to learn the ins and outs of our
-                    organization throughout the process.
-                    </p>
-                    <p>&mdash;Chris Romero, Home Repair Services</p>
-                </blockquote>
-            </div>
-            <div class="social">
-                <a href="https://twitter.com/diiq" aria-label="Twitter" alt="Twitter"><i class="fa fa-lg fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/sam-bleckley/" aria-label="LinkedIn" alt="LinkedIn"><i class="fa fa-lg fa-linkedin-square"></i></a>
-                <a href="https://github.com/diiq" aria-label="Github" alt="Github"><i class="fa fa-lg fa-github"></i></a>
-                <a class="email" href="mailto:sam@sambleckley.com" aria-label="Email" alt="Email"><i class="fa fa-lg fa-envelope"></i></a>
-            </div>
+      <div class="content vcard">
+        <img
+          class="self-portrait-mobile u-photo"
+          src="assets/images/portrait_no_beard_sm.jpg"
+          alt="A painting of Sam's face"
+        />
+        <a class="fn url" href="https://sambleckley.com">Sam Bleckley</a>
+        <img
+          class="self-portrait-desktop u-photo"
+          src="assets/images/portrait_no_beard_sm.jpg"
+          alt="A painting of Sam's face"
+        />
+        {{ content }}
+        <div class="quotes">
+          <blockquote>
+            <p class="skip-justification">
+              Sam possesses tremendous insight into how software should be
+              written, from inception through delivery.
+            </p>
+            <p>&mdash;Mike Doel, Mutually Human</p>
+          </blockquote>
+          <blockquote>
+            <p class="skip-justification">
+              Not only knowledgeable, but more importantly, knew how to
+              articulate abstract ideas and knowledge to non-domain experts
+            </p>
+            <p>&mdash;Ryan Liu, SJS Lab</p>
+          </blockquote>
+          <blockquote>
+            <p class="skip-justification">
+              Code quality was consistently excellent, laying down a solid
+              foundation for us to grow our application suite.
+            </p>
+            <p>&mdash;Joshua Bloom, Wise.io</p>
+          </blockquote>
+          <blockquote>
+            <p class="skip-justification">
+              He quickly became one of my most trusted colleagues and favorite
+              collaborators for working through the thorniest of problems.
+            </p>
+            <p>&mdash;Zach Dennis, Mutually Human</p>
+          </blockquote>
+          <blockquote>
+            <p class="skip-justification">
+              Sam took the time to learn the ins and outs of our organization
+              throughout the process.
+            </p>
+            <p>&mdash;Chris Romero, Home Repair Services</p>
+          </blockquote>
         </div>
+        <div class="social">
+          <a href="https://twitter.com/diiq" aria-label="Twitter" alt="Twitter"
+            ><i class="fa fa-lg fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/sam-bleckley/"
+            aria-label="LinkedIn"
+            alt="LinkedIn"
+            ><i class="fa fa-lg fa-linkedin-square"></i
+          ></a>
+          <a href="https://github.com/diiq" aria-label="Github" alt="Github"
+            ><i class="fa fa-lg fa-github"></i
+          ></a>
+          <a
+            class="email"
+            href="mailto:sam@sambleckley.com"
+            aria-label="Email"
+            alt="Email"
+            ><i class="fa fa-lg fa-envelope"></i
+          ></a>
+        </div>
+      </div>
 
-        <script type="application/ld+json">
-            {
-              "@context": "http://schema.org",
-              "@type": "Person",
-              "name": "Sam Bleckley",
-              "url": "https://sambleckley.com",
-              "email": "mailto:sam@sambleckley.com",
-              "image": "assets/images/sam.png"
-            }
-        </script>
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Sam Bleckley",
+          "url": "https://sambleckley.com",
+          "email": "mailto:sam@sambleckley.com",
+          "image": "assets/images/sam.png"
+        }
+      </script>
     </main>
-
-</body>
+  </body>
 </html>

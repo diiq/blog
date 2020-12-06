@@ -25,7 +25,7 @@
             <i class="fa fa-lg fa-bars"></i>
         </button>
         <a class="gray" href="/">Sam Bleckley</a>
-        <a class="tools" href="/tools">Tools</a>
+        <a class="tools" href="/tools">Software</a>
         <a class="services" href="/services">Services</a>
         <a class="writing" href="/blog">Writing</a>
         <a class="art" href="/art">Art</a>
@@ -34,15 +34,14 @@
     <main>
         <div class="content">
           <h1>Drawing, Painting, &amp;c.</h1>
-          <ul>
               {% assign sorted = site.art | sort: 'date' | reverse %}
               {% for post in sorted %}
-              <li>
-                  <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
-                  <a class="title" href="{{ post.url }}">{{post.title}}</a>
+                <h2 class="title">{{post.title}} ({{post.date | date: "%Y"}})</h2>
+                {% for image in post.images %}
+                  <img src="/assets/images/art/{{ image }}" />
+                {% endfor %}
               </li>
               {% endfor %}
-          </ul>
         </div>
     </main>
     <footer>

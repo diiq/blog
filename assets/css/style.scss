@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "{{ site.theme }}";
 @import "main.scss";
 
@@ -8,16 +9,28 @@
 }
 
 html {
-  @media(min-width: 676px) {
+  @media (min-width: 676px) {
     height: 100%;
   }
 
-  &.tools { background-color: $tools-theme; }
-  &.writing { background-color: $writing-theme; }
-  &.services { background-color: $services-theme; }
-  &.art { background-color: $art-theme; }
-  &.contact { background-color: $yellow-text; }
-  &.default { background-color: $blue; }
+  &.tools {
+    background-color: $tools-theme;
+  }
+  &.writing {
+    background-color: $writing-theme;
+  }
+  &.services {
+    background-color: $services-theme;
+  }
+  &.art {
+    background-color: $art-theme;
+  }
+  &.contact {
+    background-color: $yellow-text;
+  }
+  &.default {
+    background-color: $blue;
+  }
 }
 
 @mixin colorLink($color, $hover) {
@@ -27,7 +40,7 @@ html {
     color: $hover;
   }
 
-  @media(max-width: 650px) {
+  @media (max-width: 650px) {
     background-color: $color;
     color: $font-white;
   }
@@ -38,14 +51,15 @@ html {
   margin: 0;
   padding: 0;
 
-  .content > .aside, content > .aside-mobile {
+  .content > .aside,
+  content > .aside-mobile {
     float: right;
     width: 40%;
     margin-top: 32px;
     color: $font-light;
     font-family: $heading-font-family;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       display: none;
     }
   }
@@ -55,7 +69,7 @@ html {
     margin-bottom: 60px;
     text-align: center;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       display: block;
       float: none;
     }
@@ -70,17 +84,17 @@ html {
     padding: 30px;
     color: #fff;
 
-    @media(max-width: 1030px) {
+    @media (max-width: 1030px) {
       margin-left: -50px;
     }
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       text-align: center;
       margin: 10px auto 10px;
     }
 
-    @media(max-width: 400px) {
-      font-size:48px;
+    @media (max-width: 400px) {
+      font-size: 48px;
     }
   }
 
@@ -99,7 +113,7 @@ html {
       margin-top: 5px;
     }
 
-    @media(max-width: 650px) {
+    @media (max-width: 650px) {
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -115,7 +129,7 @@ html {
     display: flex;
     justify-content: space-between;
 
-    @media(max-width: 650px) {
+    @media (max-width: 650px) {
       display: none;
       &.open {
         display: flex;
@@ -141,16 +155,26 @@ html {
       padding: 20px;
       transition: color 125ms;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         text-decoration: underline;
       }
 
-      &.tools { @include colorLink($tools-theme, $tools-theme-hover) }
-      &.art { @include colorLink($art-theme, $art-theme-hover) }
-      &.services { @include colorLink($services-theme, $services-theme-hover) }
-      &.writing { @include colorLink($writing-theme, $writing-theme-hover) }
-      &.contact { @include colorLink($contact-theme, $contact-theme-hover);
-        @media(max-width: 650px) {
+      &.tools {
+        @include colorLink($tools-theme, $tools-theme-hover);
+      }
+      &.art {
+        @include colorLink($art-theme, $art-theme-hover);
+      }
+      &.services {
+        @include colorLink($services-theme, $services-theme-hover);
+      }
+      &.writing {
+        @include colorLink($writing-theme, $writing-theme-hover);
+      }
+      &.contact {
+        @include colorLink($contact-theme, $contact-theme-hover);
+        @media (max-width: 650px) {
           color: $font;
           &:hover {
             color: $font;
@@ -162,12 +186,12 @@ html {
         @include colorLink($font, $font-light);
         margin-right: 25px;
 
-        @media(max-width: 650px) {
+        @media (max-width: 650px) {
           display: none;
         }
       }
 
-      @media(max-width: 650px) {
+      @media (max-width: 650px) {
         display: block;
         font-size: 24px;
         padding: 20px 30px;
@@ -187,7 +211,7 @@ html {
     margin: 0 auto -50px;
     max-width: 900px;
 
-    @media(max-width: 675px) {
+    @media (max-width: 675px) {
       padding: 20px;
     }
   }
@@ -198,8 +222,12 @@ html {
     padding-top: 100px;
     text-align: center;
     color: $font-white;
-    a { color: rgba(255,255,255,.25) }
-    a:hover { color: rgba(255,255,255,1) }
+    a {
+      color: rgba(255, 255, 255, 0.25);
+    }
+    a:hover {
+      color: rgba(255, 255, 255, 1);
+    }
   }
 }
 
@@ -211,12 +239,11 @@ html {
 
   h1 {
     background-color: $color;
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       background-color: transparent;
       color: $color;
     }
   }
-
 
   nav {
     a.#{$class} {
@@ -310,11 +337,15 @@ html {
     color: $font-extra-light;
   }
 
-  .title {
+  h2 {
     font-family: $heading-font-family;
+    display: block;
+    max-width: 675px;
+    margin: 100px auto 20px;
   }
 
-  ul {
+  .content > img {
+    display: block;
     max-width: 675px;
     margin: 0 auto;
   }
@@ -330,14 +361,19 @@ html {
   .art-post {
     img {
       display: block;
-      border: 1px solid #CFC5B4;
+      border: 1px solid #cfc5b4;
       margin: 0 auto 50px;
     }
   }
 }
 
 .blog-index-page {
-  @include colorPage($writing-theme, $writing-theme, $writing-theme-hover, writing);
+  @include colorPage(
+    $writing-theme,
+    $writing-theme,
+    $writing-theme-hover,
+    writing
+  );
   .date {
     float: right;
     font-style: italic;
@@ -360,7 +396,12 @@ html {
 }
 
 .blog-page {
-  @include colorPage($writing-theme, $writing-theme, $writing-theme-hover, writing);
+  @include colorPage(
+    $writing-theme,
+    $writing-theme,
+    $writing-theme-hover,
+    writing
+  );
 
   h1 {
     max-width: 550px;
@@ -370,7 +411,7 @@ html {
     width: 70%;
     float: right;
 
-    @media(max-width: 675px) {
+    @media (max-width: 675px) {
       width: 100%;
       float: none;
       margin: 0 auto;
@@ -385,7 +426,7 @@ html {
     color: #888;
   }
 
-  .marginalia  {
+  .marginalia {
     font-family: "Raleway";
     font-size: 14px;
     color: $font-extra-light;
@@ -394,7 +435,7 @@ html {
     padding-right: 40px;
     float: left;
 
-    @media(max-width: 675px) {
+    @media (max-width: 675px) {
       display: none;
     }
 
@@ -406,7 +447,7 @@ html {
   figure.image {
     margin: $base-spacing 0;
     padding: $small-spacing/2 $base-spacing;
-    font-size: .9em;
+    font-size: 0.9em;
     overflow: auto;
     background-color: #f5f5f5;
     border: 1px solid #f5f5f5;
@@ -421,10 +462,11 @@ html {
     overflow: visible;
   }
 
-  figure.highlight, div.highlight {
+  figure.highlight,
+  div.highlight {
     overflow: auto;
-    border-top: 1px solid #EBE1CF;
-    border-bottom: 1px solid #EBE1CF;
+    border-top: 1px solid #ebe1cf;
+    border-bottom: 1px solid #ebe1cf;
 
     padding: 30px 50px;
     overflow-x: auto;
@@ -450,10 +492,10 @@ html {
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: #EBE1CF;
+      background-color: #ebe1cf;
     }
 
-    @media(max-width: 675px) {
+    @media (max-width: 675px) {
       margin: 0 -20px $base-spacing;
     }
   }
@@ -471,11 +513,11 @@ html {
 
   .tool {
     background-color: #fff;
-    border: 1px solid #CFC5B4;
+    border: 1px solid #cfc5b4;
     display: flex;
     margin-bottom: 50px;
 
-    @media(max-width: 575px) {
+    @media (max-width: 575px) {
       display: block;
     }
 
@@ -484,7 +526,7 @@ html {
       width: 225px;
       height: 225px;
 
-      @media(max-width: 768px) {
+      @media (max-width: 768px) {
         border-radius: 3px;
         overflow: hidden;
         width: 100px;
@@ -492,7 +534,7 @@ html {
         margin: 30px 0 30px 30px;
       }
 
-      @media(max-width: 575px) {
+      @media (max-width: 575px) {
         margin: 30px auto 0;
       }
     }
@@ -512,7 +554,7 @@ html {
       font-family: $heading-font-family;
       padding: 5px 10px;
 
-      @media(max-width: 675px) {
+      @media (max-width: 675px) {
         max-width: 100%;
         width: 100%;
       }
@@ -520,54 +562,63 @@ html {
   }
 
   .tool.vistimo a {
-    background-color: #0085AA;
+    background-color: #0085aa;
     &:hover {
-      background-color: darken(#0085AA, 10%);
+      background-color: darken(#0085aa, 10%);
     }
   }
 
   .tool.reference-board {
     .img {
-      background-color: #FCDFBD;
+      background-color: #fcdfbd;
     }
     a {
-      background-color: #FF8800;
+      background-color: #ff8800;
       &:hover {
-        background-color: darken(#FF8800, 10%);
+        background-color: darken(#ff8800, 10%);
       }
     }
   }
 
   .tool.draw-every-day {
     .img {
-      background-color: #3DA5E6;
+      background-color: #3da5e6;
     }
     a {
-      background-color: #3DA5E6;
+      background-color: #3da5e6;
       &:hover {
-        background-color: darken(#3DA5E6, 10%);
+        background-color: darken(#3da5e6, 10%);
       }
     }
   }
 
   .tool.pigmentor a {
-    background-color: #E08782;
+    background-color: #e08782;
     &:hover {
-      background-color: darken(#E08782, 10%);
+      background-color: darken(#e08782, 10%);
     }
   }
 }
 
 @mixin serviceBox($color, $hover) {
-  .title { color: $color }
+  .title {
+    color: $color;
+  }
   a {
     background-color: $color;
-    &:hover { background-color: $hover; }
+    &:hover {
+      background-color: $hover;
+    }
   }
 }
 
 .services-page {
-  @include colorPage($services-theme, $services-theme, $services-theme-hover, services);
+  @include colorPage(
+    $services-theme,
+    $services-theme,
+    $services-theme-hover,
+    services
+  );
   .content > .services {
     margin: -15px;
     display: flex;
@@ -576,7 +627,7 @@ html {
 
   .service {
     background-color: #fff;
-    border: 1px solid #CFC5B4;
+    border: 1px solid #cfc5b4;
     padding: 30px;
     padding-bottom: 70px;
     margin: 15px;
@@ -607,10 +658,17 @@ html {
     }
   }
 
-  .service.hire { @include serviceBox($violet, $violet-hover);}
-  .service.gap { @include serviceBox($blue, $blue-hover);}
-  .service.talks { @include serviceBox($red, $red-hover);}
-  .service.web-app { @include serviceBox($green, $green-hover);
+  .service.hire {
+    @include serviceBox($violet, $violet-hover);
+  }
+  .service.gap {
+    @include serviceBox($blue, $blue-hover);
+  }
+  .service.talks {
+    @include serviceBox($red, $red-hover);
+  }
+  .service.web-app {
+    @include serviceBox($green, $green-hover);
     min-width: 70%;
   }
   .service.linkless {
@@ -618,14 +676,16 @@ html {
   }
   .service.audit {
     @include serviceBox($yellow, $yellow-hover);
-    .title {color: $yellow-text;}
+    .title {
+      color: $yellow-text;
+    }
   }
 }
 
 @mixin indexColorLink($color) {
   color: $color;
 
-  @media(max-width: 675px) {
+  @media (max-width: 675px) {
     background-color: $color;
     color: $font-white;
   }
@@ -645,7 +705,7 @@ html {
   justify-content: stretch;
   align-items: stretch;
 
-  @media(max-width: 675px) {
+  @media (max-width: 675px) {
     flex-direction: column-reverse;
   }
 
@@ -657,7 +717,7 @@ html {
     align-items: stretch;
     position: relative;
 
-    @media(max-width: 675px) {
+    @media (max-width: 675px) {
       flex: 0;
       display: block;
     }
@@ -670,7 +730,7 @@ html {
       text-align: right;
       transition: background-color 125ms, color 125ms;
 
-      @media(max-width: 675px) {
+      @media (max-width: 675px) {
         display: block;
         text-align: center;
         max-width: 300px;
@@ -679,13 +739,25 @@ html {
         padding: 10px 30px;
       }
 
-      &.tools { @include indexColorLink($tools-theme) }
-      &.writing { @include indexColorLink($writing-theme) }
-      &.art { @include indexColorLink($art-theme) }
-      &.contact { @include indexColorLink($contact-theme);
-        &:hover { background-color: $yellow; color: $font }
+      &.tools {
+        @include indexColorLink($tools-theme);
       }
-      &.services { @include indexColorLink($services-theme) }
+      &.writing {
+        @include indexColorLink($writing-theme);
+      }
+      &.art {
+        @include indexColorLink($art-theme);
+      }
+      &.contact {
+        @include indexColorLink($contact-theme);
+        &:hover {
+          background-color: $yellow;
+          color: $font;
+        }
+      }
+      &.services {
+        @include indexColorLink($services-theme);
+      }
     }
   }
 
@@ -699,11 +771,11 @@ html {
     justify-content: center;
     align-items: stretch;
 
-    @media(max-width: 800px) {
+    @media (max-width: 800px) {
       flex: 2.5;
     }
 
-    @media(max-width: 675px) {
+    @media (max-width: 675px) {
       flex: 0;
       display: block;
       margin-top: 100px;
@@ -722,15 +794,15 @@ html {
       color: $base-font-color;
       pointer-events: none;
 
-      @media(max-width: 800px) {
+      @media (max-width: 800px) {
         font-size: 60px;
       }
 
-      @media(max-width: 700px) {
+      @media (max-width: 700px) {
         text-align: center;
       }
 
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         font-size: 48px;
       }
     }
@@ -741,7 +813,7 @@ html {
       width: 200px;
       margin: -2px 40px 20px;
 
-      @media(max-width: 800px) {
+      @media (max-width: 800px) {
         display: none;
       }
     }
@@ -752,7 +824,7 @@ html {
       width: 200px;
       display: none;
 
-      @media(max-width: 800px) {
+      @media (max-width: 800px) {
         display: block;
       }
     }
@@ -761,13 +833,13 @@ html {
       max-width: 700px;
       margin-left: 50px;
 
-      @media(max-width: 800px) {
+      @media (max-width: 800px) {
         max-width: none;
         margin: 0;
         padding: 50px;
       }
 
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         padding: 30px;
       }
 
@@ -779,7 +851,7 @@ html {
     .social {
       margin-top: 40px;
 
-      @media(max-width: 800px) {
+      @media (max-width: 800px) {
         text-align: center;
       }
 
@@ -808,28 +880,48 @@ html {
         margin-bottom: 10px;
       }
 
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         font-size: 18px;
       }
-    };
+    }
   }
 
   @keyframes quote {
-    0% { transform: translateY(0);}
+    0% {
+      transform: translateY(0);
+    }
 
-    18% { transform: translateY(0);}
-    20% { transform: translateY(-200px);}
+    18% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-200px);
+    }
 
-    38% { transform: translateY(-200px);}
-    40% { transform: translateY(-400px);}
+    38% {
+      transform: translateY(-200px);
+    }
+    40% {
+      transform: translateY(-400px);
+    }
 
-    58% { transform: translateY(-400px);}
-    60% { transform: translateY(-600px);}
+    58% {
+      transform: translateY(-400px);
+    }
+    60% {
+      transform: translateY(-600px);
+    }
 
-    78% { transform: translateY(-600px);}
-    80% { transform: translateY(-800px);}
+    78% {
+      transform: translateY(-600px);
+    }
+    80% {
+      transform: translateY(-800px);
+    }
 
-    98% { transform: translateY(-800px);}
+    98% {
+      transform: translateY(-800px);
+    }
   }
 }
 
@@ -843,7 +935,7 @@ html {
   overflow: hidden;
   transform: rotate(0);
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -854,18 +946,18 @@ html {
   background-color: #dce3ec;
   overflow: hidden;
   transform: rotate(0);
-  border: 1px solid #CFC5B4;
+  border: 1px solid #cfc5b4;
   margin-bottom: 30px;
 }
 
 .dapple {
   position: absolute;
   filter: blur(15px);
-  border: 10px rgba(255,255,254,.5);
+  border: 10px rgba(255, 255, 254, 0.5);
   width: 200px;
   height: 200px;
   border-radius: 100px;
-  background-color: rgba(255,255,254,.2);
+  background-color: rgba(255, 255, 254, 0.2);
 }
 
 .dapples-a {
@@ -876,7 +968,7 @@ html {
   animation: sway 10s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .dapples-b {
@@ -887,18 +979,20 @@ html {
   animation: sway 9.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 @keyframes sway {
-  0% { transform: translate3d(-20vw, -20vh, 0);  }
-  50% { transform: translate3d(20vw, 20vh, 0);  }
-  100% { transform: translate3d(0vw, 0vh, 0);  }
+  0% {
+    transform: translate3d(-20vw, -20vh, 0);
+  }
+  50% {
+    transform: translate3d(20vw, 20vh, 0);
+  }
+  100% {
+    transform: translate3d(0vw, 0vh, 0);
+  }
 }
-
-
-
-
 
 #stripes {
   overflow: hidden;
@@ -917,22 +1011,22 @@ html {
       animation-delay: 0s;
       width: 7%;
     }
-    &:nth-of-type(5n+1) {
+    &:nth-of-type(5n + 1) {
       background-color: $blue-afterimage;
       animation-delay: -7s;
       width: 28%;
     }
-    &:nth-of-type(5n+2) {
+    &:nth-of-type(5n + 2) {
       background-color: $green-afterimage;
       animation-delay: -14s;
       width: 21%;
     }
-    &:nth-of-type(5n+3) {
+    &:nth-of-type(5n + 3) {
       background-color: $yellow-afterimage;
       animation-delay: -21s;
       width: 30%;
     }
-    &:nth-of-type(5n+4) {
+    &:nth-of-type(5n + 4) {
       background-color: $violet-afterimage;
       animation-delay: -28s;
       width: 14%;
@@ -940,15 +1034,23 @@ html {
   }
 }
 
- @keyframes colorchange {
-   0.0% { transform: translate(0)  }
-   25% { transform: translate(400px) }
-   50% { transform: translate(100px)  }
-   75% { transform: translate(300px) }
-   100% { transform: translate(0) }
+@keyframes colorchange {
+  0.0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(400px);
+  }
+  50% {
+    transform: translate(100px);
+  }
+  75% {
+    transform: translate(300px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
-
-
 
 .footer-banner {
   position: fixed;
@@ -967,14 +1069,27 @@ html {
     text-decoration: underline;
   }
 
-  @media(max-width: 740px) {
-    font-size: .9rem;
+  @media (max-width: 740px) {
+    font-size: 0.9rem;
   }
 }
 
-html.tools .footer-banner { background-color: $tools-theme; }
-html.writing .footer-banner { background-color: $writing-theme; }
-html.services .footer-banner { background-color: $services-theme; }
-html.art .footer-banner { background-color: $art-theme; }
-html.contact .footer-banner { background-color: $yellow; color: $base-font-color }
-html.default .footer-banner { background-color: $blue; }
+html.tools .footer-banner {
+  background-color: $tools-theme;
+}
+html.writing .footer-banner {
+  background-color: $writing-theme;
+}
+html.services .footer-banner {
+  background-color: $services-theme;
+}
+html.art .footer-banner {
+  background-color: $art-theme;
+}
+html.contact .footer-banner {
+  background-color: $yellow;
+  color: $base-font-color;
+}
+html.default .footer-banner {
+  background-color: $blue;
+}

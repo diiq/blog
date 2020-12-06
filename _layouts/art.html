@@ -1,55 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" class="art">
-<head>
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width,initial-scale=1" name="viewport">
-	<meta charset="UTF-8">
-	<link rel="alternate" type="application/atom+xml" href="{{ '/feed/art.xml' | absolute_url }}" title="Atom feed">
-	<link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-  <title>{{page.title}} | Sam Bleckley</title>
-</head>
-	<body class="art-page page">
-			<button class="mobile-nav" aria-haspopup="true" onclick="openNav();" aria-label="Menu">
-					<div>Sam Bleckley</div>
-					<i class="fa fa-lg fa-bars"></i>
-			</button>
-			<nav id="nav">
-					<button class="mobile-nav" aria-haspopup="true" onclick="closeNav();" aria-label="Close menu">
-							<div>Sam Bleckley</div>
-							<i class="fa fa-lg fa-bars"></i>
-					</button>
-					<a class="gray" href="/">Sam Bleckley</a>
-					<a class="tools" href="/tools">Tools</a>
-					<a class="services" href="/services">Services</a>
-					<a class="writing" href="/blog">Writing</a>
-					<a class="art" href="/art">Art</a>
-					<a class="contact" href="/contact">Contact</a>
-			</nav>
-			<main>
-					<div class="content  {{page.categories}}">
-						<h1>{{ page.title }}</h1>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta charset="UTF-8" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      href="{{ '/feed/art.xml' | absolute_url }}"
+      title="Atom feed"
+    />
+    <link href="{{ "/assets/images/favicon.png" | absolute_url }}" rel="icon"
+    type="image/png">
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    />
+    <script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    <title>{{page.title}} | Sam Bleckley</title>
+  </head>
+  <body class="art-page page">
+    <button
+      class="mobile-nav"
+      aria-haspopup="true"
+      onclick="openNav();"
+      aria-label="Menu"
+    >
+      <div>Sam Bleckley</div>
+      <i class="fa fa-lg fa-bars"></i>
+    </button>
+    <nav id="nav">
+      <button
+        class="mobile-nav"
+        aria-haspopup="true"
+        onclick="closeNav();"
+        aria-label="Close menu"
+      >
+        <div>Sam Bleckley</div>
+        <i class="fa fa-lg fa-bars"></i>
+      </button>
+      <a class="gray" href="/">Sam Bleckley</a>
+      <a class="tools" href="/tools">Software</a>
+      <a class="services" href="/services">Services</a>
+      <a class="writing" href="/blog">Writing</a>
+      <a class="art" href="/art">Art</a>
+      <a class="contact" href="/contact">Contact</a>
+    </nav>
+    <main>
+      <div class="content  {{page.categories}}">
+        <h1>{{ page.title }}</h1>
 
-						<div class="art-post">
-							{% for image in page.images %}
-								<img src="/assets/images/art/{{ image }}" />
-							{% endfor %}
-						</div>
+        <div class="art-post">
+          {% for image in page.images %}
+          <img src="/assets/images/art/{{ image }}" />
+          {% endfor %}
+        </div>
 
-						<div class="scrub">
-								{% if page.previous.url %}
-								<a class="older" title="Older post" href="{{page.previous.url}}"><i class="fa fa-lg fa-arrow-left"></i></a>
-								{% endif %}
-								{% if page.next.url %}
-								<a class="newer" title="Newer post" href="{{page.next.url}}"><i class="fa fa-lg fa-arrow-right"></i></a>
-								{% endif %}
-						</div>
-					</div>
-			</main>
-			<footer>
-				<a href="mailto:sam@sambleckley.com">sam@sambleckley.com</a>
-			</footer>
-	</body>
+        <div class="scrub">
+          {% if page.previous.url %}
+          <a class="older" title="Older post" href="{{page.previous.url}}"
+            ><i class="fa fa-lg fa-arrow-left"></i
+          ></a>
+          {% endif %} {% if page.next.url %}
+          <a class="newer" title="Newer post" href="{{page.next.url}}"
+            ><i class="fa fa-lg fa-arrow-right"></i
+          ></a>
+          {% endif %}
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="mailto:sam@sambleckley.com">sam@sambleckley.com</a>
+    </footer>
+  </body>
 </html>

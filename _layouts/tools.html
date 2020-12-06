@@ -1,115 +1,162 @@
 <!DOCTYPE html>
 <html lang="en" class="tools">
-<head>
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width,initial-scale=1" name="viewport">
-	<meta charset="UTF-8">
-    <link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta charset="UTF-8" />
+    <link href="{{ "/assets/images/favicon.png" | absolute_url }}" rel="icon"
+    type="image/png">
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    />
+    <script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 
     <script src="{{ '/assets/js/trees.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-  <title>{{ page.title }} | Sam Bleckley</title>
-</head>
-<body class="tools-page page">
-    <button class="mobile-nav" aria-haspopup="true" onclick="openNav();" aria-label="Menu">
-        <div>Sam Bleckley</div>
-        <i class="fa fa-lg fa-bars"></i>
+    <title>{{ page.title }} | Sam Bleckley</title>
+  </head>
+  <body class="tools-page page">
+    <button
+      class="mobile-nav"
+      aria-haspopup="true"
+      onclick="openNav();"
+      aria-label="Menu"
+    >
+      <div>Sam Bleckley</div>
+      <i class="fa fa-lg fa-bars"></i>
     </button>
     <nav id="nav">
-        <button class="mobile-nav" aria-haspopup="true" onclick="closeNav();" aria-label="Close menu">
-            <div>Sam Bleckley</div>
-            <i class="fa fa-lg fa-bars"></i>
-        </button>
-        <a class="gray" href="/">Sam Bleckley</a>
-        <a class="tools" href="/tools">Tools</a>
-        <a class="services" href="/services">Services</a>
-        <a class="writing" href="/blog">Writing</a>
-        <a class="art" href="/art">Art</a>
-        <a class="contact" href="/contact">Contact</a>
+      <button
+        class="mobile-nav"
+        aria-haspopup="true"
+        onclick="closeNav();"
+        aria-label="Close menu"
+      >
+        <div>Sam Bleckley</div>
+        <i class="fa fa-lg fa-bars"></i>
+      </button>
+      <a class="gray" href="/">Sam Bleckley</a>
+      <a class="tools" href="/tools">Software</a>
+      <a class="services" href="/services">Services</a>
+      <a class="writing" href="/blog">Writing</a>
+      <a class="art" href="/art">Art</a>
+      <a class="contact" href="/contact">Contact</a>
     </nav>
     <main>
-        <div class="content">
-            <div class="aside">
-                <p class="skip-justification">Here are tools and products I’ve built to help me do my job more effectively. Maybe they’ll help you, too.</p>
-            </div>
-            <h1>Tools</h1>
-            <div class="aside-mobile">
-                <p>Here are tools and products I’ve built to help me do my job more effectively. Maybe they’ll help you, too.</p>
-            </div>
-            <div class="tool vistimo">
-                <div class="img"><img src="/assets/images/vistimo_logo.png" /></div>
-                <div class="description">
-                    <p>Vistimo manages software projects. It ensures
-                    your team shares the same product vision, and your
-                    business understands the time and budgetary
-                    risks.</p>
-                    <a href="https://www.vistimo.com/landing">Try Vistimo</a>
-                </div>
-            </div>
-
-            <div class="tool draw-every-day">
-                <div class="img"><img src="/assets/images/draw-every-day-logo.jpg" /></div>
-                <div class="description">
-                    <p>Draw Every Day is an iOS app. It gives you one blank canvas, a one-word prompt, and 24 hours to draw something.</p>
-                    <a href="https://draweveryday.io/">Try Draw Every Day</a>
-                </div>
-            </div>
-
-            <div class="tool reference-board">
-                <div class="img"><img src="/assets/images/reference-board-logo.svg" /></div>
-                <div class="description">
-                    <p>Reference Board helps artists to organize and store
-                    references images. It eliminates social distractions and
-                    lets artists concentrate on making art.</p>
-                    <a href="https://www.reference-board.com/">Try Reference Board</a>
-                </div>
-            </div>
-
-            <div class="tool pigmentor">
-                <div class="img"><img src="/assets/images/pigmentor_logo.png" /></div>
-                <div class="description">
-                    <p>Pigmentor is a tool for understanding and harmonizing
-                    color, with a pedigree going back to the early 1900's and
-                    Munsell's Book of Color.</p>
-                    <a href="https://palette.sambleckley.com">Try Pigmentor</a>
-                </div>
-            </div>
-
-            <div class="tool vistimo">
-                <div class="description">
-                    <p>Esdragon is a drag-and-drop library for React. I gave a multi-screen talk about it at 2018's Beer City Code.</p>
-                    <a href="https://github.com/diiq/esdragon">View on Github</a>
-                </div>
-            </div>
-
-            <div class="tool reference-board">
-                <div class="description">
-                    <p>Phocus is a framework-agnostic frontend library for managing documentation, focus and context-sensitive hotkeys.</p>
-                    <a href="https://github.com/diiq/phocus">View on Github</a>
-                </div>
-            </div>
-
-            <div class="tool pigmentor">
-                <div class="description">
-                    <p>Schematizer is a tiny tool to help prototype Rails APIs more quickly. It take a single YAML document and builds a database schema to match.</p>
-                    <a href="https://github.com/diiq/schematizer">View on Github</a>
-                </div>
-            </div>
-
-            <div class="tool vistimo">
-                <div class="description">
-                    <p>Unjustifiable is a library for beautiful text justification on the web.</p>
-                    <a href="https://github.com/diiq/unjustifiable">View on Github</a>
-                </div>
-            </div>
+      <div class="content">
+        <div class="aside">
+          <p class="skip-justification">
+            Here are tools and products I’ve built to help me do my job more
+            effectively. Maybe they’ll help you, too.
+          </p>
         </div>
+        <h1>Software</h1>
+        <div class="aside-mobile">
+          <p>
+            Here are tools and products I’ve built to help me do my job more
+            effectively. Maybe they’ll help you, too.
+          </p>
+        </div>
+        <div class="tool vistimo">
+          <div class="img"><img src="/assets/images/vistimo_logo.png" /></div>
+          <div class="description">
+            <p>
+              Vistimo manages software projects. It ensures your team shares the
+              same product vision, and your business understands the time and
+              budgetary risks.
+            </p>
+            <a href="https://www.vistimo.com/landing">Try Vistimo</a>
+          </div>
+        </div>
+
+        <div class="tool draw-every-day">
+          <div class="img">
+            <img src="/assets/images/draw-every-day-logo.jpg" />
+          </div>
+          <div class="description">
+            <p>
+              Draw Every Day is an iOS app. It gives you one blank canvas, a
+              one-word prompt, and 24 hours to draw something.
+            </p>
+            <a href="https://draweveryday.io/">Try Draw Every Day</a>
+          </div>
+        </div>
+
+        <div class="tool reference-board">
+          <div class="img">
+            <img src="/assets/images/reference-board-logo.svg" />
+          </div>
+          <div class="description">
+            <p>
+              Reference Board helps artists to organize and store references
+              images. It eliminates social distractions and lets artists
+              concentrate on making art.
+            </p>
+            <a href="https://www.reference-board.com/">Try Reference Board</a>
+          </div>
+        </div>
+
+        <div class="tool pigmentor">
+          <div class="img"><img src="/assets/images/pigmentor_logo.png" /></div>
+          <div class="description">
+            <p>
+              Pigmentor is a tool for understanding and harmonizing color, with
+              a pedigree going back to the early 1900's and Munsell's Book of
+              Color.
+            </p>
+            <a href="https://palette.sambleckley.com">Try Pigmentor</a>
+          </div>
+        </div>
+
+        <div class="tool vistimo">
+          <div class="description">
+            <p>
+              Esdragon is a drag-and-drop library for React. I gave a
+              multi-screen talk about it at 2018's Beer City Code.
+            </p>
+            <a href="https://github.com/diiq/esdragon">View on Github</a>
+          </div>
+        </div>
+
+        <div class="tool reference-board">
+          <div class="description">
+            <p>
+              Phocus is a framework-agnostic frontend library for managing
+              documentation, focus and context-sensitive hotkeys.
+            </p>
+            <a href="https://github.com/diiq/phocus">View on Github</a>
+          </div>
+        </div>
+
+        <div class="tool pigmentor">
+          <div class="description">
+            <p>
+              Schematizer is a tiny tool to help prototype Rails APIs more
+              quickly. It take a single YAML document and builds a database
+              schema to match.
+            </p>
+            <a href="https://github.com/diiq/schematizer">View on Github</a>
+          </div>
+        </div>
+
+        <div class="tool vistimo">
+          <div class="description">
+            <p>
+              Unjustifiable is a library for beautiful text justification on the
+              web.
+            </p>
+            <a href="https://github.com/diiq/unjustifiable">View on Github</a>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
       <a href="mailto:sam@sambleckley.com">sam@sambleckley.com</a>
     </footer>
-</body>
+  </body>
 </html>
