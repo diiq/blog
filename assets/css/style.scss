@@ -346,8 +346,9 @@ html {
 
   .content > img {
     display: block;
-    max-width: 675px;
-    margin: 0 auto;
+    width: 675px;
+    max-width: calc(100vw - 40px);
+    margin: 20px auto;
   }
 }
 
