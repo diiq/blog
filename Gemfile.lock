@@ -54,6 +54,8 @@ GEM
       json (> 0)
     kramdown (2.3.0)
       rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     liquid (4.0.3)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -84,6 +86,7 @@ DEPENDENCIES
   jekyll-minifier
   jekyll-sitemap
   jekyll-theme-cayman
+  kramdown-parser-gfm
   tzinfo-data
 
 BUNDLED WITH
