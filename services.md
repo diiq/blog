@@ -17,9 +17,40 @@ permalink: /services/
 </div>
 <div class="services">
     <div class="service web-app">
-        <div class="title">Custom Web Applications</div>
-        <p>You've got data that tells a complicated story, and want to present it clearly; or you've got a service to deliver and you want to do it online. Let me design and build information-dense, complex web software, custom for you.</p>
-        <a href="/services/custom-apps">Read More</a>
+        <div class="title">Software and Process Consulting</div>
+        As a software engineer with almost two decades of experience, I know how to help your team balance speed and care in order to deliver beautiful, reliable, and maintainable software, on time and on budget.
+
+As an engineer who also designs, I'll pay close attention to your broad business needs and to small UX details without foregoing technical excellence, and I'll help instill those same practices and values in your team.
+
+Here’s a buzzword-packed list of tools I'm comfortable using:
+<ul class="buzzwords">
+<li>AngularJS, Angular</li>
+<li>AWS (S3, Lambda, RDS, &c.)</li>
+<li>C</li>
+<li>CSS</li>
+<li>Creative Cloud</li>
+<li>Flask</li>
+<li>git, mercurial, svn, darcs </li>
+<li>Glamor</li>
+<li>GCS</li>
+<li>HTML</li>
+<li>Javascript/ECMAscript</li>
+<li>Lisps of many varieties</li>
+<li>Photoshop</li>
+<li>Python</li>
+<li>Rails</li>
+<li>React</li>
+<li>Ruby</li>
+<li>SASS, SCSS</li>
+<li>Sketch</li>
+<li>Svelte</li>
+<li>Swift</li>
+<li>Typescript</li>
+<li>Vue</li>
+<li>webpack</li>
+</ul>
+        <p>Looking for something specific and don't see it in this list? Reach out anyway! I am always excited to learn something new.</p>
+        <a href="/contact">Contact me</a>
     </div>
 
     <div class="service hire">

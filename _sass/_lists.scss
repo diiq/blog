@@ -68,3 +68,23 @@ dl {
     margin-top: $small-spacing;
   }
 }
+
+.buzzwords {
+  border: none;
+  font-size: .8em;
+  font-weight: bold;
+
+  @media(min-width: 500px) {
+    columns: 2;
+  }
+  @media(min-width: 800px) {
+    columns: 3;
+  }
+
+  li {
+    margin-bottom: 0;
+    &:before {
+      display: none;
+    }
+  }
+}
