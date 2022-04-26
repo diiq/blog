@@ -6,6 +6,6 @@ layout: index
 ---
 
 <p  class="skip-justification">
-My name is Sam Bleckley. I’m a <span class="category">software engineer, designer, and artist</span> working
+My name is Sam Bleckley. I’m a <span class="category">consulting software engineer, designer, and artist</span> working
 out of <span class="adr"><span class="locality">Grand Rapids</span>, <span class="region">Michigan</span></span>.
 </p>

@@ -19,6 +19,16 @@ What you want is some kind of `GROUP BY` with a `LIMIT` on each group --- but th
 
 Postgres has a different solution for this problem: the `LATERAL JOIN`. ActiveRecord doesn't have built-in support for it, but here's what a lateral join looks like in SQL:
 
+```sql
+SELECT lateral_subquery.* FROM posts
+  JOIN LATERAL (
+    SELECT comments.* FROM comments
+      WHERE (comments.post_id = posts.id)
+      LIMIT 3
+  ) lateral_subquery ON true
+  WHERE posts.id IN [A_LIST_OF_POST_IDS]
+```
+
 You could always select against this raw SQL directly, but then your query is not available for the chaining, adjusting, lazy-evaluating fun that ActiveRecord makes possible. Here's how to make that same query in conjunction with (or at least in spite of) ActiveRecord.
 
 We're going to build the query from the inside out; concentrate on what each step _means_ and how we combine them, not what it will return if run in isolation. First, write a generic query you'd _like_ to run against each `Post`. We don't have a post to run against, so we're just describing a filter on `Comment`:

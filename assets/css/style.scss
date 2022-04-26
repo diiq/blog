@@ -562,6 +562,23 @@ html {
     }
   }
 
+  .tool .img {
+    display: block;
+  }
+
+  .tool.vistimo-quotes {
+    .img {
+      background-color: #0b1e21;
+    }
+
+    a {
+      background-color: #d93620;
+      &:hover {
+        background-color: darken(#d93620, 10%);
+      }
+    }
+  }
+
   .tool.vistimo a {
     background-color: #0085aa;
     &:hover {

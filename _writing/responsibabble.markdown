@@ -50,3 +50,7 @@ She was in tears because it was late, and migrating was going to take an indeter
 She is a level-headed, forward-thinking person who is not given to histrionics in any way, and she was in totally exhausted tears --- and had started keeping a box of tissue in her car --- because of a small custom software project that was fudging its timeline in a way I'd call "totally average" and even "unsurprising".
 
 Anyway, there's good news: some steely-eyed designers with global vision have invented "responsible software design," and it will save the world.
+
+---
+
+A postscript: [Software keeping inmates imprisoned past their release](https://kjzz.org/content/1660988/whistleblowers-software-bug-keeping-hundreds-inmates-arizona-prisons-beyond-release)
