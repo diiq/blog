@@ -11,7 +11,7 @@ notes: I'm not sure I've got this one right. Please feel free to call me out if 
 >
 > --- Vincent van Gogh
 
-I suspect the feelings we associate "impostor syndrome" are fine. Useful, even.
+I suspect the feelings we associate with "impostor syndrome" are fine. Useful, even.
 
 In general, feelings aren't bad. They're signals. The way we _cope_ with feelings can be dangerous or ineffective, though.
 
@@ -30,7 +30,7 @@ When I feel ignorant, that _can_ be fuel for a slow burn to learn more. If I fee
 
 Impostor syndrome is bad because it makes you feel like a permanent outsider, and blinds you to how to fix that.
 
-Often, I see people try to combat impostor syndrome by insisting, "Don't worry, everyone feels this way, no one knows what they are doing!" and I'm not sure that's the best resolution to the problem. For one, I _want_ to know what I'm doing; having expertise is fun, and lets me helps people! I've seen true experts at work, and while they may have self doubt, they're not faking the expertise.
+Often, I see people try to combat impostor syndrome by insisting, "Don't worry, everyone feels this way, no one knows what they are doing!" and I'm not sure that's the best resolution to the problem. For one, I _want_ to know what I'm doing; having expertise is fun, and lets me help people! I've seen true experts at work, and while they may have self doubt, they're not faking the expertise.
 
 Maybe worse, imply ignoring or eliminating the emotions that lead to impostor syndrome can lead to an _opposite_ affliction -- a belief I'm an expert in fields I am not, or a belief that experts don't exist at al. Call it "Maestro syndrome". Self confidence becomes foolhardy (or blowhard-y) when it makes you believe that:
 
