@@ -388,6 +388,7 @@ html {
   .description {
     color: $font-light;
     margin-bottom: 40px;
+    padding-left: 5px;
   }
 
   ul {
@@ -503,6 +504,34 @@ html {
 
   .scrub {
     clear: both;
+  }
+
+  .contract-banner {
+    width: 100%;
+    font-size: .9em;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background-color: $writing-theme;
+    color: $white;
+    font-family: "Raleway";
+    font-size: 14px;
+    > div {
+      padding: $base-spacing/4 $base-spacing;
+      margin: 0 auto;
+      max-width: 875px;
+      @media (max-width: 675px) {
+        padding: 5px $base-spacing/2;
+      }
+    }
+    a {
+      color: $white;
+      text-decoration: underline;
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
   }
 }
 
@@ -848,7 +877,7 @@ html {
     }
 
     .content {
-      max-width: 700px;
+      max-width: 800px;
       margin-left: 50px;
 
       @media (max-width: 800px) {
@@ -887,14 +916,22 @@ html {
     height: 200px;
     overflow: hidden;
     padding-top: -100px;
+    margin-top: 2rem;
 
     blockquote {
       margin: 0;
       height: 200px;
       animation: 40s quote infinite;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      border-left-width: 1px;
 
       p {
+        font-style: normal;
+        font-family: "Raleway";
+        font-size: 1rem;
         margin-bottom: 10px;
       }
 
@@ -909,36 +946,43 @@ html {
       transform: translateY(0);
     }
 
-    18% {
+    14% {
       transform: translateY(0);
     }
-    20% {
+    16% {
       transform: translateY(-200px);
     }
 
-    38% {
+    30% {
       transform: translateY(-200px);
     }
-    40% {
+    32% {
       transform: translateY(-400px);
     }
 
-    58% {
+    46% {
       transform: translateY(-400px);
     }
-    60% {
+    48% {
       transform: translateY(-600px);
+    }
+
+    62% {
+      transform: translateY(-600px);
+    }
+    64% {
+      transform: translateY(-800px);
     }
 
     78% {
-      transform: translateY(-600px);
+      transform: translateY(-800px);
     }
     80% {
-      transform: translateY(-800px);
+      transform: translateY(-1000px);
     }
 
     98% {
-      transform: translateY(-800px);
+      transform: translateY(-1000px);
     }
   }
 }
@@ -1111,3 +1155,4 @@ html.contact .footer-banner {
 html.default .footer-banner {
   background-color: $blue;
 }
+
