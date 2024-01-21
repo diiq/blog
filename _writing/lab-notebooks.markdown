@@ -60,7 +60,7 @@ Software engineering doesn't have quite the same forensic constraints, but the s
 
 - **Summarize when necessary**
 
-  If you've spent a messy week going round in circles, and you lab notebook has become hard to follow, feel free to take a page to summarize what you've learned and where you ended up. Flag it specially in your table of contents.
+  If you've spent a messy week going round in circles, and your lab notebook has become hard to follow, feel free to take a page to summarize what you've learned and where you ended up. Flag it specially in your table of contents.
 
 - **Store safely**
 
