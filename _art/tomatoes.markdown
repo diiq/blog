@@ -1,7 +1,7 @@
 ---
   layout: art
   title:  "Three Tomatoes"
-  images: ["tomatoes.jpeg"]
+  images: ["tomatoes.png"]
   date: 2023-03-10
   notes:
 ---

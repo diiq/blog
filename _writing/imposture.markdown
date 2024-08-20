@@ -24,15 +24,15 @@ The word "impostor" is _key_ to understanding how perfectly healthy emotions tur
 
 ...and so on.
 
-If the strategy for coping with those feelings is shut down, shut up, and give up, that's a problem. Similarly if the strategy is frantic and breathless urgency.
+If my strategy for coping with those feelings is shut down, shut up, and give up, that's a problem. It's equally damaging if my strategy involves frantic and breathless urgency.
 
-When I feel ignorant, that _can_ be fuel for a slow burn to learn more. If I feel unprepared, it _could_ be a signal to change the way I prepare. If I feel unprofessional, it's _also_ a chance to pause, imagine what I dream a professional would do in this situation, and do that. If the work feels impossible, it _might_ be time to take a breather rather than a panic.
+On the other hand, when I feel ignorant, that _can_ be fuel for a slow burn to learn more. If I feel unprepared, it _could_ be a signal to change the way I prepare. If I feel unprofessional, it's _also_ a chance to pause, imagine what I dream a professional would do in this situation, and do that. If the work feels impossible, it _might_ be time to take a breather rather than a panic.
 
-Impostor syndrome is bad because it makes you feel like a permanent outsider, and blinds you to how to fix that.
+Impostor syndrome is bad when it makes you feel like a permanent outsider, and blinds you to how to fix that.
 
 Often, I see people try to combat impostor syndrome by insisting, "Don't worry, everyone feels this way, no one knows what they are doing!" and I'm not sure that's the best resolution to the problem. For one, I _want_ to know what I'm doing; having expertise is fun, and lets me help people! I've seen true experts at work, and while they may have self doubt, they're not faking the expertise.
 
-Maybe worse, imply ignoring or eliminating the emotions that lead to impostor syndrome can lead to an _opposite_ affliction -- a belief I'm an expert in fields I am not, or a belief that experts don't exist at al. Call it "Maestro syndrome". Self confidence becomes foolhardy (or blowhard-y) when it makes you believe that:
+Maybe worse, simply ignoring or eliminating the emotions that lead to impostor syndrome can lead to an _opposite_ affliction -- a belief I'm an expert in fields I am not, or a belief that experts don't exist at all. Call it "Maestro syndrome". Self confidence becomes foolhardy (or blowhard-y) when it makes you believe that:
 
 - no one knows something just because you don't know it
 - you can pick up a job in weeks when it has taken others years

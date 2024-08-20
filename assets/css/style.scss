@@ -856,9 +856,9 @@ html {
 
     .self-portrait-desktop {
       float: right;
-      border-radius: 100px;
-      width: 200px;
-      margin: -2px 40px 20px;
+      border-radius: 150px;
+      margin: -5px 40px -5px;
+      max-height: 350px;
 
       @media (max-width: 800px) {
         display: none;
