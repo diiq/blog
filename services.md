@@ -6,6 +6,7 @@ layout: services
 title: Services
 permalink: /services/
 ---
+
 <div class="aside">
     <p class="skip-justification">Does your team need a helping hand, or a nudge in the right
     direction? Here are some ways I can help.</p>
@@ -18,11 +19,12 @@ permalink: /services/
 <div class="services">
     <div class="service web-app">
         <div class="title">Software and Process Consulting</div>
-        As a software engineer with almost two decades of experience, I know how to help your team balance speed and care in order to deliver beautiful, reliable, and maintainable software, on time and on budget.
+        As a software engineer with over two decades of experience, I know how to help your team balance speed and care in order to deliver beautiful, reliable, and maintainable software, on time and on budget.
 
 As an engineer who also designs, I'll pay close attention to your broad business needs and to small UX details without foregoing technical excellence, and I'll help instill those same practices and values in your team.
 
 Here’s a buzzword-packed list of tools I'm comfortable using:
+
 <ul class="buzzwords">
 <li>AngularJS, Angular</li>
 <li>AWS (S3, Lambda, RDS, &c.)</li>
@@ -65,8 +67,8 @@ Here’s a buzzword-packed list of tools I'm comfortable using:
         <div class="title">Project Audit</div>
         <p>You've got a small, scrappy team, and they've been working on
         your product for what seems like too long. Are they doing a good
-        job? We'll do an independent audit of your process, code, and
-        goals. We'll help get you and your team back on track.</p>
+        job? I'll do an independent audit of your process, code, and
+        goals, and help get you and your team back on track.</p>
         <a href="/contact">Contact Me</a>
     </div>
 
@@ -88,4 +90,5 @@ Here’s a buzzword-packed list of tools I'm comfortable using:
         <!-- <a href="/services/talks">Read More</a> -->
         <a href="/contact">Contact Me</a>
     </div>
+
 </div>

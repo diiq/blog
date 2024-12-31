@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lab Notebooks"
+title: "Lab Notebooks"
 subtitle: What wet-lab chemistry can teach software engineers
 date: 2020-07-20
 categories: code
@@ -10,11 +10,12 @@ notes:
 In college I worked as a developer in several science labs, including a chemistry lab. Even us computational folks were told to keep lab notebooks, and the protocols for your lab notebook were quite strict. At the time, I was not very good at using my notebook (or at doing the science, frankly). Over the intervening years, I've come to understand and value what they were for; and now I keep lab books for almost all my software engineering work.
 
 ## What's a lab notebook?
+
 It's a disciplined record of what you do and think each day.
 
 One of the hardest things about software engineering is that, while it's often possible to understand the code you committed, it's usually impossible to see all the things you tried first, that didn't work. This is a trap for other developers, and even your future self, where a seemingly better solution gets tried again and again, and each time the same problem arises. But since the failure never gets committed, no record of the attempt is left. I suspect most experienced developers can remember a time where their memory saved a team hours or even weeks of work, simply by saying "ah, we tried [clever solution] a few years ago, but ran into problems X, Y, and Z. So we'd need to solve those problems before we try again."
 
-A lab notebook takes that kind of information *out* of your memory and puts it somewhere safe and permanent.
+A lab notebook takes that kind of information _out_ of your memory and puts it somewhere safe and permanent.
 
 Also, too many developers rely on their working memory, and end up burning out because they are afraid to leave a problem halfway. If the entire plan of attack exists only in your head, taking a lunch break can be disastrous.
 
@@ -36,9 +37,9 @@ Software engineering doesn't have quite the same forensic constraints, but the s
 
 - **Always in pen.**
 
-  Your goal is not to preserve the *outcome* of your thoughts --- that's your code. Your goal is to preserve the *process* of your thoughts. So no erasing, no blacking out. You can put a single line through anything spelled or written incorrectly.
+  Your goal is not to preserve the _outcome_ of your thoughts --- that's your code. Your goal is to preserve the _process_ of your thoughts. So no erasing, no blacking out. You can put a single line through anything spelled or written incorrectly.
 
-- **Always *during***
+- **Always _during_**
 
   Write down what the problem is, what you're about to do, and what you expect the result to be. Treat your work as an experiment! This is especially valuable for junior developers who are still in a "try everything until something works" frame of mind. Forcing yourself to hypothesize what's actually wrong is really valuable; and there's nothing wrong with expecting a negative result ("I don't think the problem is X, but it's easy to prove it, so...")
 
@@ -46,9 +47,9 @@ Software engineering doesn't have quite the same forensic constraints, but the s
 
   Don't wait until after you're "done" --- because "done" might mean six hours from now.
 
-- **Always *forward*.**
+- **Always _forward_.**
 
-  If you write something on Monday and realize you were wrong on Tuesday, write the correction in Tuesday's entry. This is a lab *journal* --- from the French "daily". If you had a misconception, you *want* a record of that, as well as a record of why you were wrong. You can (and should) add a small note to the original entry pointing to the page where you correct yourself --- but don't obscure what you originally wrote.
+  If you write something on Monday and realize you were wrong on Tuesday, write the correction in Tuesday's entry. This is a lab _journal_ --- from the French "daily". If you had a misconception, you _want_ a record of that, as well as a record of why you were wrong. You can (and should) add a small note to the original entry pointing to the page where you correct yourself --- but don't obscure what you originally wrote.
 
 - **Keep a table of contents**
 
@@ -60,7 +61,7 @@ Software engineering doesn't have quite the same forensic constraints, but the s
 
 - **Summarize when necessary**
 
-  If you've spent a messy week going round in circles, and you lab notebook has become hard to follow, feel free to take a page to summarize what you've learned and where you ended up. Flag it specially in your table of contents.
+  If you've spent a messy week going round in circles, and your lab notebook has become hard to follow, feel free to take a page to summarize what you've learned and where you ended up. Flag it specially in your table of contents.
 
 - **Store safely**
 
