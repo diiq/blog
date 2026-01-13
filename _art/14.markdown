@@ -1,0 +1,8 @@
+---
+  layout: art
+  title:  ""
+  images: ["14.png"]
+  thumb: thumbs/14.png
+  date: 2026-01-13
+  notes:
+---

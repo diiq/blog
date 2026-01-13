@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" class="art">
-<head>
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta charset="UTF-8">
-  <link rel="alternate" type="application/atom+xml" href="{{ '/feed/art.xml' | absolute_url }}" title="Atom feed">
-  <link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-  <script src="{{ '/assets/js/nav.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-  <script src="{{ '/assets/js/trees.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-  <title>{{ page.title }} | Sam Bleckley</title>
-</head>
-<body class="art-index-page page">
-    <button class="mobile-nav" aria-haspopup="true" onclick="openNav();" aria-label="Menu">
-        <div>Sam Bleckley</div>
-        <i class="fa fa-lg fa-bars"></i>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta charset="UTF-8" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      href="{{ '/feed/art.xml' | absolute_url }}"
+      title="Atom feed"
+    />
+    <link href="{{ "/assets/images/favicon.png" | absolute_url }}" rel="icon"
+    type="image/png">
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    />
+    <script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    <script src="{{ '/assets/js/nav.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    <script src="{{ '/assets/js/trees.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    <title>{{ page.title }} | Sam Bleckley</title>
+  </head>
+  <body class="art-index-page page">
+    <button
+      class="mobile-nav"
+      aria-haspopup="true"
+      onclick="openNav();"
+      aria-label="Menu"
+    >
+      <div>Sam Bleckley</div>
+      <i class="fa fa-lg fa-bars"></i>
     </button>
     <nav id="nav">
-        <button class="mobile-nav" aria-haspopup="true" onclick="closeNav();" aria-label="Close menu">
-            <div>Sam Bleckley</div>
-            <i class="fa fa-lg fa-bars"></i>
-        </button>
-        <a class="gray" href="/">Sam Bleckley</a>
-        <a class="tools" href="/tools">Software</a>
-        <a class="services" href="/services">Services</a>
-        <a class="writing" href="/blog">Writing</a>
-        <a class="art" href="/art">Art</a>
-        <a class="contact" href="/contact">Contact</a>
+      <button
+        class="mobile-nav"
+        aria-haspopup="true"
+        onclick="closeNav();"
+        aria-label="Close menu"
+      >
+        <div>Sam Bleckley</div>
+        <i class="fa fa-lg fa-bars"></i>
+      </button>
+      <a class="gray" href="/">Sam Bleckley</a>
+      <a class="tools" href="/tools">Software</a>
+      <a class="services" href="/services">Services</a>
+      <a class="writing" href="/blog">Writing</a>
+      <a class="art" href="/art">Art</a>
+      <a class="contact" href="/contact">Contact</a>
     </nav>
     <main>
-        <div class="content">
-          <h1>Drawing, Painting, &amp;c.</h1>
-              {% assign sorted = site.art | sort: 'date' | reverse %}
-              {% for post in sorted %}
-                <h2 class="title">{{post.title}} ({{post.date | date: "%Y"}})</h2>
-                {% for image in post.images %}
-                  <img src="/assets/images/art/{{ image }}" />
-                {% endfor %}
-              </li>
-              {% endfor %}
+      <div class="content">
+        <h1>Art</h1>
+        {% assign sorted = site.art | sort: 'date' | reverse %}
+        <div class="art-grid">
+          {% for post in sorted %}
+          <a href="{{post.url}}">
+            <img class src="/assets/images/art/{{ post.thumb }}"
+          /></a>
+          {% endfor %}
         </div>
+      </div>
     </main>
     <footer>
       <a href="mailto:sam@sambleckley.com">sam@sambleckley.com</a>
     </footer>
-</body>
+  </body>
 </html>

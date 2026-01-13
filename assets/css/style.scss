@@ -338,18 +338,34 @@ html {
     color: $font-extra-light;
   }
 
-  h2 {
-    font-family: $heading-font-family;
-    display: block;
-    max-width: 675px;
-    margin: 100px auto 20px;
+  .art-grid {
+    column-count: 4;
+    column-gap: 10px;
+
+    @media (max-width: 900px) {
+      column-count: 3;
+    }
+
+    @media (max-width: 650px) {
+      column-count: 2;
+    }
+
+    @media (max-width: 400px) {
+      column-count: 1;
+    }
   }
 
-  .content > img {
+  .art-grid a {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+
+  .art-grid img {
+    width: 100%;
+    height: auto;
     display: block;
-    width: 675px;
-    max-width: calc(100vw - 40px);
-    margin: 20px auto;
   }
 }
 
@@ -1161,4 +1177,3 @@ html.contact .footer-banner {
 html.default .footer-banner {
   background-color: $blue;
 }
-
