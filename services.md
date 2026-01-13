@@ -26,7 +26,7 @@ As an engineer who also designs, I'll pay close attention to your broad business
 Here’s a buzzword-packed list of tools I'm comfortable using:
 
 <ul class="buzzwords">
-<li>AngularJS, Angular</li>
+<li>Angular, AngularJS</li>
 <li>AWS (S3, Lambda, RDS, &c.)</li>
 <li>C</li>
 <li>CSS</li>
@@ -34,10 +34,12 @@ Here’s a buzzword-packed list of tools I'm comfortable using:
 <li>Flask</li>
 <li>git, mercurial, svn, darcs </li>
 <li>Glamor</li>
-<li>GCS</li>
+<li>Google Cloud</li>
+<li>GraphQL</li>
 <li>HTML</li>
 <li>Javascript/ECMAscript</li>
 <li>Lisps of many varieties</li>
+<li>Node</li>
 <li>Photoshop</li>
 <li>Python</li>
 <li>Rails</li>

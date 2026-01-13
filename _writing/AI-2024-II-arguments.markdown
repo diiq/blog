@@ -27,6 +27,8 @@ Too, crypto was doing things that we could already do another way, much faster a
 
 ## "Training generative models on scraped data is theft."
 
+**Note from Feb 12, 2024: If [Judge Bibas' judgement](https://storage.courtlistener.com/recap/gov.uscourts.ded.72109/gov.uscourts.ded.72109.770.0.pdf) holds, this section is inaccurate --- a direct commercial impact outweighs the fact that the trained work doesn't appear in the delivered result.**
+
 This has a good argument at its core, but it's almost always phrased in a way that I think is morally complicated and potentially legally unsuccessful.
 
 I'll pursue the legal argument in the US because that's the law I'm most familiar with, but I believe a similar framework would apply to any attempt at allowing or banning AI training on open web data in the EU, too. Copyright law is complex, the existing precedent can seem contradictory and confusing, and I'm not a lawyer let alone an international intellectual property lawyer, so take all of this with a grain of salt.

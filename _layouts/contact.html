@@ -5,8 +5,11 @@
 	<meta content="width=device-width,initial-scale=1" name="viewport">
 	<meta charset="UTF-8">
     <link href="{{ "/assets/images/favicon.png"  | absolute_url }}" rel="icon" type="image/png">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link
+    href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    rel="stylesheet"
+  />
+  	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 	<script src="{{ '/assets/js/hypher.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <script src="{{ '/assets/js/nav.js?v=' | append: site.github.build_revision | relative_url }}"></script>
     <script src="{{ '/assets/js/trees.js?v=' | append: site.github.build_revision | relative_url }}"></script>
@@ -51,11 +54,37 @@
             </form>
 
             <div class="social">
-                <a href="https://twitter.com/diiq" aria-label="Twitter" alt="Twitter"><i class="fa fa-lg fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/sam-bleckley/" aria-label="LinkedIn" alt="LinkedIn"><i class="fa fa-lg fa-linkedin-square"></i></a>
-                <a href="https://github.com/diiq" aria-label="Github" alt="Github"><i class="fa fa-lg fa-github"></i></a>
-                <a class="email" href="mailto:sam@sambleckley.com" aria-label="Email" alt="Email"><i class="fa fa-lg fa-envelope"></i></a>
-            </div>
+                <a
+                  href="https://bsky.app/profile/sambleckley.com"
+                  aria-label="Bluesky"
+                  title="Bluesky"
+                  ><i class="fa-brands fa-lg fa-bluesky"></i
+                ></a>
+                <a
+                  <a
+                  class="email"
+                  href="mailto:sam@sambleckley.com"
+                  aria-label="Email"
+                  title="Email"
+                  ><i class="fa fa-lg fa-envelope"></i
+                ></a>
+                <a
+                href="https://www.linkedin.com/in/sam-bleckley/"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                ><i class="fa fa-brands fa-lg fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/diiq" aria-label="Github" title="Github"
+                ><i class="fa fa-brands fa-lg fa-github"></i
+              ></a>
+                <a
+                  class="rss"
+                  href="https://sambleckley.com/feed.xml"
+                  aria-label="RSS Feed"
+                  title="RSS Feed"
+                  ><i class="fa fa-lg fa-rss"></i
+                ></a>
+              </div>
         </div>
     </main>
     <footer>

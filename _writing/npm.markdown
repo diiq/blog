@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Worrying about the NPM ecosystem"
+title: "Worrying about the NPM ecosystem"
 subtitle: There are too many packages and too many dependencies, too deeply nested. Can we measure the problem? And what do we do about it?
 date: 2020-06-29
 categories: code
 notes:
 ---
+
 ## TL;DR
+
 The <acronym>npm</acronym> ecosystem seems unwell. If you are concerned with security, reliability, or long-term maintenance, it is almost impossible to pick a suitable package to use --- both because there are 1.3 million packages available, and even if you find one that is well documented and maintained, it might depend on hundreds of other packages, with dependency trees stretching ten or more levels deep --- as one developer, it's impossible to validate them all.
 
 I spend some time measuring the extent of the problem.
@@ -15,7 +17,7 @@ I suggest that this is a social problem, more than a technical one, and propose 
 
 ## The premise
 
-I don't like the way I feel when I'm installing packages with npm. Selecting a package, installing it, discovering the 93 additional packages that were installed along with it, and hoping all of *them* are also suitable for my project... it feels out of control.
+I don't like the way I feel when I'm installing packages with npm. Selecting a package, installing it, discovering the 93 additional packages that were installed along with it, and hoping all of _them_ are also suitable for my project... it feels out of control.
 
 I feel unhappy because picking dependencies is hard, so I blame npm, and that way my problems are not my fault.
 
@@ -23,7 +25,7 @@ Is there some way for me to measure this badness, and thus more thoroughly escap
 
 ## Thinking a bit like a scientist, but not too much
 
-Can we make meaningful empirical measurements of the health of the <acronym>npm</acronym> registry? I think so; but before I do, in order to maintain the slightest semblance of impartiality, I want to lay out what I *expect* a healthy package registry to look like. If it turns out that npm, taken as a whole, mostly looks the way I expect a healthy registry to look, I'll have to put my tail between my legs and take ownership of my struggles. If it looks wildly different, I'll still have hope for blaming the system.
+Can we make meaningful empirical measurements of the health of the <acronym>npm</acronym> registry? I think so; but before I do, in order to maintain the slightest semblance of impartiality, I want to lay out what I _expect_ a healthy package registry to look like. If it turns out that npm, taken as a whole, mostly looks the way I expect a healthy registry to look, I'll have to put my tail between my legs and take ownership of my struggles. If it looks wildly different, I'll still have hope for blaming the system.
 
 ## Imagining a healthy repository
 
@@ -45,7 +47,7 @@ In my ideal world there are, mostly, 4 types of packages:
 
   A plugin enhances a framework with additional, special-use functionality. For a plugin, the framework should be a peer dependency, not a true dependency. It might also depend directly on a library, or a handful of utilities. Examples: an angular component or a jquery plugin.
 
-Obviously, the world is messy! I don't expect 100% of packages to fit into such simple categories, nor are any of these definitions strict and unyielding. But overall, I'd hope *many* or even *most* packages to *mostly* conform to a categorization *something* like that, with most packages being utilities and libraries, and the fewest packages being frameworks.
+Obviously, the world is messy! I don't expect 100% of packages to fit into such simple categories, nor are any of these definitions strict and unyielding. But overall, I'd hope _many_ or even _most_ packages to _mostly_ conform to a categorization _something_ like that, with most packages being utilities and libraries, and the fewest packages being frameworks.
 
 ## What would that mean statistically?
 
@@ -59,7 +61,7 @@ In a world where packages fit mostly into that hierarchy, a registry of many pac
 
 I downloaded the metadata for all 1.3 million packages in the npmjs.org repository and attempted to crunch some numbers. (For more technical details on how I did this, see the final section, titled "Appendix: Methods")
 
-I'm going to use "the number of other packages that depend on this one" as a poor-man's proxy for how popular a package is. It's not a *good* proxy, but neither is the other common choice: the number of downloads (see the section ["Background"](https://packaging.python.org/guides/analyzing-pypi-package-downloads/#background), from PyPI). The number of downloads would have been much more computationally expensive to acquire, so I used dependents.
+I'm going to use "the number of other packages that depend on this one" as a poor-man's proxy for how popular a package is. It's not a _good_ proxy, but neither is the other common choice: the number of downloads (see the section ["Background"](https://packaging.python.org/guides/analyzing-pypi-package-downloads/#background), from PyPI). The number of downloads would have been much more computationally expensive to acquire, so I used dependents.
 
 ## Circular dependencies
 
@@ -71,14 +73,14 @@ Then ~500, ~125, and ~25 are part of 3-, 4-, and 5-package cycles, respectively.
 
 My immediate reaction was that those numbers seemed like good news; out of a million packages, only a tiny percentage of oddball packages have circular dependencies, and the rest are fine. Right?
 
-Unfortunately, what I discovered was that almost 150,000 packages --- more than 1 in 10 --- had at least one of these circular dependencies *somewhere* in their dependency graph. That means at least a few of those "oddballs" are actually major, highly-referenced packages. Some examples:
+Unfortunately, what I discovered was that almost 150,000 packages --- more than 1 in 10 --- had at least one of these circular dependencies _somewhere_ in their dependency graph. That means at least a few of those "oddballs" are actually major, highly-referenced packages. Some examples:
 
 - `babel-core` depends on `babel-register`, which depends on `babel-core`.
 - `yeoman-generator` depends on `yeoman-environment` which depends on `yeoman-generator`.
 
 Those are not isolated instances; I plucked them as the most easily recognizable out of a list of dozens of highly-depended-upon packages with circular dependencies.
 
-I need to be clear, here, that this is not *technically* a problem! <acronym>npm</acronym> can install these packages just fine. They can circularly-depend on one another; there's no technical problem. They work. Obviously. If `babel-core` didn't work, someone would have said something by now.
+I need to be clear, here, that this is not _technically_ a problem! <acronym>npm</acronym> can install these packages just fine. They can circularly-depend on one another; there's no technical problem. They work. Obviously. If `babel-core` didn't work, someone would have said something by now.
 
 But I'm not particularly comfortable with it. I'm especially uncomfortable when the cycles involved are longer than two packages, which makes them seem less intentional. Maybe there's a good reason; these folks are smart, and I always try to assume that odd choices were made for important reasons. And yet...
 
@@ -92,15 +94,15 @@ Among the most-depended-upon packages are
 
 I'm **not** measuring that using `devDependencies` --- `typescript` appears in over 12,000 "dependency" lists.
 
-So while I am less concerned with packages having large and deep `devDependency` trees (I *am* still concerned, but less so), it seems that a large proportion of packages aren't making use of the distinctions between `dependencies` and `devDependencies` in the first place. That *is* concerning.
+So while I am less concerned with packages having large and deep `devDependency` trees (I _am_ still concerned, but less so), it seems that a large proportion of packages aren't making use of the distinctions between `dependencies` and `devDependencies` in the first place. That _is_ concerning.
 
 ## Dependency tree depths
 
 I am defining the depth of a package's dependency tree as the longest dependency-of-a-dependency-of-a-dependency chain I can find. Especially deep dependency trees are a problem because of how difficult they make it to audit all the packages that will get installed when including a single new package.
 
-The *average* dependency tree depth in npmjs.org is just under 4. Which doesn't sound too bad!
+The _average_ dependency tree depth in npmjs.org is just under 4. Which doesn't sound too bad!
 
-As often happens, though, the mean does not tell the whole story. Almost half of all packages have no dependencies at all --- which is a good thing! --- but all those zeros dramatically drop the average of the packages that *do* have dependencies.
+As often happens, though, the mean does not tell the whole story. Almost half of all packages have no dependencies at all --- which is a good thing! --- but all those zeros dramatically drop the average of the packages that _do_ have dependencies.
 
 If we charted of the number of packages with each dependency tree depth greater than zero, then based on the idealized registry I imagined above, here's what I'd hope to see:
 
@@ -114,7 +116,7 @@ And here's what we actually get:
 
 ![Real chart of package counts per tree depth](/assets/images/npm_packages_per_tree_depth.svg)
 
-Remember that we were hoping for mostly 2, 3, and 4. Instead, there is still a long tail of packages with tree depths *above 20*. 20 is... much larger than I was expecting, and I was expecting to be disappointed.
+Remember that we were hoping for mostly 2, 3, and 4. Instead, there is still a long tail of packages with tree depths _above 20_. 20 is... much larger than I was expecting, and I was expecting to be disappointed.
 
 But let's re-use the "oddball" theory: perhaps all those packages with extremely deep dependency trees are rarely used, and not worth worrying about. Let's check.
 
@@ -132,7 +134,6 @@ Followed by reality:
 
 There are heaps of 10+ tree-depths up among even the most popular packages, and a few even reach 20+. Extremely deep trees are not just a problem of "oddball" packages.
 
-
 ## Direct dependencies (branching factor)
 
 The average number of direct dependencies (among packages with any dependencies at all) is 5. That, by itself, doesn't seem to bad. It feels a little alarming when combined with high tree depths, though. Does that mean some of these packages have 5<sup>10</sup> total dependencies? (Spoiler: no.)
@@ -141,11 +142,11 @@ Here's a graph of how many packages have 1 dependency, 2 dependencies... up to 3
 
 ![Chart of package counts per direct dependencies](/assets/images/npm_packages_per_direct_dependencies.svg)
 
-This curve is clean enough that I would not be surprised to see something pretty similar in any package registry --- maybe not the exact same parameters, but a similar shape. Not shown here is an *incredibly* long tail; there are 4 packages tied for the most direct dependencies with exactly 1000, and there are runners-up spread pretty smoothly up to that maximum.
+This curve is clean enough that I would not be surprised to see something pretty similar in any package registry --- maybe not the exact same parameters, but a similar shape. Not shown here is an _incredibly_ long tail; there are 4 packages tied for the most direct dependencies with exactly 1000, and there are runners-up spread pretty smoothly up to that maximum.
 
 ## Indirect dependencies
 
-Knowing the average depth and branching factor, you have to imagine that counting the total dependencies of each package, including dependencies-of-dependencies, is not going to yield good news. But many of the branches of a large dependency tree are shared --- multiple packages in the tree all depend on the same library. And the tree depth I have measured is the *maximum* depth for each package --- not the average. So the picture is not necessarily as dire as an initial back-of-the-envelope calculation might make it seem.
+Knowing the average depth and branching factor, you have to imagine that counting the total dependencies of each package, including dependencies-of-dependencies, is not going to yield good news. But many of the branches of a large dependency tree are shared --- multiple packages in the tree all depend on the same library. And the tree depth I have measured is the _maximum_ depth for each package --- not the average. So the picture is not necessarily as dire as an initial back-of-the-envelope calculation might make it seem.
 
 So, now that we're convinced that we won't be seeing packages with 9 million total dependencies, let's see what the actual numbers are.
 
@@ -205,7 +206,7 @@ But most of all, imagine this recursive rule:
 
 - A healthy package can only depend on other healthy packages.
 
-Now, starting with the most popular packages with zero dependencies, start collecting a list of healthy packages. Then you can start looking at the packages that depend upon those, walking the dependency graph backwards and flagging what is not only safe, but recursively so. Eventually, (with time, and enough social pressure to be "healthy"), you could build something akin to a standard library. When a package like `request` decides to deprecate, that will mean *something* to any approved packages that depend on it --- they must find a replacement, or lose approved status themselves.
+Now, starting with the most popular packages with zero dependencies, start collecting a list of healthy packages. Then you can start looking at the packages that depend upon those, walking the dependency graph backwards and flagging what is not only safe, but recursively so. Eventually, (with time, and enough social pressure to be "healthy"), you could build something akin to a standard library. When a package like `request` decides to deprecate, that will mean _something_ to any approved packages that depend on it --- they must find a replacement, or lose approved status themselves.
 
 There's no need to change <acronym>npm</acronym> for any of this to work! People can still publish silly packages and personal packages and packages they have no intention of maintaining --- but it will be easy for developers in professional contexts to recognize the difference.
 
@@ -213,7 +214,7 @@ It's a lovely picture to imagine. Obviously, it won't work. The most popular jav
 
 Any set of rules will risk gaming; for instance, if you say a healthy package responds to bug reports in a timely manner, you're giving permission to frustrated mis-users to yell and scream and threaten to report a project when they're ignored.
 
-How do we solve *those* problems?
+How do we solve _those_ problems?
 
 I can imagine a committee of respected voices in javascript --- well-known developers, maintainers of popular projects, project leads from angular and react --- fighting over and finally agreeing on the set of rules, and endorsing the process with their names.
 
@@ -255,15 +256,15 @@ If you're interested in discussing the problem, potential solutions, or berating
 
 ## Appendix: Methods
 
-There is not a *documented* endpoint on [replicate.npmjs.org](https://replicate.npmjs.org) for downloading the entire registry in bulk; for some time I assumed I would need to make 1.3 million separate requests to get the data I needed. However, the replicate api is actually a raw couchdb instance. So (don't follow this link!) https://replicate.npmjs.com/registry/_all_docs?include_docs=true is an incantation for a 50GB json file that contains more than enough information for this task.
+There is not a _documented_ endpoint on [replicate.npmjs.org](https://replicate.npmjs.org) for downloading the entire registry in bulk; for some time I assumed I would need to make 1.3 million separate requests to get the data I needed. However, the replicate api is actually a raw couchdb instance. So (don't follow this link!) https://replicate.npmjs.com/registry/_all_docs?include_docs=true is an incantation for a 50GB json file that contains more than enough information for this task.
 
 You'll need to be able to parse that 50GB file, and if you are not among the 1% of RAM-wealthy, that means using a streaming parser. I was not expecting to do this task in javascript, but [Oboe.js](http://www.oboejs.com/) does exactly the job we need --- it allows you to parse a json file as a stream, and discard parsed nodes once they've been used.
 
-I pushed the relevant data from that json file into a postgres database. Note that if you attempt to use [node-postrges](https://node-postgres.com/), or any other asynchronous interface, all the work of using oboe will be for naught --- you'll create tens of thousands of pending asynchronous calls, and still run out of memory. I used [pg-native](https://www.npmjs.com/package/pg-native)'s synchronous API.
+I pushed the relevant data from that json file into a postgres database. Note that if you attempt to use [node-postgres](https://node-postgres.com/), or any other asynchronous interface, all the work of using oboe will be for naught --- you'll create tens of thousands of pending asynchronous calls, and still run out of memory. I used [pg-native](https://www.npmjs.com/package/pg-native)'s synchronous API.
 
 My data schema was simple: a table for packages, and a join table (from packages to packages) for dependencies (I also created and filled tables for `devDependencies`, `peerDependencies`, etc, but didn't end up using them for this analysis).
 
-Inserting 1.3 million packages and 4.1 million dependencies will take several hours. Make sure you handle errors gracefully, so you're not forced to restart the process. A few uniqueness-guaranteeing indices will help if you *are* forced to.
+Inserting 1.3 million packages and 4.1 million dependencies will take several hours. Make sure you handle errors gracefully, so you're not forced to restart the process. A few uniqueness-guaranteeing indices will help if you _are_ forced to.
 
 Most of the calculations were iterative, built like inductive proofs, and pretty gnarly.
 

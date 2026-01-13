@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "On Good and Green"
+title: "On Good and Green"
 subtitle: how morality is like a color
 date: 2013-01-01
 categories: on good
-notes: 
+notes:
 ---
 
 Today I’m thinking about good, and green.
@@ -25,7 +25,7 @@ Green is partially mental, physical, and social.
 
 I think that <acronym>Good</acronym> is like green. Relativists are right — a man alone, without their compatriots, could decide on any principle and call it moral.
 
-Society plays a huge roll in defining <acronym>Good</acronym>; but once we learn what’s good, once a person kens goodness, they should no longer need society to list each and every good thing. Once learned, goodness is a quality that can be understood individually.
+Society plays a huge role in defining <acronym>Good</acronym>; but once we learn what’s good, once a person kens goodness, they should no longer need society to list each and every good thing. Once learned, goodness is a quality that can be understood individually.
 
 And, I think, good names something that has a physical reality; not one that is physically differentiated — but, like green, one that can be physically defined in terms of the patterns and qualities of good things: complexity, elegance, adventure, self-awareness, balance.
 

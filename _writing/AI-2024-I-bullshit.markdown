@@ -15,15 +15,17 @@ One of my favorite papers this year so far has been [Generative AI is Bullshit](
 
 I find myself making reference to it over and over again, and I don't want to force people to read a lengthy academic paper, so here's a 3-point summary (the paper itself is very readable, though, and if that sort of thing is your idea of fun, click through and read it instead. If you've done that, or are already familiar with the paper, feel free to skip ahead to "What is bullshit good for?")
 
-1. "Bullshit" as a technical term
+1. **"Bullshit" as a technical term**
+
    For the sake of this argument, "bullshit" means anything that is intended to be _plausible_ but is unconcerned with _truth_. Something purely and purposefully false is a lie; but when it _doesn't matter_ whether it's true or false as long as it is believable, that's bullshit.
 
-2. LLMs are explicitly trained to bullshit
+2. **LLMs are explicitly trained to bullshit**
+
    An LLM is given _all the text its trainers can get their hands on_, true, false, fiction, non-fiction, opinion, fantasy, shitpost, diatribe, peer-reviewed academic study...
 
-   Training optimizes the LLM's ability to predict the next word* of that text, given some chunk of it. If the text is a complete fabrication written by a crackpot, it still predicts the next word. If the text is truth handed down by a god, it predicts the next word. If the text is a dadaist poem, it predicts the next word. It does not have the ability to say "hold on, that's nonsense!" it can only say "it is unlikely *anyone\* would ever say that".
+   Training optimizes the LLM's ability to predict the next word of that text, given some chunk of it. If the text is a complete fabrication written by a crackpot, it still predicts the next word. If the text is truth handed down by a god, it predicts the next word. If the text is a dadaist poem, it predicts the next word. It does not have the ability to say "hold on, that's nonsense!" it can only say "it is unlikely _anyone_ would ever say that".
 
-3. 'Hallucinations' and correct answers are the same side of the same coin
+3. **'Hallucinations' and correct answers are the same side of the same coin**
 
    It's so tempting to think about the times an LLM generates blatantly untrue text as somehow _different_ from when it generates true text; that we can work to fix the former and keep the latter.
 
