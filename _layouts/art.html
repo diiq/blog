@@ -53,7 +53,9 @@
     </nav>
     <main>
       <div class="content  {{page.categories}}">
+        {% if page.title.count %}
         <h1>{{ page.title }}</h1>
+        {% endif %}
 
         <div class="art-post">
           {% for image in page.images %}
